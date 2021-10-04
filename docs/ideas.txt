@@ -1,0 +1,3 @@
+My favourite part of any role playing game is character creation. So I've written an introductory campaign, in the form of interactive fiction, that tells the story of how a D&D hero comes to be.
+
+Travok's backstory: Most of Travok's clan work in the mines and forges, proudly adding to the kingdom's collection of gold, which is used to adorn the temples and palace. Travok found more use for the plain stone, however. He apprenticed as a mason as a boy, and spent many years in the fulfilling work of building and maintaining the walls, steps, temples and shrines, in service both to the gods and the common people.

@@ -1,0 +1,209 @@
+/** filename: styles.scss
+ *  description: main styles for D&D Text Adventure
+ *  author: Sarah Rosanna Busch
+ *  date: 10 Sept 2021
+ */
+
+//sass --watch styles.scss styles.css
+
+/*************************** Scrollbar ******************************/
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #666;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/*************************** Variables ******************************/
+$backgroundColour: black;
+$fontSize: 13pt;
+$fontFam: monospace;
+$fontColour: lightgrey;
+
+
+/*************************** Globals ******************************/
+
+* {
+    box-sizing: border-box; /* padding and border are included in total width/height of all elements */
+    margin: 0px;
+    color: $fontColour;
+}
+
+header, section, footer, aside, nav, main, article, figure {
+    display: block; /* to define html5 semantic elements in older browsers */
+}
+
+a {
+    color: darkorange;
+}
+
+body {    
+    background: $backgroundColour;
+    color: $fontColour;
+    font-size: $fontSize;
+    font-family: $fontFam;
+}
+
+.viewContainer {
+    height: 100vh;
+    position: relative;
+    background: #212121;
+}
+
+/*************************** Layout ******************************/
+$dmTableBackground: #212121;
+$playerMatBackground: #121212;
+$red: rgba(255, 0, 0, 0.75);
+
+main { //container
+    height: 100vh;
+    max-height: 820px;
+    width: 100vw;
+    max-width: 420px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;  
+    border: 5px solid black;
+    box-shadow: 3px 3px 5px 1px black, -1px -1px 10px black;
+}
+
+header, footer { //indicators, error messages
+    width: 100vw;
+    height: 1em;
+    display: none;
+}
+
+#dmTable {
+    overflow-y: auto;
+    background: $dmTableBackground;
+    background-image: url("../img/background.svg");
+    background-size: cover;
+    background-position: center;
+    padding: 0.5em;
+    flex: 0.75;
+    border-bottom: 5px solid black;
+}
+
+#playerMat {
+    background: $playerMatBackground;
+    flex: 0.25;
+    padding: 0.5em;
+    text-align: center;
+    display: table;
+
+    #buttonContainer {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+
+/*************************** Classes ******************************/
+
+fieldset {
+    box-shadow: 3px 3px 5px 1px black, -1px -1px 10px black;
+    max-width: 420px;
+    margin: auto;
+    margin-bottom: 0.25em;
+    display: inline-block;
+}
+
+#storyHeading {
+    text-align: center;
+
+    fieldset {
+        padding-top: 0.25em;;
+        border-color: black;
+        background-color: #121212;
+    }
+
+    legend {
+        padding: 2px 0.5em 2px 0.5em;
+        text-shadow: 3px 3px 3px black;
+        background: $dmTableBackground;
+        background-color: black;
+        border-radius: 2px;
+        font-size: 12pt;
+        font-weight: bold;
+    }
+
+    h1 {
+        color: $red;
+        text-shadow: 2px 2px black;
+        font-size: 24pt;
+    }
+
+    h3 {
+        font-size: smaller;
+        padding: 0.5em;
+    }
+}
+
+#storyText {
+    fieldset {
+        border-radius: 5px;
+        border: 1px solid grey;
+        background-color: #292929;
+    }
+
+    legend {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        font-weight: bold;
+        background: grey;
+        color: $dmTableBackground;
+        border-radius: 10px;
+        box-shadow: 2px -2px 5px black, -1px -1px 3px black;
+    }
+
+    .dm {
+        text-align: left;
+    }
+
+    .player {
+        text-align: right;
+    }
+}
+
+button {
+    padding: 1em;
+    margin: 0.75em;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+    background-color: #090909;
+    border: none;
+    box-shadow: 1px 1px 5px $red, -1px -1px 5px $red;
+    min-width: 5em;
+    font-size: 13pt;
+    min-width: 40%;
+}
+
+/* default styles are for phone-sized screens; layout is responsive: */
+/* tablet-sized */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* full-screen */
+@media only screen and (min-width: 850px) {
+
+}

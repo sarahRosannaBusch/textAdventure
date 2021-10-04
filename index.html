@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang='en-US'> 
+<head>
+  <meta charset='UTF-8' />
+  <title> D&D Text Adventure </title>
+  <meta name='author' content='Sarah Rosanna Busch' />
+  <meta name='description' content='D&D Backstories: A Text Adventure' />
+  <meta name='date' content='4 Oct 2021' />
+  <meta name='keywords' content='text adventure, game, d&d, dungeons and dragons, backstories, character creation, campaign, basic rules, game, browser' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <!-- <link rel='icon shortcut' href='icon.png' /> -->
+  <link rel='stylesheet' href='css/styles.css' />
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <![endif]--> 
+</head>
+<body onload='main.init()'>
+<div class='viewContainer'>
+<main>  
+    <header>
+        <!-- time, date, weather, light conditions, etc-->
+    </header>
+    <section id='dmTable' >
+        <div id='storyHeading'>  
+            <fieldset>
+                <legend>A TEXT ADVENTURE</legend>
+                <h1>D&D Backstories</h1>
+            </fieldset>          
+            <h3>by Sarah Rosanna Busch</h3>
+        </div>         
+        <div id='storyText'>
+            <!-- text added dynamically here -->
+        </div>
+    </section>
+    <section id='playerMat'>
+        <div id='buttonContainer'></div>
+        <!-- <section id='sentenceBuilder'>
+            <span id='sentence'></span>
+            <select id='wordPicker'></select>
+        </section> -->
+    </section>
+    <footer>
+        <!-- error messages -->
+    </footer>
+</main>
+
+<!-- *********** Dialogs ************ -->
+
+<dialogs>
+<dialog id='notebook'>
+    <section id='characterSheet'>
+
+    </section>
+    <section id='backstory'>
+
+    </section>
+    <section id='notes'>
+
+    </section>
+</dialog>
+<dialog id='bags'>
+
+</dialog>
+<dialog id='spells'>
+
+</dialog>
+</dialogs>
+
+</div> <!-- viewContainer -->
+
+<!-- *********** Scripts ************ -->
+
+<script src='libs/f.js'></script>
+<script src='main.js'></script>
+<script src='Player.js'></script>
+<script src='refs/backgrounds/Acolyte.js'></script>
+<script src='refs/classes/Cleric.js'></script>
+<script src='refs/races/Dwarf.js'></script>
+<script src='pcs/PlayerWords.js'></script>
+<script src='util/CHAR.js'></script>
+<script src='encounters/Intro.js'></script>
+<script src='encounters/TravoksRoom.js'></script>
+<script src='pcs/Travok.js'></script>
+</body>
+</html>
