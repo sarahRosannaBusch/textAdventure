@@ -9,7 +9,8 @@ var main = (function() {
     var that = {};
     var elem = {};
     var pc = null; //selected character
-    var encounter = null; //currently loaded encounter or zone
+    var encounter = null; //currently loaded encounter or zone    
+    var bubbleCount = 0; //number of text bubbles displayed
     
     var sentence = {
         move: '',
@@ -23,8 +24,12 @@ var main = (function() {
     that.init = function() {
         elem.main = f.html.getElem('main');
         elem.header = f.html.getElem('header');
+        elem.storyBody = f.html.getElem('#storyBody');
         elem.storyText = f.html.getElem('#storyText');
+        elem.dmTop = f.html.getElem('#dmTop');
+        elem.dmBtm = f.html.getElem('#dmBtm');
         elem.playerOpts = f.html.getElem('#playerOpts');
+        elem.playerMatCover = f.html.getElem('#playerMatCover');
         elem.sentenceBuilder = f.html.getElem('#sentenceBuilder');
         elem.sentence = f.html.getElem('#sentence');
         elem.wordPicker = f.html.getElem('#wordPicker');
@@ -41,15 +46,45 @@ var main = (function() {
         // encounter = Travok.getEncounter(); 
         // encounter.start(pc);
 
+        bubbleCount = 0;
         Intro.start();
     }
 
+    //param is bool
+    function disableUI(disabled) {
+        if(disabled) {
+            elem.playerMatCover.style.pointerEvents = "auto"; //no click
+        } else {
+            elem.playerMatCover.style.pointerEvents = "none"; //click
+        }
+    }
+
     that.writeStory = function(speaker, text) {
+        bubbleCount++;
+        var bubbleId = "textBubble_" + bubbleCount;
         var speakerClass = (speaker === "You") ? "player" : "dm";
-        elem.storyText.innerHTML += "<div class='" + speakerClass + "'><fieldset><legend>" + speaker 
-            + "</legend>" + text + "</fieldset></div>";
-            //TODO: add avatars instead of names
-        elem.dmTable.scrollTo(0, 6000); //x, y
+        elem.storyBody.innerHTML += "<div id=" + bubbleId + " class='" + speakerClass + "'><fieldset><legend>" + speaker 
+            + "</legend><p></p></fieldset></div>";
+        var bubbleId = "textBubble_" + bubbleCount;
+        var bubbleElem = f.html.getElem('#' + bubbleId);
+        var p = f.html.getElem("p", bubbleElem);
+        p.innerHTML = text;
+        bubbleElem.scrollIntoView(true); //false to scroll to bottom
+    }
+
+    that.scroll = function() {
+        if(elem.storyText.scrollTop > 25) {
+            elem.dmTop.style.display = 'block';
+        } else {
+            elem.dmTop.style.display = 'none';
+        }
+
+        var bottom = elem.storyText.scrollTop + elem.dmTable.offsetHeight;
+        if(bottom < elem.storyText.scrollHeight - 25) {
+            elem.dmBtm.style.display = 'block';
+        } else {
+            elem.dmBtm.style.display = 'none';
+        }
     }
 
     //param opts = array of strings to be printed in buttons
@@ -59,7 +94,7 @@ var main = (function() {
         var numButtons = opts.length;
         for(var i = 0; i < numButtons; i++) {
             var btn = f.html.spawn(elem.buttonContainer, 'button', i);
-            btn.innerText = opts[i];
+            btn.innerHTML = opts[i];
             btn.callback = callbacks[i];
             btn.onclick = function() {
                 main.writeStory('You', this.innerText);

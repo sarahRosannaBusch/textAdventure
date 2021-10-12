@@ -20,17 +20,21 @@
     <header>
         <!-- time, date, weather, light conditions, etc-->
     </header>
-    <section id='dmTable' >
-        <div id='storyHeading'>  
-            <fieldset>
-                <legend>A TEXT ADVENTURE</legend>
-                <h1>D&D Backstories</h1>
-            </fieldset>          
-            <h3>by Sarah Rosanna Busch</h3>
-        </div>         
-        <div id='storyText'>
-            <!-- text added dynamically here -->
+    <section id='dmTable' >        
+        <div id='storyText' onscroll="main.scroll()">
+            <div id='storyHeading'>  
+                <fieldset>
+                    <legend>A TEXT ADVENTURE</legend>
+                    <h1>D&D Backstories</h1>
+                </fieldset>          
+                <h3>by Sarah Rosanna Busch</h3>
+            </div> 
+            <div id='storyBody'>
+                <!-- text added dynamically here -->
+            </div>
         </div>
+        <div id='dmTop' style='display:none'></div>
+        <div id='dmBtm' style='display:none'></div>
     </section>
     <section id='playerMat'>
         <div id='buttonContainer'></div>
@@ -38,6 +42,7 @@
             <span id='sentence'></span>
             <select id='wordPicker'></select>
         </section> -->
+        <div id='playerMatCover'></div>
     </section>
     <footer>
         <!-- error messages -->

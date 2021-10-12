@@ -15,7 +15,7 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #666;
+    background: #444;
 }
 
 /* Handle */
@@ -25,7 +25,7 @@
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: #666;
 }
 
 /*************************** Variables ******************************/
@@ -93,17 +93,47 @@ header, footer { //indicators, error messages
 }
 
 #dmTable {
-    overflow-y: auto;
     background: $dmTableBackground;
     background-image: url("../img/background.svg");
     background-size: cover;
     background-position: center;
-    padding: 0.5em;
     flex: 0.75;
     border-bottom: 5px solid black;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    left: -5px; //so the scrollbar isn't shaded
+    width: 100%;
+    height: 1em;
+    pointer-events: none;
+}
+
+#dmTop {
+    @extend .overlay;
+    top: 0;
+    background-image: linear-gradient(black, rgba(0,0,0,0));
+}
+
+#dmBtm {
+    @extend .overlay;
+    bottom: 0;
+    background-image: linear-gradient(rgba(0,0,0,0), black);
+}
+
+#storyText {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    padding: 0.5em;
 }
 
 #playerMat {
+    position: relative;
     background: $playerMatBackground;
     flex: 0.25;
     padding: 0.5em;
@@ -114,6 +144,15 @@ header, footer { //indicators, error messages
         display: table-cell;
         vertical-align: middle;
     }
+}
+
+#playerMatCover {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
 }
 
 
@@ -131,7 +170,8 @@ fieldset {
     text-align: center;
 
     fieldset {
-        padding-top: 0.25em;;
+        padding-top: 0;
+        padding-bottom: 0.5em;
         border-color: black;
         background-color: #121212;
     }
@@ -144,6 +184,7 @@ fieldset {
         border-radius: 2px;
         font-size: 12pt;
         font-weight: bold;
+        color: grey;
     }
 
     h1 {
@@ -155,17 +196,20 @@ fieldset {
     h3 {
         font-size: smaller;
         padding: 0.5em;
+        color: grey;
     }
 }
 
-#storyText {
+#storyBody {
     fieldset {
         border-radius: 5px;
         border: 1px solid grey;
         background-color: #292929;
+        margin-top: 0.5em;
     }
 
     legend {
+        padding: 0.1em;
         padding-left: 0.5em;
         padding-right: 0.5em;
         font-weight: bold;
