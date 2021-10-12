@@ -11,7 +11,7 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #666;
+  background: #444;
 }
 
 /* Handle */
@@ -21,7 +21,7 @@
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #666;
 }
 
 /*************************** Variables ******************************/
@@ -80,17 +80,45 @@ header, footer {
 }
 
 #dmTable {
-  overflow-y: auto;
   background: #212121;
   background-image: url("../img/background.svg");
   background-size: cover;
   background-position: center;
-  padding: 0.5em;
   flex: 0.75;
   border-bottom: 5px solid black;
+  position: relative;
+}
+
+.overlay, #dmBtm, #dmTop {
+  position: absolute;
+  left: -5px;
+  width: 100%;
+  height: 1em;
+  pointer-events: none;
+}
+
+#dmTop {
+  top: 0;
+  background-image: linear-gradient(black, rgba(0, 0, 0, 0));
+}
+
+#dmBtm {
+  bottom: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), black);
+}
+
+#storyText {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  padding: 0.5em;
 }
 
 #playerMat {
+  position: relative;
   background: #121212;
   flex: 0.25;
   padding: 0.5em;
@@ -100,6 +128,15 @@ header, footer {
 #playerMat #buttonContainer {
   display: table-cell;
   vertical-align: middle;
+}
+
+#playerMatCover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 
 /*************************** Classes ******************************/
@@ -115,7 +152,8 @@ fieldset {
   text-align: center;
 }
 #storyHeading fieldset {
-  padding-top: 0.25em;
+  padding-top: 0;
+  padding-bottom: 0.5em;
   border-color: black;
   background-color: #121212;
 }
@@ -127,6 +165,7 @@ fieldset {
   border-radius: 2px;
   font-size: 12pt;
   font-weight: bold;
+  color: grey;
 }
 #storyHeading h1 {
   color: rgba(255, 0, 0, 0.75);
@@ -136,14 +175,17 @@ fieldset {
 #storyHeading h3 {
   font-size: smaller;
   padding: 0.5em;
+  color: grey;
 }
 
-#storyText fieldset {
+#storyBody fieldset {
   border-radius: 5px;
   border: 1px solid grey;
   background-color: #292929;
+  margin-top: 0.5em;
 }
-#storyText legend {
+#storyBody legend {
+  padding: 0.1em;
   padding-left: 0.5em;
   padding-right: 0.5em;
   font-weight: bold;
@@ -152,10 +194,10 @@ fieldset {
   border-radius: 10px;
   box-shadow: 2px -2px 5px black, -1px -1px 3px black;
 }
-#storyText .dm {
+#storyBody .dm {
   text-align: left;
 }
-#storyText .player {
+#storyBody .player {
   text-align: right;
 }
 
