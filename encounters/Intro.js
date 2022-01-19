@@ -17,13 +17,13 @@ var Intro = (function(){
 
     var rulesShort = function() {
         Player.dndNoob = false;
-        main.writeStory('DM', "Ok cool, I won't hold your hand through all the basic stuff then. FYI, this campaign is based entirely on the <a href='https://dnd.wizards.com/articles/features/basicrules' target=_'blank'>D&D Basic Rules</a>. You can reference them if you'd like, but you don't need to since the code will take care of all the rules stuff for you.");
+        main.writeStory('DM', "Ok cool, I won't hold your hand through all the basic stuff then. FYI, this campaign is based entirely on the <a href='https://dnd.wizards.com/articles/features/basicrules' target='_blank'>D&D Basic Rules</a>. You can reference them if you'd like, but you don't need to since the code will take care of all the rules stuff for you.");
         main.createBtnOpts(['Got it.', 'Wait, I want you to hold my hand.'], [textAdventure, function(){rulesLong2("No worries, I got you. ")}])
     }
 
     var rulesLong = function() {
         Player.dndNoob = true;
-        main.writeStory('DM', "That's ok, this game is designed to familiarize you with the rules and language of D&D. You can read the <a href='https://dnd.wizards.com/articles/features/basicrules' target=_'blank'>D&D Basic Rules</a> if you're curious, but it's not necessary to play this text adventure. I'll explain the rules and terms as they come up.");
+        main.writeStory('DM', "That's ok, this game is designed to familiarize you with the rules and language of D&D. You can read the <a href='https://dnd.wizards.com/articles/features/basicrules' target='_blank'>D&D Basic Rules</a> if you're curious, but it's not necessary to play this text adventure. I'll explain the rules and terms as they come up.");
         main.createBtnOpts(['Got it.', "Don't bother explaining the rules."], [rulesLong2, notANoob]);
     }
 
