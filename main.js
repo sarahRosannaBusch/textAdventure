@@ -1,8 +1,11 @@
 "use strict"
 
-/** @brief  d&d game
- *  @author Sarah Rosanna Busch
- *  @date   4 Oct 2021
+/** 
+ * @file main.js
+ * @brief  D&D Backstories main functionality
+ * @author Sarah Rosanna Busch
+ * @version 0.1
+ * @date   9 Feb 2022
  */
 
 var main = (function() {
@@ -57,20 +60,7 @@ var main = (function() {
         } else {
             elem.playerMatCover.style.pointerEvents = "none"; //click
         }
-    }
-
-    that.writeStory = function(speaker, text) {
-        bubbleCount++;
-        var bubbleId = "textBubble_" + bubbleCount;
-        var speakerClass = (speaker === "You") ? "player" : "dm";
-        elem.storyBody.innerHTML += "<div id=" + bubbleId + " class='" + speakerClass + "'><fieldset><legend>" + speaker 
-            + "</legend><p></p></fieldset></div>";
-        var bubbleId = "textBubble_" + bubbleCount;
-        var bubbleElem = f.html.getElem('#' + bubbleId);
-        var p = f.html.getElem("p", bubbleElem);
-        p.innerHTML = text;
-        bubbleElem.scrollIntoView(true); //false to scroll to bottom
-    }
+    }    
 
     that.scroll = function() {
         if(elem.storyText.scrollTop > 25) {
@@ -85,6 +75,19 @@ var main = (function() {
         } else {
             elem.dmBtm.style.display = 'none';
         }
+    }
+
+    that.writeStory = function(speaker, text) {
+        bubbleCount++;
+        var bubbleId = "textBubble_" + bubbleCount;
+        var speakerClass = (speaker === "You") ? "player" : "dm";
+        elem.storyBody.innerHTML += "<div id=" + bubbleId + " class='" + speakerClass + "'><fieldset><legend>" + speaker 
+            + "</legend><p></p></fieldset></div>";
+        var bubbleId = "textBubble_" + bubbleCount;
+        var bubbleElem = f.html.getElem('#' + bubbleId);
+        var p = f.html.getElem("p", bubbleElem);
+        p.innerHTML = text;
+        bubbleElem.scrollIntoView(true); //false to scroll to bottom
     }
 
     //param opts = array of strings to be printed in buttons
@@ -103,139 +106,64 @@ var main = (function() {
         }
     }
 
-    that.startSentence = function() { 
-        sentence = {
-            move: '',
-            action: '',
-            connector: '',
-            target: '',
-            moveResult: '',
-            actionResult: ''
-        };
-        elem.wordPicker.style.display = 'inline-block';
-        elem.sentence.innerHTML = pc.getName('first');
-        let textOpts = _getNextWordOpts('', '');
-        _showOptions(textOpts);
-    }
+    that.sentenceBuilder = function(sentenceOpts, callback) {
+        let numOpts = sentenceOpts.length;
+        const RESULT = 0; //result is always first in the array,
+        let wordIdx = 1; //followed by the word options
+        let chosenWords = [];
 
-    //populate word selector with next possible options
-    function _showOptions(textOpts) {   
-        elem.wordPicker.innerHTML = '';
-        let opt = f.html.spawn(elem.wordPicker, 'option');
-        opt.value = opt.innerText = '';
-        let numOpts = 0;
-        let choice = '';
-        let choiceType = '';
-        for(let text in textOpts) {
-            opt = f.html.spawn(elem.wordPicker, 'option');
-            opt.value = opt.innerText = choice = text;
-            choiceType = textOpts[text];
-            opt.setAttribute("data-type", choiceType);
-            numOpts++;
+        //track indices of remaining sentenceOpts
+        let possibleResults = []; 
+        for(let i = 0; i < numOpts; i++) {
+            possibleResults.push(i);
         }
-        if(numOpts === 1) {
-            _writeWords(choice, choiceType);
-        }
-        elem.wordPicker.onchange = function() {
-            let idx = this.selectedIndex;
-            let selectedType = this.options[idx].getAttribute('data-type');
-            _writeWords(this.value, selectedType);
-        }
-    }
 
-    //event handler for when user selects from word options
-    //params are words and type chosen
-    function _writeWords(words, type) {
-        if(words === '.' || type === 'target') {
-            if(type === 'target') {
-                elem.sentence.innerHTML += ' ' + words;
-            }
-            elem.sentence.innerHTML += '.';
-            elem.wordPicker.style.display = 'none';
-            encounter.playResult();
-        } else {                   
-            elem.sentence.innerHTML += ' ' + words;
-            sentence[type] = words;
-            if(type === 'move' || type === 'action') {
-                sentence[type + 'Result'] = PlayerWords.getResult(words, type);
-            }
-            if(type === 'move' && sentence.moveResult === 'change posture') {
-                pc.changePosture(words);
-            }
-            let nextWordOpts = _getNextWordOpts(words, type);
-            _showOptions(nextWordOpts);
-        }
-    }
-
-    //determines next word choices
-    //returns object list in form 'choice':'type'
-    function _getNextWordOpts(lastChoice, lastType) {
-        let ret = {};
-
-        if(lastChoice === "") {
-            let moves = PlayerWords.getWords('move');
-            let actions = PlayerWords.getWords('action');
-            _addToList(moves, 'move');
-            _addToList(actions, 'action');
-        } else {
-            switch(lastType) {
-                case 'action':
-                    //TODO: combat?
-                    //no break
-                case 'move': 
-                    let connectors = PlayerWords.getWords('connector');
-                    _addToList(connectors, 'connector');
-                    break;
-                case 'connector':             
-                    if(sentence.connector === 'and') {       
-                        let actions = PlayerWords.getWords('action');
-                        _addToList(actions, 'action');
-                    }
-                    let targets = encounter.getTargets();
-                    _addToList(targets, 'target');
-                    break;
-                default: break;
-            }
-        }
+        createUserOptions();
         
-        function _addToList(words, type) {
-            for(let key in words) {
-                let choice = words[key];
-                let include = false;
-                //first include
-                if(choice.if) {
-                    let posture = pc.getPosture();
-                    if(choice.if.posture && choice.if.posture.includes(posture)) {
-                        include = true;
+        function createUserOptions() {            
+            //find next word options to show user
+            let wordOpts = {};
+            for(let i = 0; i < numOpts; i++) {
+                if(!possibleResults.includes(i)) continue;
+                let sentence = sentenceOpts[i];
+                if(sentence[wordIdx]) { //sentence arrays are not all same length
+                    let words = sentence[wordIdx]
+                    if(!wordOpts[words]) {
+                        wordOpts[words] = [];
                     }
-                    if(choice.if.lastChoice && choice.if.lastChoice.includes(lastChoice)) {
-                        include = true;
-                    }
-                }
-                //then exclude
-                if(include && choice.xif) {
-                    if(choice.xif.condition) {
-                        let conditions = pc.getConditions();
-                        for(let i = 0; i < conditions.length; i++) {
-                            let c = conditions[i];
-                            if(choice.xif.condition.includes(c)) {
-                                include = false;
-                                continue;
-                            }
-                        }
-                    }
-                    if(choice.xif.zeroTargets) {
-                        //TODO: get num targets
-                    }
-                }
-                if(include) {
-                    ret[key] = type;
+                    wordOpts[words].push(i); //track indices of remaining possibilities
+                } else {
+                    console.log('how did we get here?');
                 }
             }
+            
+            //create buttons
+            f.html.empty(elem.buttonContainer);
+            for(let key in wordOpts) {
+                var btn = f.html.spawn(elem.buttonContainer, 'button', key);
+                btn.innerHTML = key;
+                btn.data = wordOpts[key];
+                btn.onclick = (e) => {
+                    let lastWords = e.currentTarget.id;
+                    possibleResults = e.currentTarget.data;
+                    chosenWords.push(lastWords);
+                    console.log(JSON.stringify(lastWords));
+                    console.log(JSON.stringify(possibleResults));
+                    if(lastWords.endsWith('.')) {
+                        that.writeStory('You', chosenWords.join(''));
+                        if(possibleResults.length !== 1) {
+                            console.error('hmmmm....')
+                        }
+                        callback(sentenceOpts[possibleResults][RESULT]); //should just be one at this point
+                    } else {
+                        wordIdx++;
+                        createUserOptions();
+                    }
+                }
+            }  
         }
 
-        return ret;
-    }    
+    }
 
     return that;
 }());
