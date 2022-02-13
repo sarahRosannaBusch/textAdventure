@@ -33,9 +33,6 @@ var main = (function() {
         elem.dmBtm = f.html.getElem('#dmBtm');
         elem.playerOpts = f.html.getElem('#playerOpts');
         elem.playerMatCover = f.html.getElem('#playerMatCover');
-        elem.sentenceBuilder = f.html.getElem('#sentenceBuilder');
-        elem.sentence = f.html.getElem('#sentence');
-        elem.wordPicker = f.html.getElem('#wordPicker');
         elem.dmTable = f.html.getElem('#dmTable');
         elem.buttonContainer = f.html.getElem('#buttonContainer');
         elem.dialogs = f.html.getElem('dialogs');
@@ -88,6 +85,7 @@ var main = (function() {
         var p = f.html.getElem("p", bubbleElem);
         p.innerHTML = text;
         bubbleElem.scrollIntoView(true); //false to scroll to bottom
+        return bubbleElem;
     }
 
     //param opts = array of strings to be printed in buttons
@@ -107,6 +105,8 @@ var main = (function() {
     }
 
     that.sentenceBuilder = function(sentenceOpts, callback) {
+        let bubbleElem = null;
+        let p = null;
         let numOpts = sentenceOpts.length;
         const RESULT = 0; //result is always first in the array,
         let wordIdx = 1; //followed by the word options
@@ -117,10 +117,10 @@ var main = (function() {
         for(let i = 0; i < numOpts; i++) {
             possibleResults.push(i);
         }
-
+        
         createUserOptions();
         
-        function createUserOptions() {            
+        function createUserOptions() {           
             //find next word options to show user
             let wordOpts = {};
             for(let i = 0; i < numOpts; i++) {
@@ -141,16 +141,21 @@ var main = (function() {
             f.html.empty(elem.buttonContainer);
             for(let key in wordOpts) {
                 var btn = f.html.spawn(elem.buttonContainer, 'button', key);
+                btn.className = 'words';
                 btn.innerHTML = key;
                 btn.data = wordOpts[key];
                 btn.onclick = (e) => {
+                    if(bubbleElem === null) {
+                        bubbleElem = that.writeStory('You', '...');
+                        p = f.html.getElem('p', bubbleElem);
+                    }
                     let lastWords = e.currentTarget.id;
                     possibleResults = e.currentTarget.data;
                     chosenWords.push(lastWords);
+                    p.innerHTML = chosenWords.join('');
                     console.log(JSON.stringify(lastWords));
                     console.log(JSON.stringify(possibleResults));
-                    if(lastWords.endsWith('.')) {
-                        that.writeStory('You', chosenWords.join(''));
+                    if(lastWords.endsWith('.') || lastWords.endsWith('!') || lastWords.endsWith('?')) {
                         if(possibleResults.length !== 1) {
                             console.error('hmmmm....')
                         }
@@ -160,9 +165,9 @@ var main = (function() {
                         createUserOptions();
                     }
                 }
-            }  
+            } 
+            bubbleElem.scrollIntoView(true);
         }
-
     }
 
     return that;

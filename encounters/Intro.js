@@ -47,9 +47,9 @@ var Intro = (function(){
     var concept = function() {
         let extraWords = "";
         switch(Player.dndNoob) {
-            case 'Pro': extraWords = DM[2][0]; break;
-            case 'Mid': extraWords = DM[2][1]; break;
-            case 'Noob': extraWords = DM[2][2]; break;
+            case 'Pro': extraWords = DM[2][2]; break;
+            case 'Mid': extraWords = DM[2][0]; break;
+            case 'Noob': extraWords = DM[2][1]; break;
         }
         main.writeStory('DM', extraWords + "<br><br>" + DM[3][0]);
         main.createBtnOpts(['Go on...'], [textAdventure]);
@@ -57,7 +57,10 @@ var Intro = (function(){
 
     var textAdventure = function() {
         main.writeStory('DM', DM[4][0]);
-        main.createBtnOpts(["I'll only slay the evil monsters.", "I'm down to sow a little chaos."], [textAdventure2, textAdventure2]);
+        main.sentenceBuilder(SENTENCE_1(), function(result) {
+            console.log(result);
+            textAdventure2();
+        });
     }
 
     var textAdventure2 = function() {
@@ -121,9 +124,9 @@ var Intro = (function(){
             "That's ok, this game is designed to familiarize you with the rules and language of D&D. You can read the <a href='https://dnd.wizards.com/articles/features/basicrules' target='_blank'>D&D 5e Basic Rules</a> if you're curious, but it's not necessary to play this text adventure. I'll explain the rules and terms as they come up."
         ],
         [
-            "Good luck!",
+            "You're gonna do great.",
             "No worries, I got you.",
-            "Got it. No hand-holding for you."
+            "Alrighty then, no hand-holding for you."
         ],
         [
             "All you really need to know to get started is that I have created a fantasy world full of lively characters, fearsome monsters, and epic adventures. I'll tell you all about it as we go. You, the player, will be playing a single character. An adventurer ready to start questing to prove their worth. You get to decide who this character is and what they do, through exploration, social interaction, and combat."
@@ -132,7 +135,7 @@ var Intro = (function(){
             "Normally, in D&D, you would come to the table with a level-one character already decked out in adventuring gear and with a small arsenal of supernatural abilities.But how hard was it for you to master those spells? How many hours did it take to become proficient with that sword? Where the hell did this random trinket come from? Was there a defining moment when you chose good over evil? Law over chaos?"
         ],
         [
-            "You can certainly try, we'll see what the dice have to say. For the purposes of this text-adventure, I have created four level-zero characters for you to choose from. You will be picking up their story as they take their very first step towards becoming a hero. Guide them on their journey wisely. Each choice will help determine exactly what kind of hero they will become."
+            "You can certainly try. For the purposes of this text-adventure, I have created four level-zero characters for you to choose from. You will be picking up their story as they take their very first step towards becoming a hero. Guide them on their journey wisely. Each choice will help determine exactly what kind of hero they will become."
         ],
         [
             "Character choices: <br><br> 1. A dwarven acolyte who aspires to channel the power of a god. <br><br> 2. An elven soldier who aims to become a champion on the battlefield. <br><br> 3. A human bookworm itching to test their carefully crafted spells. <br><br> 4. A halfling with sticky fingers and an air of mystery."
@@ -149,13 +152,123 @@ var Intro = (function(){
         ["Pro", "Yes", "."],
         ["Pro", "Yes", ", ", "I've played ", "5th edition."],
         ["Mid", "Yes", ", ", "I've played ", "an older version."],
-        ["Mid", "Yes", ", ", "I've played ", "other RPGs."],
         ["Noob", "No", "."],
         ["Pro", "No", ", ", "but I ", "know ", "the 5e rules."],
         ["Mid", "No", ", ", "but I ", "know ", "older edition rules."],
         ["Mid", "No", ", ", "but I ", "have ", "watched people play."],
-        ["Noob", "No", ", ", "but I ", "have ", "heard of it."]
+        ["Noob", "No", ", ", "but I ", "have ", "heard of it."],
+        ["Mid", "No", ", ", "but I ", "have ", "played other RPGs."],
     ];
+
+    
+    const SENTENCE_1 = function() {
+        let sentence = [
+            [0, "I'll ", "slay all the ", "monsters."],
+            [1, "I'll ", "slay all the ", "beasts."],
+            [2, "I'll ", "slay all the ", "dragons."],
+            [3, "I'll ", "slay all the ", "zombies."],
+            [4, "I'm ", "down to ", "find all the ", "loot."],
+            [5, "I'm ", "down to ", "find all the ", "secret doors."],
+            [6, "I'm ", "down to ", "find all the ", "traps."],
+            [7, "I'm ", "down to ", "sow a little ", "chaos."],
+            [8, "I'm ", "down to ", "sow a little ", "kindness."],
+            [9, "I'm ", "down to ", "pick some ", "locks."],
+            [10, "I'm ", "down to ", "pick some ", "pockets."]
+        ];
+
+        let result = 11;
+
+        let goodMonsters = [
+            'beasts.',
+            'dragons.',
+            'fey.',
+            'giants.',
+            'constructs.',
+            'elementals.',
+            'humanoids.',
+            'celestials.'
+        ];
+
+        let evilMonsters = [
+            'beasts.',
+            'dragons.',
+            'fiends.',
+            'fey.',
+            'giants.',
+            'aberrations.',
+            'constructs.',
+            'elementals.',
+            'oozes.',
+            'plants.',
+            'monstrosities.',
+            'humanoids.',
+            'undead.'
+        ];
+
+        let numGoodMonsters = goodMonsters.length;
+        let numEvilMonsters = evilMonsters.length;
+
+        for(let i = 0; i < numGoodMonsters; i++) {
+            sentence.push([result, "I'll ", "slay all the ", "good ", goodMonsters[i]]);
+            result++;
+            sentence.push([result, "I'm ", "down to ", "slay all the ", "good ", goodMonsters[i]]);
+            result++;
+        }
+
+        for(let i = 0; i < numEvilMonsters; i++) {
+            sentence.push([result, "I'll ", "slay all the ", "evil ", evilMonsters[i]]);
+            result++;
+            sentence.push([result, "I'm ", "down to ", "slay all the ", "evil ", evilMonsters[i]]);
+            result++;
+        }
+
+        let adjectives = [
+            'mightiest ',
+            'most powerful ',
+            'sneakiest ',
+            'most self-righteous ',
+            'kindest ',
+            'goofiest ',
+            'greediest ',
+            'sexiest ',
+            'most successful ',
+            'richest '
+        ];
+
+        let nouns = [
+            'rogue ',
+            'wizard ',
+            'cleric ',
+            'fighter ',
+            'bad-ass ',
+            'adventurer '
+        ];
+
+        let terminators = [
+            'ever!',
+            'off all time!',
+            'in the world!',
+            'in my family!',
+            'from my hometown!'
+        ];
+
+        let numAdj = adjectives.length;
+        let numNouns = nouns.length;
+        let numTerm = terminators.length;
+
+        for(let i = 0; i < numAdj; i++) {
+            for(let j = 0; j < numNouns; j++) {
+                for(let k = 0; k < numTerm; k++) {
+                    sentence.push([result, "I'll ", "be the ", adjectives[i], nouns[j], terminators[k]]);
+                    result++;
+                    sentence.push([result, "I'm ", "gonna ", "be the ", adjectives[i], nouns[j], terminators[k]]);
+                    result++;
+                }
+            }
+        }
+
+        return sentence;
+    }
 
     return that;
 }());

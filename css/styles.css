@@ -124,10 +124,26 @@ header, footer {
   padding: 0.5em;
   text-align: center;
   display: table;
+  overflow-y: auto;
 }
 #playerMat #buttonContainer {
   display: table-cell;
   vertical-align: middle;
+  overflow-y: auto;
+}
+#playerMat button {
+  padding: 1em;
+  margin: 0.75em;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+  background-color: #090909;
+  border: none;
+  box-shadow: 1px 1px 5px rgba(255, 0, 0, 0.75), -1px -1px 5px rgba(255, 0, 0, 0.75);
+  font-size: 13pt;
+  min-width: 40%;
+}
+#playerMat button.words {
+  min-width: 5em;
 }
 
 #playerMatCover {
@@ -199,19 +215,6 @@ fieldset {
 }
 #storyBody .player {
   text-align: right;
-}
-
-button {
-  padding: 1em;
-  margin: 0.75em;
-  margin-top: 0.25em;
-  margin-bottom: 0.25em;
-  background-color: #090909;
-  border: none;
-  box-shadow: 1px 1px 5px rgba(255, 0, 0, 0.75), -1px -1px 5px rgba(255, 0, 0, 0.75);
-  min-width: 5em;
-  font-size: 13pt;
-  min-width: 40%;
 }
 
 /* default styles are for phone-sized screens; layout is responsive: */
