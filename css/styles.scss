@@ -138,11 +138,29 @@ header, footer { //indicators, error messages
     flex: 0.25;
     padding: 0.5em;
     text-align: center;
-    display: table;
-
+    display: table;  
+    overflow-y: auto;
+    
     #buttonContainer {
         display: table-cell;
         vertical-align: middle;
+        overflow-y: auto;
+    }  
+
+    button {
+        padding: 1em;
+        margin: 0.75em;
+        margin-top: 0.25em;
+        margin-bottom: 0.25em;
+        background-color: #090909;
+        border: none;
+        box-shadow: 1px 1px 5px $red, -1px -1px 5px $red;
+        font-size: 13pt;
+        min-width: 40%;
+    }
+
+    button.words { //for sentence builder
+        min-width: 5em;
     }
 }
 
@@ -226,19 +244,6 @@ fieldset {
     .player {
         text-align: right;
     }
-}
-
-button {
-    padding: 1em;
-    margin: 0.75em;
-    margin-top: 0.25em;
-    margin-bottom: 0.25em;
-    background-color: #090909;
-    border: none;
-    box-shadow: 1px 1px 5px $red, -1px -1px 5px $red;
-    min-width: 5em;
-    font-size: 13pt;
-    min-width: 40%;
 }
 
 /* default styles are for phone-sized screens; layout is responsive: */
