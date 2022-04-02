@@ -132,7 +132,7 @@ var Intro = (function(){
             "All you really need to know to get started is that I have created a fantasy world full of lively characters, fearsome monsters, and epic adventures. I'll tell you all about it as we go. You, the player, will be playing a single character. An adventurer ready to start questing to prove their worth. You get to decide who this character is and what they do, through exploration, social interaction, and combat."
         ],
         [
-            "Normally, in D&D, you would come to the table with a level-one character already decked out in adventuring gear and with a small arsenal of supernatural abilities.But how hard was it for you to master those spells? How many hours did it take to become proficient with that sword? Where the hell did this random trinket come from? Was there a defining moment when you chose good over evil? Law over chaos?"
+            "Normally, in D&D, you would come to the table with a level-one character already decked out in adventuring gear and with a small arsenal of supernatural abilities. But how hard was it for you to master those spells? How many hours did it take to become proficient with that sword? Where the hell did this trinket come from? Was there a defining moment when you chose good over evil? Law over chaos?"
         ],
         [
             "You can certainly try. For the purposes of this text-adventure, I have created four level-zero characters for you to choose from. You will be picking up their story as they take their very first step towards becoming a hero. Guide them on their journey wisely. Each choice will help determine exactly what kind of hero they will become."
