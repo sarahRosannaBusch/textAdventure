@@ -70,7 +70,9 @@ var f = (function(){
             xhr.onreadystatechange = function() {
                 if(this.readyState === 4) { //request finished and response is ready
                     if(this.status === 200) { //ok
-                        callback(this.responseText);
+                        if(callback) {
+                            callback(this.responseText);
+                        }
                     }
                 }
             };

@@ -98,7 +98,9 @@ var main = (function() {
             btn.innerHTML = opts[i];
             btn.callback = callbacks[i];
             btn.onclick = function() {
-                main.writeStory('You', this.innerText);
+                let choice = this.innerText;
+                main.writeStory('You', choice);
+                f.http.post('playerChoice', choice);
                 this.callback();
             }
         }
@@ -152,13 +154,15 @@ var main = (function() {
                     let lastWords = e.currentTarget.id;
                     possibleResults = e.currentTarget.data;
                     chosenWords.push(lastWords);
-                    p.innerHTML = chosenWords.join('');
-                    console.log(JSON.stringify(lastWords));
-                    console.log(JSON.stringify(possibleResults));
+                    let sentence = chosenWords.join('');
+                    p.innerHTML = sentence;
+                    //console.log(JSON.stringify(lastWords));
+                    //console.log(JSON.stringify(possibleResults));
                     if(lastWords.endsWith('.') || lastWords.endsWith('!') || lastWords.endsWith('?')) {
                         if(possibleResults.length !== 1) {
                             console.error('hmmmm....')
                         }
+                        f.http.post('playerSentence', sentence);
                         callback(sentenceOpts[possibleResults][RESULT]); //should just be one at this point
                     } else {
                         wordIdx++;
@@ -166,7 +170,9 @@ var main = (function() {
                     }
                 }
             } 
-            bubbleElem.scrollIntoView(true);
+            if(bubbleElem){
+                bubbleElem.scrollIntoView(true);
+            }
         }
     }
 
