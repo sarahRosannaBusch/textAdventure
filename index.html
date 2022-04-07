@@ -33,8 +33,10 @@
                 <!-- text added dynamically here -->
             </div>
         </div>
+        <!-- fade to show you can scroll up and/or down-->
         <div id='dmTop' style='display:none'></div>
         <div id='dmBtm' style='display:none'></div>
+        <div id="diceBox"></div>
     </section>
     <section id='playerMat'>
         <div id='buttonContainer'></div>
@@ -71,7 +73,16 @@
 
 <!-- *********** Scripts ************ -->
 
-<script src='libs/f.js'></script>
+<!-- dom helpers -->
+<script src='libs/f.js'></script> 
+
+<!-- dice roller -->
+<script src="libs/dice/libs/three.min.js"></script>
+<script src="libs/dice/libs/cannon.min.js"></script>
+<script src="libs/dice/libs/teal.js"></script>
+<script src="libs/dice/dice.js"></script>
+
+<!-- game -->
 <script src='main.js'></script>
 <script src='Player.js'></script>
 <script src='refs/backgrounds/Acolyte.js'></script>

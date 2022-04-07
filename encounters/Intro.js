@@ -11,13 +11,18 @@ var Intro = (function(){
     var that = {};
 
     that.start = function() {
+        //hello();
+        diceIntro();
+    }
+
+    function hello() {
         main.writeStory('DM', DM[0][0]);
         //main.createBtnOpts(['Yes', 'Sort of', 'No'], [basicRules0, basicRules1, basicRules2]);
         main.sentenceBuilder(SENTENCE_0, function(result) {
             switch(result) {
-                case "Pro": basicRules0(); break;
-                case "Mid": basicRules1(); break;
-                case "Noob": basicRules2(); break;
+                case "pro": basicRules0(); break;
+                case "mid": basicRules1(); break;
+                case "noob": basicRules2(); break;
                 default: console.log('unknown noob lvl: ' + JSON.stringify(result)); break;
             }
         });
@@ -25,18 +30,18 @@ var Intro = (function(){
 
     var basicRules0 = function() {
         main.writeStory('DM', DM[1][0]);
-        main.createBtnOpts(['Got it.', 'Wait, I want you to hold my hand.'], [function(){confirmNoob("Pro");}, function(){confirmNoob("Noob");}])
+        main.createBtnOpts(['Got it.', 'Wait, I want you to hold my hand.'], [function(){confirmNoob("pro");}, function(){confirmNoob("noob");}])
     }
     
     var basicRules1 = function() {
         main.writeStory('DM', DM[1][1]);
-        main.createBtnOpts(['Got it.', "I don't trust my gut, explain the rules to me.", "Don't bother explaining the rules."], [function(){confirmNoob("Mid");}, function(){confirmNoob("Noob");}, function(){confirmNoob("Pro");}]);
+        main.createBtnOpts(['Got it.', "I don't trust my gut, explain the rules to me.", "Don't bother explaining the rules."], [function(){confirmNoob("mid");}, function(){confirmNoob("noob");}, function(){confirmNoob("pro");}]);
     }
 
     var basicRules2 = function() {
         Player.dndNoob = true;
         main.writeStory('DM', DM[1][2]);
-        main.createBtnOpts(['Got it.', "Don't bother explaining the rules."], [function(){confirmNoob("Noob");}, function(){confirmNoob("Pro");}]);
+        main.createBtnOpts(['Got it.', "Don't bother explaining the rules."], [function(){confirmNoob("noob");}, function(){confirmNoob("pro");}]);
     }
 
     var confirmNoob = function(noob) {
@@ -47,9 +52,9 @@ var Intro = (function(){
     var concept = function() {
         let extraWords = "";
         switch(Player.dndNoob) {
-            case 'Pro': extraWords = DM[2][2]; break;
-            case 'Mid': extraWords = DM[2][0]; break;
-            case 'Noob': extraWords = DM[2][1]; break;
+            case 'pro': extraWords = DM[2][2]; break;
+            case 'mid': extraWords = DM[2][0]; break;
+            case 'noob': extraWords = DM[2][1]; break;
         }
         main.writeStory('DM', extraWords + "<br><br>" + DM[3][0]);
         main.createBtnOpts(['Go on...'], [textAdventure]);
@@ -86,7 +91,7 @@ var Intro = (function(){
     }
 
     var pickHuman = function() {
-        Player.charaName = "Darvin";
+        Player.charName = "Darvin";
         main.writeStory('DM', DM[7][2]);
         confirmCharacter();
     }
@@ -98,8 +103,77 @@ var Intro = (function(){
     }
 
     function confirmCharacter() {
-        main.createBtnOpts(["End demo.", "Choose a different character."], [theEnd, characterPicker]);
+        main.createBtnOpts(["Choose a different character.", "Let's roll some dice!"], [characterPicker, diceIntro]);
     }
+
+    function diceIntro() {
+        let p1 = "";
+        switch(Player.dndNoob) {
+            case "noob": 
+                p1 = DM[8][0];
+                break;
+            case "mid":
+                p1 = DM[8][1];
+                break;
+            case "pro":
+                p1 = DM[8][2];
+                break;
+            default:
+                console.log('unknown dndNoob level: ' + Player.dndNoob);
+                break;
+        }
+        main.writeStory('DM', p1 + "<br><br>" + DM[9]);
+        main.createBtnOpts(["Roll for sex."], [rollForSex]);
+    }
+
+    function rollForSex() {
+        main.rollDice('1d20', function(result) {
+            let roll = result.resultTotal;
+            console.log(roll);
+            main.createBtnOpts(
+                ["I rolled a " + roll], 
+                [
+                    function() {
+                        let p1 = null;
+                        if(roll === 1) {
+                            p1 = DM[10][0];
+                        } else if(roll === 20) {
+                            p1 = DM[10][3];
+                        } else {
+                            if(roll % 2 === 0) { //evens
+                                p1 = DM[10][1];
+                            } else {
+                                p1 = DM[10][2];
+                            }
+                        }
+                        main.writeStory('DM', p1 + "<br><br>" + DM[11]);
+                        main.createBtnOpts([
+                            "she/her",
+                            "he/him",
+                            "they/them",
+                            "he/they",
+                            "she/they",
+                            "any/all"
+                        ], [setPronouns]);
+                    }
+                ]
+            );
+        });
+    }
+
+    function setPronouns(pronouns) {
+        Player.pronouns = pronouns;
+        rollForSize();
+    }
+
+    function rollForSize() {   
+        main.createBtnOpts(["Roll for height."], []);
+    }
+
+    function rollForColours() {
+        
+    }  
+
 
     var theEnd = function() {      
         main.writeStory('DM', "That's it for now. This game is still under development, so come back soon to begin " + Player.charName + "'s story.");
@@ -145,19 +219,36 @@ var Intro = (function(){
             "Good choice! You will be playing Rhinn Galanodel, the wood elf soldier training to become an epic fighter.",
             "Good choice! You will be playing Darvyn Dotsk, the human sage who's studying to become a powerful wizard.",
             "Good choice! You will be playing Poe Ungart, the lightfoot halfling criminal who was born to be a sneaky rogue."
+        ],
+        [
+            "In D&D, the DM describes the scene then the player describes what their character tries to do. Whenever an outcome is uncertain, we roll dice to see what happens.",
+            "As a reminder, in RPGs we roll dice whenever the outcome of an action is uncertain.", 
+            "As you know, in D&D we roll dice whenever the outcome of an action is uncertain."
+        ],
+        [
+            "You can think of the dice as fate, chance, the Universe, God, Satan, or whatever works for you. Basically, the dice decide the things that we don't get to decide for ourselves. For example, we don't get to choose the body we are born with. So let's roll a d20 to see what you're working with. Evens for female, odds for male."
+        ],
+        [
+            "Sorry to say this friend, but no sex for you. You're smooth as a Ken doll down there.",
+            "Congratulations, you get a vagina!",
+            "Congratulations, you get a penis!",
+            "Natural 20! I think that means you get both a penis and a vagina!"
+        ],
+        [
+            "Hopefully you're happy with what the dice have given you. But if you're not, you can seek out ways to change it in game. Don't worry though, sex has no bearing on the choices you can make or your ability to become a hero. Common language does tend to be gendered, however, so pick your character's preferred pronouns."
         ]
     ];
 
     const SENTENCE_0 = [
-        ["Pro", "Yes", "."],
-        ["Pro", "Yes", ", ", "I've played ", "5th edition."],
-        ["Mid", "Yes", ", ", "I've played ", "an older version."],
-        ["Noob", "No", "."],
-        ["Pro", "No", ", ", "but I ", "know ", "the 5e rules."],
-        ["Mid", "No", ", ", "but I ", "know ", "older edition rules."],
-        ["Mid", "No", ", ", "but I ", "have ", "watched people play."],
-        ["Noob", "No", ", ", "but I ", "have ", "heard of it."],
-        ["Mid", "No", ", ", "but I ", "have ", "played other RPGs."],
+        ["pro", "Yes", "."],
+        ["pro", "Yes", ", ", "I've played ", "5th edition."],
+        ["mid", "Yes", ", ", "I've played ", "an older version."],
+        ["noob", "No", "."],
+        ["pro", "No", ", ", "but I ", "know ", "the 5e rules."],
+        ["mid", "No", ", ", "but I ", "know ", "older edition rules."],
+        ["mid", "No", ", ", "but I ", "have ", "watched people play."],
+        ["noob", "No", ", ", "but I ", "have ", "heard of it."],
+        ["mid", "No", ", ", "but I ", "have ", "played other RPGs."],
     ];
 
     

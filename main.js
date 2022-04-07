@@ -11,9 +11,10 @@
 var main = (function() {
     var that = {};
     var elem = {};
-    var pc = null; //selected character
-    var encounter = null; //currently loaded encounter or zone    
-    var bubbleCount = 0; //number of text bubbles displayed
+    var vars = {
+        bubbleCount: 0, //number of text bubbles displayed
+        diceShowing: false
+    }  
     
     var sentence = {
         move: '',
@@ -23,6 +24,8 @@ var main = (function() {
         moveResult: '',
         actionResult: ''
     };
+
+    var diceRoller = null;
 
     that.init = function() {
         elem.main = f.html.getElem('main');
@@ -34,6 +37,7 @@ var main = (function() {
         elem.playerOpts = f.html.getElem('#playerOpts');
         elem.playerMatCover = f.html.getElem('#playerMatCover');
         elem.dmTable = f.html.getElem('#dmTable');
+        elem.diceBox = f.html.getElem('#diceBox');
         elem.buttonContainer = f.html.getElem('#buttonContainer');
         elem.dialogs = f.html.getElem('dialogs');
         elem.notebook = f.html.getElem('#notebook');
@@ -42,12 +46,27 @@ var main = (function() {
         elem.notes = f.html.getElem('#bags');
         elem.spells = f.html.getElem('#spells');
         
-        // pc = Travok; //TODO: let user select
-        // encounter = Travok.getEncounter(); 
-        // encounter.start(pc);
+        diceRoller = new DICE.dice_box(elem.diceBox);
+        showDiceBox(false);
 
-        bubbleCount = 0;
+        vars.bubbleCount = 0;
         Intro.start();
+    }
+
+    that.rollDice = function(diceToRoll, callback) {
+        showDiceBox(true);
+        diceRoller.setDice(diceToRoll);
+        diceRoller.start_throw(null, callback); //result will be passed to callback
+    }
+
+    function showDiceBox(show) {
+        if(show) {
+            vars.diceShowing = true;
+            elem.diceBox.style.display = 'block';
+        } else {
+            vars.diceShowing = false;
+            elem.diceBox.style.display = 'none';
+        }
     }
 
     //param is bool
@@ -75,12 +94,13 @@ var main = (function() {
     }
 
     that.writeStory = function(speaker, text) {
-        bubbleCount++;
-        var bubbleId = "textBubble_" + bubbleCount;
+        if(vars.diceShowing) showDiceBox(false);
+        vars.bubbleCount++;
+        var bubbleId = "textBubble_" + vars.bubbleCount;
         var speakerClass = (speaker === "You") ? "player" : "dm";
         elem.storyBody.innerHTML += "<div id=" + bubbleId + " class='" + speakerClass + "'><fieldset><legend>" + speaker 
             + "</legend><p></p></fieldset></div>";
-        var bubbleId = "textBubble_" + bubbleCount;
+        var bubbleId = "textBubble_" + vars.bubbleCount;
         var bubbleElem = f.html.getElem('#' + bubbleId);
         var p = f.html.getElem("p", bubbleElem);
         p.innerHTML = text;
@@ -96,12 +116,16 @@ var main = (function() {
         for(var i = 0; i < numButtons; i++) {
             var btn = f.html.spawn(elem.buttonContainer, 'button', i);
             btn.innerHTML = opts[i];
-            btn.callback = callbacks[i];
+            if(callbacks.length === 1) {
+                btn.callback = callbacks[0];
+            } else {
+                btn.callback = callbacks[i];
+            }
             btn.onclick = function() {
                 let choice = this.innerText;
                 main.writeStory('You', choice);
                 f.http.post('playerChoice', choice);
-                this.callback();
+                this.callback(choice);
             }
         }
     }

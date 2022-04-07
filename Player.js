@@ -9,8 +9,8 @@
 
 var Player = (function(){
     var that = {
-        dndNoob: true,
-        characterType: ''
+        dndNoob: "noob",
+        charName: 'Travok'
     };
 
     return that;

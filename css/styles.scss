@@ -122,6 +122,12 @@ header, footer { //indicators, error messages
     background-image: linear-gradient(rgba(0,0,0,0), black);
 }
 
+#diceBox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
 #storyText {
     position: absolute;
     top: 0;
