@@ -12,7 +12,7 @@ var Intro = (function(){
 
     that.start = function() {
         //hello();
-        diceIntro();
+        characterPicker();
     }
 
     function hello() {
@@ -80,24 +80,32 @@ var Intro = (function(){
 
     var pickDwarf = function() {
         Player.charName = "Travok";
+        Player.race = 'dwarf';
+        Player.class = 'cleric';
         main.writeStory('DM', DM[7][0]);
         confirmCharacter();
     }
 
     var pickElf = function() {
         Player.charName = "Rhinn";
+        Player.race = 'elf';
+        Player.class = 'fighter';
         main.writeStory('DM', DM[7][1]);
         confirmCharacter();
     }
 
     var pickHuman = function() {
         Player.charName = "Darvin";
+        Player.race = 'human';
+        Player.class = 'wizard';
         main.writeStory('DM', DM[7][2]);
         confirmCharacter();
     }
 
     var pickHalfling = function() {
         Player.charName = "Poe";
+        Player.race = 'halfling';
+        Player.class = 'rogue';
         main.writeStory('DM', DM[7][3]);
         confirmCharacter();
     }
@@ -167,12 +175,57 @@ var Intro = (function(){
     }
 
     function rollForSize() {   
-        main.createBtnOpts(["Roll for height."], []);
+        let p2 = '';
+        let dice = '';
+        switch(Player.race) {
+            case 'human': 
+                p2 = DM[13][0]; 
+                dice = '2d10';
+                break;
+            case 'dwarf': 
+                p2 = DM[13][1]; 
+                dice = '2d4';
+                break;
+            case 'elf': 
+                p2 = DM[13][2]; 
+                dice = '2d10';
+                break;
+            case 'halfling': 
+                p2 = DM[13][3]; 
+                dice = '2d4';
+                break;
+            default: 
+                console.log('unknown race: ' + Player.race);
+                break;
+        }
+        main.writeStory('DM', DM[12] + "<br><br>" + p2);
+        main.rollDice(dice, rollForWeight);
     }
 
-    function rollForColours() {
-        
-    }  
+    function rollForWeight(result) {
+        let heightMod = result.resultTotal;
+        let height = 0;
+        switch(Player.race) {
+            case 'human': 
+                height = 56 + heightMod;
+                break;
+            case 'dwarf': 
+                height = 44 + heightMod;
+                break;
+            case 'elf': 
+                height = 54 + heightMod;
+                break;
+            case 'halfling': 
+                height = 31 + heightMod;
+                break;
+            default: 
+                console.log('unknown race: ' + Player.race);
+                break;
+        }
+        Player.height = height; //in inches
+        let p1 = (Player.race === 'halfling') ? DM[14][1] : DM[14][0];
+        main.writeStory('DM', p1);
+    }
 
 
     var theEnd = function() {      
@@ -236,6 +289,19 @@ var Intro = (function(){
         ],
         [
             "Hopefully you're happy with what the dice have given you. But if you're not, you can seek out ways to change it in game. Don't worry though, sex has no bearing on the choices you can make or your ability to become a hero. Common language does tend to be gendered, however, so pick your character's preferred pronouns."
+        ],
+        [
+            "Got it, <pronouns> it is. You'll be able to change this at any time, if you find it doesn't feel right. Next, let's determine your character's size."
+        ],
+        [
+            "Humans vary as widely in height and weight in the world of D&D as they do in real life, standing from under 5 to well over 6 feet tall and weighing between 125 to 250 pounds. Roll 2d10 to see how many inches over 4'8\" your character is.",
+            "Though dwarves are all well under 5 feet tall, they are so wide and dense that they can weigh the same as any human. Roll 2d4 to see how many inches over 3'8\" your character is.",
+            "Elves are graceful with fine features, and tend to be a bit shorter and more slender than humans. Roll 2d10 to see how many inches over 4'6\" your character is.",
+            "Halflings are short and stout and are all pretty much the same size, coming in at about 3 feet and between 40 and 45 pounds. Roll 2d4 to see how many inches over 2'7\" and how many pounds over 35 lbs your character is."
+        ],
+        [
+            "<charName> is <height> tall. There's not a lot you can do about your height but your weight, on the other hand, you do have some control over. So roll twice for this one and pick the weight you prefer.",
+            "Poe is <height> tall. Since halflings don't vary much in size, we'll just use that roll to determine <possessivePronoun> weight as well."
         ]
     ];
 
