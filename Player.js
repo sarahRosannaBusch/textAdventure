@@ -63,8 +63,8 @@ var Player = (function(){
 
     that.getHeightString = function() {
         let height = Player.height;
-        let feet = height / 12;
-        let inches = (height % 12) * 12;
+        let feet = Math.floor(height / 12);
+        let inches = height % 12;
         return feet + "'" + inches + '"'; 
     }
 

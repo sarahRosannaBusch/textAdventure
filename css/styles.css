@@ -222,6 +222,13 @@ fieldset {
 #storyBody .player {
   text-align: right;
 }
+#storyBody .player fieldset {
+  background-color: #090909;
+  border: 1px solid rgba(255, 0, 0, 0.75);
+}
+#storyBody .player legend {
+  background-color: rgba(255, 0, 0, 0.75);
+}
 
 /* default styles are for phone-sized screens; layout is responsive: */
 /* tablet-sized */

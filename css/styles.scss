@@ -249,6 +249,13 @@ fieldset {
 
     .player {
         text-align: right;
+        fieldset {
+            background-color: #090909;
+            border: 1px solid rgba(255, 0, 0, 75%);
+        }
+        legend {
+            background-color: rgba(255, 0, 0, 75%);
+        }
     }
 }
 
