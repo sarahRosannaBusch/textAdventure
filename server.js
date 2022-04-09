@@ -14,16 +14,17 @@ const PORT = 8080;
 const server = new http.createServer(function (req, res) {
     var query = url.parse(req.url, true);  
     var file = query.pathname;
+    var clientIP = req.socket.remoteAddress;
     if(file === "/") {
         file = "/index.html";
-        console.log('req from ' + req.socket.remoteAddress);
+        console.log('req from ' + clientIP);
     }
     var filename =  __dirname + file;
 
     if(req.method === 'POST') {
         req.setEncoding('utf8');
         req.on('data', function(data) {
-            console.log(data);
+            console.log(Date.now() + ' ' + clientIP + ': ' + data);
             res.write(JSON.stringify({ack:true}));
             res.end();
         });

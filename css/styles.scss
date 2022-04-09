@@ -122,6 +122,12 @@ header, footer { //indicators, error messages
     background-image: linear-gradient(rgba(0,0,0,0), black);
 }
 
+#diceBox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
 #storyText {
     position: absolute;
     top: 0;
@@ -243,6 +249,13 @@ fieldset {
 
     .player {
         text-align: right;
+        fieldset {
+            background-color: #090909;
+            border: 1px solid rgba(255, 0, 0, 75%);
+        }
+        legend {
+            background-color: rgba(255, 0, 0, 75%);
+        }
     }
 }
 

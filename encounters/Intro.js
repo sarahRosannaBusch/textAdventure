@@ -11,13 +11,18 @@ var Intro = (function(){
     var that = {};
 
     that.start = function() {
+        //hello();
+        characterPicker();
+    }
+
+    function hello() {
         main.writeStory('DM', DM[0][0]);
         //main.createBtnOpts(['Yes', 'Sort of', 'No'], [basicRules0, basicRules1, basicRules2]);
         main.sentenceBuilder(SENTENCE_0, function(result) {
             switch(result) {
-                case "Pro": basicRules0(); break;
-                case "Mid": basicRules1(); break;
-                case "Noob": basicRules2(); break;
+                case "pro": basicRules0(); break;
+                case "mid": basicRules1(); break;
+                case "noob": basicRules2(); break;
                 default: console.log('unknown noob lvl: ' + JSON.stringify(result)); break;
             }
         });
@@ -25,18 +30,18 @@ var Intro = (function(){
 
     var basicRules0 = function() {
         main.writeStory('DM', DM[1][0]);
-        main.createBtnOpts(['Got it.', 'Wait, I want you to hold my hand.'], [function(){confirmNoob("Pro");}, function(){confirmNoob("Noob");}])
+        main.createBtnOpts(['Got it.', 'Wait, I want you to hold my hand.'], [function(){confirmNoob("pro");}, function(){confirmNoob("noob");}])
     }
     
     var basicRules1 = function() {
         main.writeStory('DM', DM[1][1]);
-        main.createBtnOpts(['Got it.', "I don't trust my gut, explain the rules to me.", "Don't bother explaining the rules."], [function(){confirmNoob("Mid");}, function(){confirmNoob("Noob");}, function(){confirmNoob("Pro");}]);
+        main.createBtnOpts(['Got it.', "I don't trust my gut, explain the rules to me.", "Don't bother explaining the rules."], [function(){confirmNoob("mid");}, function(){confirmNoob("noob");}, function(){confirmNoob("pro");}]);
     }
 
     var basicRules2 = function() {
         Player.dndNoob = true;
         main.writeStory('DM', DM[1][2]);
-        main.createBtnOpts(['Got it.', "Don't bother explaining the rules."], [function(){confirmNoob("Noob");}, function(){confirmNoob("Pro");}]);
+        main.createBtnOpts(['Got it.', "Don't bother explaining the rules."], [function(){confirmNoob("noob");}, function(){confirmNoob("pro");}]);
     }
 
     var confirmNoob = function(noob) {
@@ -47,9 +52,9 @@ var Intro = (function(){
     var concept = function() {
         let extraWords = "";
         switch(Player.dndNoob) {
-            case 'Pro': extraWords = DM[2][2]; break;
-            case 'Mid': extraWords = DM[2][0]; break;
-            case 'Noob': extraWords = DM[2][1]; break;
+            case 'pro': extraWords = DM[2][2]; break;
+            case 'mid': extraWords = DM[2][0]; break;
+            case 'noob': extraWords = DM[2][1]; break;
         }
         main.writeStory('DM', extraWords + "<br><br>" + DM[3][0]);
         main.createBtnOpts(['Go on...'], [textAdventure]);
@@ -75,31 +80,281 @@ var Intro = (function(){
 
     var pickDwarf = function() {
         Player.charName = "Travok";
+        Player.race = 'dwarf';
+        Player.class = 'cleric';
         main.writeStory('DM', DM[7][0]);
         confirmCharacter();
     }
 
     var pickElf = function() {
         Player.charName = "Rhinn";
+        Player.race = 'elf';
+        Player.class = 'fighter';
         main.writeStory('DM', DM[7][1]);
         confirmCharacter();
     }
 
     var pickHuman = function() {
-        Player.charaName = "Darvin";
+        Player.charName = "Darvin";
+        Player.race = 'human';
+        Player.class = 'wizard';
         main.writeStory('DM', DM[7][2]);
         confirmCharacter();
     }
 
     var pickHalfling = function() {
         Player.charName = "Poe";
+        Player.race = 'halfling';
+        Player.class = 'rogue';
         main.writeStory('DM', DM[7][3]);
         confirmCharacter();
     }
 
     function confirmCharacter() {
-        main.createBtnOpts(["End demo.", "Choose a different character."], [theEnd, characterPicker]);
+        main.createBtnOpts(["Let's roll some dice!", "Choose a different character."], [diceIntro, characterPicker]);
     }
+
+    function diceIntro() {
+        let p1 = "";
+        switch(Player.dndNoob) {
+            case "noob": 
+                p1 = DM[8][0];
+                break;
+            case "mid":
+                p1 = DM[8][1];
+                break;
+            case "pro":
+                p1 = DM[8][2];
+                break;
+            default:
+                console.log('unknown dndNoob level: ' + Player.dndNoob);
+                break;
+        }
+        main.writeStory('DM', p1 + "<br><br>" + DM[9]);
+        main.createBtnOpts(["Roll for sex."], [rollForSex]);
+    }
+
+    function rollForSex() {
+        main.rollDice('1d20', function(result) {
+            let roll = result.resultTotal;
+            console.log(roll);
+            main.createBtnOpts(
+                ["I rolled a " + roll + '.'], 
+                [
+                    function() {
+                        let p1 = null;
+                        if(roll === 1) {
+                            Player.sex = 'none';
+                            p1 = DM[10][0];
+                        } else if(roll === 20) {
+                            Player.sex = 'hermaphrodite';
+                            p1 = DM[10][3];
+                        } else {
+                            if(roll % 2 === 0) { //evens
+                                Player.sex = 'female';
+                                p1 = DM[10][1];
+                            } else {
+                                Player.sex = 'male';
+                                p1 = DM[10][2];
+                            }
+                        }
+                        main.writeStory('DM', p1 + "<br><br>" + DM[11]);
+                        main.createBtnOpts([
+                            "she/her",
+                            "he/him",
+                            "they/them",
+                            "he/they",
+                            "she/they",
+                            "any/all"
+                        ], [setPronouns]);
+                    }
+                ]
+            );
+        });
+    }
+
+    function setPronouns(pronouns) {
+        Player.pronouns = pronouns;
+        rollForSize();
+    }
+
+    function rollForSize() {   
+        let p1 = DM[12][0];
+        p1 = p1.replace("<pronouns>", Player.pronouns);
+        let p2 = '';
+        let dice = '';
+        switch(Player.race) {
+            case 'human': 
+                p2 = DM[13][0]; 
+                dice = '2d10';
+                break;
+            case 'dwarf': 
+                p2 = DM[13][1]; 
+                dice = '2d4';
+                break;
+            case 'elf': 
+                p2 = DM[13][2]; 
+                dice = '2d10';
+                break;
+            case 'halfling': 
+                p2 = DM[13][3]; 
+                dice = '2d4';
+                break;
+            default: 
+                console.log('unknown race: ' + Player.race);
+                break;
+        }
+        main.writeStory('DM', p1 + "<br><br>" + p2);
+        main.createBtnOpts(["Roll " + dice + '.'], [
+            ()=>{main.rollDice(dice, confirmHeight);}
+        ]);
+        
+        function confirmHeight(result) {
+            main.createBtnOpts(["I rolled a total of " + result.resultTotal + '.'], [
+                ()=>{rollForWeight(result);}
+            ]);
+        }
+    }
+
+
+    function rollForWeight(result) {
+        let heightMod = result.resultTotal;
+        let height = 0;
+        let weightDice = '';
+        switch(Player.race) {
+            case 'human': 
+                height = 56 + heightMod;
+                weightDice = '2d4';
+                break;
+            case 'dwarf': 
+                height = 44 + heightMod;
+                weightDice = '2d6';
+                break;
+            case 'elf': 
+                height = 54 + heightMod;
+                weightDice = '1d4';
+                break;
+            case 'halfling': 
+                height = 31 + heightMod;
+                break;
+            default: 
+                console.log('unknown race: ' + Player.race);
+                break;
+        }
+        Player.height = height; //in inches
+        let p1 = (Player.race === 'halfling') ? DM[14][1] : DM[14][0];
+        p1 = p1.replace('<charName>', Player.charName);
+        p1 = p1.replace('<height>', Player.getHeightString());
+        main.writeStory('DM', p1);
+        if(Player.race === 'halfling') {
+            halflingWeight();
+        } else {
+            main.createBtnOpts(['Roll ' + weightDice + '.'], [
+                main.rollDice(weightDice, roll2)
+            ]);
+        } 
+
+        let firstRoll = 0;
+        let secondRoll = 0;
+
+        function roll2(result) {
+            firstRoll = result.resultTotal;            
+            main.createBtnOpts(['Second roll.'], [
+                ()=>{main.rollDice(weightDice, confirmWeight);}
+            ]);
+        }
+
+        function confirmWeight(result) {
+            secondRoll = result.resultTotal;
+            let baseWeight = 0;
+            switch(Player.race) {
+                case 'human': baseWeight = 110; break;
+                case 'dwarf': baseWeight = 115; break;
+                case 'elf': baseWeight = 100; break;
+                case 'halfling': baseWeight = 35; break;
+                default: 
+                    console.log('unknown race: ' + Player.race);
+                    break;
+            }
+            let weight1 = baseWeight + (heightMod * firstRoll);
+            let weight2 = baseWeight + (heightMod * secondRoll);
+            let btn1Text = Player.charName + ' is ' + baseWeight + ' lb + ' + heightMod + ' * ' + firstRoll + ' = ' + weight1 + 'lbs.';
+            let btn2Text = Player.charName + ' is ' + baseWeight + ' lb + ' + heightMod + ' * ' + secondRoll + ' = ' + weight2 + 'lbs.';
+            main.createBtnOpts([btn1Text, btn2Text], [next]);
+        }       
+
+        function halflingWeight() {
+            let baseWeight = 35;
+            let weight = baseWeight + heightMod;
+            let btnText = Player.charName + ' is ' + baseWeight + ' lb + ' + heightMod + ' * 1lb = ' + weight + 'lbs.';
+            main.createBtnOpts([btnText], [next]);
+        }
+
+        function next() {
+            main.writeStory('DM', DM[15]);
+            rollForColouring();
+        }
+    }
+
+    function rollForColouring() {
+        if(Player.eyeColour && Player.hairColour && Player.skinColour) {
+            let p = DM[16][0];
+            p = p.replace("<charName>", Player.charName);
+            p = p.replace("<skinColour>", Player.skinColour);
+            p = p.replace("<hairColour>", Player.hairColour);
+            p = p.replace("<eyeColour>", Player.eyeColour);
+            main.writeStory('DM', p);
+            main.createBtnOpts(['End demo.'], [theEnd]);
+            return;
+        }
+
+        let buttonText = [];
+        let callbacks = [];
+        if(!Player.eyeColour) {
+            buttonText.push('Roll for eye colour.');
+            callbacks.push(rollForEyes);
+        }
+        if(!Player.hairColour) {
+            buttonText.push('Roll for hair colour.');
+            callbacks.push(rollForHair);
+        }
+        if(!Player.skinColour) {
+            buttonText.push('Roll for skin colour.');
+            callbacks.push(rollForSkin);
+        }
+
+        main.createBtnOpts(buttonText, callbacks);
+
+        let dice = (Player.race === 'halfling') ? '1d4' : '1d6';
+        let eyeColours = COLOURS[Player.race].eyes;
+        let hairColours = COLOURS[Player.race].hair;
+        let skinColours = COLOURS[Player.race].skin;
+
+        function rollForEyes() {            
+            main.rollDice(dice, (result)=> {
+                let idx = result.resultTotal - 1;
+                Player.eyeColour = eyeColours[idx];
+                rollForColouring();
+            });
+        }
+
+        function rollForHair() {
+            main.rollDice(dice, (result)=> {
+                let idx = result.resultTotal - 1;
+                Player.hairColour = hairColours[idx];
+                rollForColouring();
+            });
+        }
+
+        function rollForSkin() {
+            main.rollDice(dice, (result)=> {
+                let idx = result.resultTotal - 1;
+                Player.skinColour = skinColours[idx];
+                rollForColouring();
+            });
+        }
+    }
+
 
     var theEnd = function() {      
         main.writeStory('DM', "That's it for now. This game is still under development, so come back soon to begin " + Player.charName + "'s story.");
@@ -145,19 +400,78 @@ var Intro = (function(){
             "Good choice! You will be playing Rhinn Galanodel, the wood elf soldier training to become an epic fighter.",
             "Good choice! You will be playing Darvyn Dotsk, the human sage who's studying to become a powerful wizard.",
             "Good choice! You will be playing Poe Ungart, the lightfoot halfling criminal who was born to be a sneaky rogue."
+        ],
+        [
+            "In D&D, the DM describes the scene then the player describes what their character tries to do. Whenever an outcome is uncertain, we roll dice to see what happens.",
+            "As a reminder, in RPGs we roll dice whenever the outcome of an action is uncertain.", 
+            "As you know, in D&D we roll dice whenever the outcome of an action is uncertain."
+        ],
+        [
+            "You can think of the dice as fate, chance, the Universe, God, Satan, or whatever works for you. Basically, the dice decide the things that we don't get to decide for ourselves. For example, we don't get to choose the body we are born with. So let's roll a d20 to see what you're working with. Evens for female, odds for male."
+        ],
+        [
+            "Sorry to say this friend, but no sex for you. You're smooth as a Ken doll down there.",
+            "Congratulations, you get a vagina!",
+            "Congratulations, you get a penis!",
+            "Natural 20! I think that means you get both a penis and a vagina!"
+        ],
+        [
+            "Hopefully you're happy with what the dice have given you. But if you're not, you can seek out ways to change it in game. Don't worry though, sex has no bearing on the choices you can make or your ability to become a hero. Common language does tend to be gendered, however, so pick your character's preferred pronouns."
+        ],
+        [
+            "Got it, <pronouns> it is. You'll be able to change this at any time, if you find it doesn't feel right. Next, let's determine your character's size."
+        ],
+        [
+            "Humans vary as widely in height and weight in the world of D&D as they do in real life, standing from under 5 to well over 6 feet tall and weighing between 125 to 250 pounds. Roll 2d10 to see how many inches over 4'8\" your character is.",
+            "Though dwarves are all well under 5 feet tall, they are so wide and dense that they can weigh the same as any human. Roll 2d4 to see how many inches over 3'8\" your character is.",
+            "Elves are graceful with fine features, and tend to be a bit shorter and more slender than humans. Roll 2d10 to see how many inches over 4'6\" your character is.",
+            "Halflings are short and stout and are all pretty much the same size, coming in at about 3 feet and between 40 and 45 pounds. Roll 2d4 to see how many inches over 2'7\" and how many pounds over 35 lbs your character is."
+        ],
+        [
+            "<charName> is <height> tall. There's not a lot you can do about your height but your weight, on the other hand, you do have some control over. So roll twice for this one and pick the weight you prefer.",
+            "<charName> is <height> tall. Since halflings don't vary much in size, we'll just use that roll to determine <possessivePronoun> weight as well."
+        ],
+        [
+            "Alrighty, last but not least, let's roll for your character's colouring."
+        ],
+        [
+            "Beautiful! <charName> has a/an <skinColour> complexion, with naturally <hairColour> hair, and <eyeColour> eyes. Feel free to add whatever adjectives you like to that as you build your mental picture of this character."
         ]
     ];
 
+    const COLOURS = {
+        human: {
+            eyes: ["amber", "blue", "brown", "grey", "green", "hazel"],
+            hair: ["black", "dark brown", "red", "blond", "dirty blond", "orange"],
+            skin: ["ivory", "beige", "light brown", "medium brown", "dark brown", "very dark brown"]
+        },
+        dwarf: {
+            eyes: ["amber", "black", "brown", "grey", "green", "hazel"],
+            hair: ["black", "dark grey", "brown", "red", "dark brown", "light grey"],
+            skin: ["deep brown", "rosy brown", "light brown", "deep tan", "sienna", "umber"]
+        },
+        elf: {
+            eyes: ["gold", "silver", "amber", "blue", "grey", "green"],
+            hair: ["green", "blue", "red", "brown", "black", "blond"],
+            skin: ["copper", "bronze", "bluish-white", "light brown", "medium brown", "dark brown"]
+        },
+        halfling: {
+            eyes: ["brown", "hazel", "amber", "grey"],
+            hair: ["brown", "sandy brown", "dirty blond", "grey"],
+            skin: ["tan", "peaches-and-cream", "light brown", "rosy brown"]
+        },
+    }
+
     const SENTENCE_0 = [
-        ["Pro", "Yes", "."],
-        ["Pro", "Yes", ", ", "I've played ", "5th edition."],
-        ["Mid", "Yes", ", ", "I've played ", "an older version."],
-        ["Noob", "No", "."],
-        ["Pro", "No", ", ", "but I ", "know ", "the 5e rules."],
-        ["Mid", "No", ", ", "but I ", "know ", "older edition rules."],
-        ["Mid", "No", ", ", "but I ", "have ", "watched people play."],
-        ["Noob", "No", ", ", "but I ", "have ", "heard of it."],
-        ["Mid", "No", ", ", "but I ", "have ", "played other RPGs."],
+        ["pro", "Yes", "."],
+        ["pro", "Yes", ", ", "I've played ", "5th edition."],
+        ["mid", "Yes", ", ", "I've played ", "an older version."],
+        ["noob", "No", "."],
+        ["pro", "No", ", ", "but I ", "know ", "the 5e rules."],
+        ["mid", "No", ", ", "but I ", "know ", "older edition rules."],
+        ["mid", "No", ", ", "but I ", "have ", "watched people play."],
+        ["noob", "No", ", ", "but I ", "have ", "heard of it."],
+        ["mid", "No", ", ", "but I ", "have ", "played other RPGs."],
     ];
 
     
