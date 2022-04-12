@@ -3,16 +3,16 @@
  * @file       Intro.js
  * @brief      Encounter: Game Intro
  * @author     Sarah Rosanna Busch
- * @version    0.1
- * @date       9 Feb 2022
+ * @version    0.2
+ * @date       11 April 2022
  * */
 
 var Intro = (function(){
     var that = {};
 
     that.start = function() {
-        //hello();
-        characterPicker();
+        hello();
+        //characterPicker();
     }
 
     function hello() {
@@ -210,7 +210,7 @@ var Intro = (function(){
         ]);
         
         function confirmHeight(result) {
-            main.createBtnOpts(["I rolled a total of " + result.resultTotal + '.'], [
+            main.createBtnOpts([result.result[0] + ' + ' + result.result[1] + ' = ' + result.resultTotal], [
                 ()=>{rollForWeight(result);}
             ]);
         }
@@ -250,7 +250,7 @@ var Intro = (function(){
             halflingWeight();
         } else {
             main.createBtnOpts(['Roll ' + weightDice + '.'], [
-                main.rollDice(weightDice, roll2)
+                ()=>{main.rollDice(weightDice, roll2);}
             ]);
         } 
 
@@ -278,15 +278,15 @@ var Intro = (function(){
             }
             let weight1 = baseWeight + (heightMod * firstRoll);
             let weight2 = baseWeight + (heightMod * secondRoll);
-            let btn1Text = Player.charName + ' is ' + baseWeight + ' lb + ' + heightMod + ' * ' + firstRoll + ' = ' + weight1 + 'lbs.';
-            let btn2Text = Player.charName + ' is ' + baseWeight + ' lb + ' + heightMod + ' * ' + secondRoll + ' = ' + weight2 + 'lbs.';
+            let btn1Text = baseWeight + ' lb + (' + heightMod + ' * ' + firstRoll + ') = ' + weight1 + 'lbs';
+            let btn2Text = baseWeight + ' lb + (' + heightMod + ' * ' + secondRoll + ') = ' + weight2 + 'lbs';
             main.createBtnOpts([btn1Text, btn2Text], [next]);
         }       
 
         function halflingWeight() {
             let baseWeight = 35;
             let weight = baseWeight + heightMod;
-            let btnText = Player.charName + ' is ' + baseWeight + ' lb + ' + heightMod + ' * 1lb = ' + weight + 'lbs.';
+            let btnText = baseWeight + ' lb + (' + heightMod + ' * 1lb) = ' + weight + 'lbs';
             main.createBtnOpts([btnText], [next]);
         }
 
@@ -428,14 +428,14 @@ var Intro = (function(){
             "Halflings are short and stout and are all pretty much the same size, coming in at about 3 feet and between 40 and 45 pounds. Roll 2d4 to see how many inches over 2'7\" and how many pounds over 35 lbs your character is."
         ],
         [
-            "<charName> is <height> tall. There's not a lot you can do about your height but your weight, on the other hand, you do have some control over. So roll twice for this one and pick the weight you prefer.",
+            "<charName> is <height> tall. You pretty much have to take the height you get. Your weight on the other hand you do have some control over, within a reasonable range for your height and body type. So roll twice for your weight modifier and pick the result you prefer.",
             "<charName> is <height> tall. Since halflings don't vary much in size, we'll just use that roll to determine <possessivePronoun> weight as well."
         ],
         [
             "Alrighty, last but not least, let's roll for your character's colouring."
         ],
         [
-            "Beautiful! <charName> has a/an <skinColour> complexion, with naturally <hairColour> hair, and <eyeColour> eyes. Feel free to add whatever adjectives you like to that as you build your mental picture of this character."
+            "Beautiful! <charName> has a <skinColour> complexion, with naturally <hairColour> hair, and <eyeColour> eyes. Feel free to add whatever adjectives you like to that as you build your mental picture of this character."
         ]
     ];
 
