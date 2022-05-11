@@ -18,6 +18,18 @@ var Player = (function(){
         weight: 0, //pounds
     };
 
+    var vars = {
+        curEncounter: "Intro",
+        playerChoices: []
+    }
+
+    that.saveChoice = function(choice) {
+        vars.playerChoices.push(choice);
+        console.log('player choices: ' + vars.playerChoices);
+        let saveData = JSON.stringify(vars);
+        f.ajax.post('user/_user.json', saveData, ()=>{});
+    }
+
     that.getSubjectivePronoun = function() {
         let pronoun = that.pronouns.split('/')[0];
         if(pronoun === 'any') {

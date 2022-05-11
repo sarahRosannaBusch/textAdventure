@@ -116,6 +116,7 @@ var main = (function() {
         for(var i = 0; i < numButtons; i++) {
             var btn = f.html.spawn(elem.buttonContainer, 'button', i);
             btn.innerHTML = opts[i];
+            btn.data = i;
             if(callbacks.length === 1) {
                 btn.callback = callbacks[0];
             } else {
@@ -124,7 +125,8 @@ var main = (function() {
             btn.onclick = function() {
                 let choice = this.innerText;
                 main.writeStory('You', choice);
-                f.http.post('playerChoice', choice);
+                //f.ajax.post('playerChoice', choice);                
+                Player.saveChoice(this.data);
                 this.callback(choice);
             }
         }
@@ -186,7 +188,8 @@ var main = (function() {
                         if(possibleResults.length !== 1) {
                             console.error('hmmmm....')
                         }
-                        f.http.post('playerSentence', sentence);
+                        //f.ajax.post('playerSentence', sentence);
+                        Player.saveChoice(possibleResults);
                         callback(sentenceOpts[possibleResults][RESULT]); //should just be one at this point
                     } else {
                         wordIdx++;

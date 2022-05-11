@@ -63,7 +63,7 @@ var Intro = (function(){
     var textAdventure = function() {
         main.writeStory('DM', DM[4][0]);
         main.sentenceBuilder(SENTENCE_1(), function(result) {
-            console.log(result);
+            //console.log(result);
             textAdventure2();
         });
     }
