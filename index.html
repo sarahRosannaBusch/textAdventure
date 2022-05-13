@@ -16,7 +16,21 @@
 </head>
 <body onload='main.init()'>
 <div class='viewContainer'>
-<main>  
+<login>
+    <form method="post">
+        <label for="username">User:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br>
+        <br>
+        <button onclick="main.login(event, username.value, password.value)">Login</button>
+        <br><br>
+        <p id="loginError" style="display:none">
+            Sorry, the username or password that you have entered is invalid.
+        </p>
+    </form>
+</login>
+<main id='game' style="display:none">  
     <header>
         <!-- time, date, weather, light conditions, etc-->
     </header>

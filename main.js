@@ -28,6 +28,8 @@ var main = (function() {
     var diceRoller = null;
 
     that.init = function() {
+        elem.login = f.html.getElem('login');
+        elem.loginError = f.html.getElem('#loginError');
         elem.main = f.html.getElem('main');
         elem.header = f.html.getElem('header');
         elem.storyBody = f.html.getElem('#storyBody');
@@ -50,7 +52,22 @@ var main = (function() {
         showDiceBox(false);
 
         vars.bubbleCount = 0;
-        Intro.start();
+    }
+
+    that.login = function(e, username, password) {
+        e.preventDefault();
+        let str = JSON.stringify({'login':{'username':username, 'password':password}});
+        f.ajax.post('users.json', str, function(ack) {
+            console.log(ack);
+            ack = JSON.parse(ack);
+            if(ack.login) {
+                elem.login.style.display = 'none';
+                elem.main.style.display = 'flex';
+                Intro.start();
+            } else {
+                elem.loginError.style.display = 'block';
+            }
+        });
     }
 
     that.rollDice = function(diceToRoll, callback) {

@@ -11,6 +11,8 @@ const fs = require('fs');
 
 const PORT = 8080;
 
+const USERS = require('./user/users.json');
+
 const server = new http.createServer(function (req, res) {
     var query = url.parse(req.url, true);  
     var file = query.pathname;
@@ -25,7 +27,30 @@ const server = new http.createServer(function (req, res) {
         req.setEncoding('utf8');
         req.on('data', function(data) {
             console.log(Date.now() + ' ' + clientIP + ': ' + data);
-            res.write(JSON.stringify({ack:true}));
+            data = JSON.parse(data);
+            for(key in data) {
+                switch(key) {
+                    case 'login':
+                        let username = data.login.username;
+                        let password = data.login.password;
+                        if(USERS[username]) {
+                            if(USERS[username] === password) {
+                                console.log(username + ' has logged in.');
+                                res.write(JSON.stringify({login:true}));
+                            } else {
+                                console.log(username + ' has wrong password');
+                                res.write(JSON.stringify({login:false}));
+                            }
+                        } else {
+                            console.log('invalid login attempt');
+                            res.write(JSON.stringify({login:false}));
+                        }
+                        break;
+                    default:
+                        res.write(JSON.stringify({ack:true}));
+                        break;
+                }
+            }
             res.end();
         });
     } else if(req.method === 'GET') {

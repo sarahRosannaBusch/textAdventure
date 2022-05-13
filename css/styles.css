@@ -28,7 +28,7 @@
   margin: 0px;
   color: lightgrey; }
 
-header, section, footer, aside, nav, main, article, figure {
+header, section, footer, aside, nav, main, article, figure, login {
   display: block;
   /* to define html5 semantic elements in older browsers */ }
 
@@ -45,6 +45,24 @@ body {
   height: 100vh;
   position: relative;
   background: #212121; }
+
+/************************** Login ************************/
+login {
+  width: 100%; }
+  login form {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    login form input, login form button {
+      width: 100%;
+      color: black;
+      padding: 0.25em; }
+    login form button {
+      padding: 0.5em;
+      background-color: lightgrey;
+      border-radius: 5px; }
 
 /*************************** Layout ******************************/
 main {
