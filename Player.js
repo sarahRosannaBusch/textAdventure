@@ -11,23 +11,20 @@ var Player = (function(){
     var that = {
         dndNoob: "noob",
         charName: '',
-        race: '',
-        class: '',
-        pronouns: "",
-        height: 0, //inches
-        weight: 0, //pounds
+        PC: {
+            curEncounter: "Intro",
+            playerChoices: [],
+            race: '',
+            class: '',
+            pronouns: "",
+            height: 0, //inches
+            weight: 0, //pounds
+        }
     };
 
-    var vars = {
-        curEncounter: "Intro",
-        playerChoices: []
-    }
-
     that.saveChoice = function(choice) {
-        vars.playerChoices.push(choice);
-        console.log('player choices: ' + vars.playerChoices);
-        let saveData = JSON.stringify(vars);
-        f.ajax.post('user/_user.json', saveData, ()=>{});
+        that.PC.playerChoices.push(choice);
+        console.log('player choices: ' + that.PC.playerChoices);
     }
 
     that.getSubjectivePronoun = function() {
@@ -74,7 +71,7 @@ var Player = (function(){
     }
 
     that.getHeightString = function() {
-        let height = Player.height;
+        let height = Player.PC.height;
         let feet = Math.floor(height / 12);
         let inches = height % 12;
         return feet + "'" + inches + '"'; 

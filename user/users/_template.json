@@ -1,8 +1,11 @@
 {
     "username": "user",
     "password": "password",
-    "dndNoob": "noob",
-    "ipAddresses": [],
+
+    "player": {
+        "dndNoob": "",
+        "curChar": ""
+    },
 
     "Travok": {
         "lastName": "Ironfist",

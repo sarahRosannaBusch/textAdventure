@@ -52,6 +52,7 @@ var main = (function() {
         showDiceBox(false);
 
         vars.bubbleCount = 0;
+        Intro.start();
     }
 
     that.login = function(e, username, password) {
@@ -62,8 +63,6 @@ var main = (function() {
             ack = JSON.parse(ack);
             if(ack.login) {
                 elem.login.style.display = 'none';
-                elem.main.style.display = 'flex';
-                Intro.start();
             } else {
                 elem.loginError.style.display = 'block';
             }

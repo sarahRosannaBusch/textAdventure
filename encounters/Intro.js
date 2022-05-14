@@ -80,32 +80,32 @@ var Intro = (function(){
 
     var pickDwarf = function() {
         Player.charName = "Travok";
-        Player.race = 'dwarf';
-        Player.class = 'cleric';
+        Player.PC.race = 'dwarf';
+        Player.PC.class = 'cleric';
         main.writeStory('DM', DM[7][0]);
         confirmCharacter();
     }
 
     var pickElf = function() {
         Player.charName = "Rhinn";
-        Player.race = 'elf';
-        Player.class = 'fighter';
+        Player.PC.race = 'elf';
+        Player.PC.class = 'fighter';
         main.writeStory('DM', DM[7][1]);
         confirmCharacter();
     }
 
     var pickHuman = function() {
         Player.charName = "Darvin";
-        Player.race = 'human';
-        Player.class = 'wizard';
+        Player.PC.race = 'human';
+        Player.PC.class = 'wizard';
         main.writeStory('DM', DM[7][2]);
         confirmCharacter();
     }
 
     var pickHalfling = function() {
         Player.charName = "Poe";
-        Player.race = 'halfling';
-        Player.class = 'rogue';
+        Player.PC.race = 'halfling';
+        Player.PC.class = 'rogue';
         main.writeStory('DM', DM[7][3]);
         confirmCharacter();
     }
@@ -174,16 +174,16 @@ var Intro = (function(){
     }
 
     function setPronouns(pronouns) {
-        Player.pronouns = pronouns;
+        Player.PC.pronouns = pronouns;
         rollForSize();
     }
 
     function rollForSize() {   
         let p1 = DM[12][0];
-        p1 = p1.replace("<pronouns>", Player.pronouns);
+        p1 = p1.replace("<pronouns>", Player.PC.pronouns);
         let p2 = '';
         let dice = '';
-        switch(Player.race) {
+        switch(Player.PC.race) {
             case 'human': 
                 p2 = DM[13][0]; 
                 dice = '2d10';
@@ -201,7 +201,7 @@ var Intro = (function(){
                 dice = '2d4';
                 break;
             default: 
-                console.log('unknown race: ' + Player.race);
+                console.log('unknown race: ' + Player.PC.race);
                 break;
         }
         main.writeStory('DM', p1 + "<br><br>" + p2);
@@ -221,7 +221,7 @@ var Intro = (function(){
         let heightMod = result.resultTotal;
         let height = 0;
         let weightDice = '';
-        switch(Player.race) {
+        switch(Player.PC.race) {
             case 'human': 
                 height = 56 + heightMod;
                 weightDice = '2d4';
@@ -238,15 +238,15 @@ var Intro = (function(){
                 height = 31 + heightMod;
                 break;
             default: 
-                console.log('unknown race: ' + Player.race);
+                console.log('unknown race: ' + Player.PC.race);
                 break;
         }
-        Player.height = height; //in inches
-        let p1 = (Player.race === 'halfling') ? DM[14][1] : DM[14][0];
+        Player.PC.height = height; //in inches
+        let p1 = (Player.PC.race === 'halfling') ? DM[14][1] : DM[14][0];
         p1 = p1.replace('<charName>', Player.charName);
         p1 = p1.replace('<height>', Player.getHeightString());
         main.writeStory('DM', p1);
-        if(Player.race === 'halfling') {
+        if(Player.PC.race === 'halfling') {
             halflingWeight();
         } else {
             main.createBtnOpts(['Roll ' + weightDice + '.'], [
@@ -267,13 +267,13 @@ var Intro = (function(){
         function confirmWeight(result) {
             secondRoll = result.resultTotal;
             let baseWeight = 0;
-            switch(Player.race) {
+            switch(Player.PC.race) {
                 case 'human': baseWeight = 110; break;
                 case 'dwarf': baseWeight = 115; break;
                 case 'elf': baseWeight = 100; break;
                 case 'halfling': baseWeight = 35; break;
                 default: 
-                    console.log('unknown race: ' + Player.race);
+                    console.log('unknown race: ' + Player.PC.race);
                     break;
             }
             let weight1 = baseWeight + (heightMod * firstRoll);
@@ -325,10 +325,10 @@ var Intro = (function(){
 
         main.createBtnOpts(buttonText, callbacks);
 
-        let dice = (Player.race === 'halfling') ? '1d4' : '1d6';
-        let eyeColours = COLOURS[Player.race].eyes;
-        let hairColours = COLOURS[Player.race].hair;
-        let skinColours = COLOURS[Player.race].skin;
+        let dice = (Player.PC.race === 'halfling') ? '1d4' : '1d6';
+        let eyeColours = COLOURS[Player.PC.race].eyes;
+        let hairColours = COLOURS[Player.PC.race].hair;
+        let skinColours = COLOURS[Player.PC.race].skin;
 
         function rollForEyes() {            
             main.rollDice(dice, (result)=> {
