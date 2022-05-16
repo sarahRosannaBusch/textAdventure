@@ -2,7 +2,8 @@
  * @file    server.js
  * @brief   D&D Backstories server (runs on rpi)
  * @author  Sarah Rosanna Busch
- * @date    31 March 2022
+ * @version 0.1
+ * @date    16 May 2022
  */
 
 const http = require('http'); 

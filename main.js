@@ -4,8 +4,8 @@
  * @file main.js
  * @brief  D&D Backstories main functionality
  * @author Sarah Rosanna Busch
- * @version 0.1
- * @date   9 Feb 2022
+ * @version 0.2
+ * @date   16 May 2022
  */
 
 var main = (function() {
@@ -75,7 +75,7 @@ var main = (function() {
         diceRoller.setDice(diceToRoll);
         diceRoller.start_throw(null, (result) => {
             if(result === -1) {
-                elem.buttonContainer.innerText = "Ooops, your dice rolled off the table. Refresh the page and try again."
+                elem.buttonContainer.innerText = "Oops, your dice rolled off the table. Refresh your browser and try again."
             } else {
                 callback(result);
             }

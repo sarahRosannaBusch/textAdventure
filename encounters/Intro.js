@@ -3,8 +3,8 @@
  * @file       Intro.js
  * @brief      Encounter: Game Intro
  * @author     Sarah Rosanna Busch
- * @version    0.2
- * @date       11 April 2022
+ * @version    0.3
+ * @date       16 May 2022
  * */
 
 var Intro = (function(){
