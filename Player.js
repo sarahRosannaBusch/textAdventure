@@ -3,32 +3,45 @@
  * @file       Player.js
  * @brief      Player data
  * @author     Sarah Rosanna Busch
- * @version    0
- * @date       7 April 2022
+ * @version    0.1
+ * @date       16 May 2022
  * */
 
 var Player = (function(){
-    var that = {
+    var that = {}; //public methods
+
+    let data = {
         dndNoob: "noob",
         charName: '',
-        PC: {
-            curEncounter: "Intro",
-            playerChoices: [],
-            race: '',
-            class: '',
-            pronouns: "",
-            height: 0, //inches
-            weight: 0, //pounds
-        }
+        curEncounter: "Intro",
+        playerChoices: [],
+        race: '',
+        class: '',
+        sex: '',
+        pronouns: "",
+        height: 0, //inches
+        weight: 0, //pounds
+        eyeColour: '',
+        hairColour: '',
+        skinColour: ''
     };
 
+    that.setData = function(key, value) {
+        data[key] = value;
+    }
+
+    that.getData = function(key) {
+        return data[key];
+    }
+
+    // track each player choice in an array
     that.saveChoice = function(choice) {
-        that.PC.playerChoices.push(choice);
-        console.log('player choices: ' + that.PC.playerChoices);
+        data.playerChoices.push(choice);
+        console.log('player choices: ' + data.playerChoices);
     }
 
     that.getSubjectivePronoun = function() {
-        let pronoun = that.pronouns.split('/')[0];
+        let pronoun = data.pronouns.split('/')[0];
         if(pronoun === 'any') {
             let rnd = Math.floor((Math.random() * 3) + 1);
             switch(rnd) {
@@ -41,7 +54,7 @@ var Player = (function(){
     }
 
     that.getObjectivePronoun = function() {
-        let pronoun = that.pronouns.split('/')[1];
+        let pronoun = data.pronouns.split('/')[1];
         if(pronoun === 'all') {
             let rnd = Math.floor((Math.random() * 3) + 1);
             switch(rnd) {
@@ -54,7 +67,7 @@ var Player = (function(){
     }
 
     that.getPossessivePronoun = function() {
-        let pronoun = that.pronouns.split('/')[0];
+        let pronoun = data.pronouns.split('/')[0];
         if(pronoun === 'any') {
             let rnd = Math.floor((Math.random() * 3) + 1);
             switch(rnd) {
@@ -71,7 +84,7 @@ var Player = (function(){
     }
 
     that.getHeightString = function() {
-        let height = Player.PC.height;
+        let height = data.height;
         let feet = Math.floor(height / 12);
         let inches = height % 12;
         return feet + "'" + inches + '"'; 

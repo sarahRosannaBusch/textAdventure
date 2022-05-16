@@ -15,6 +15,7 @@ var Intro = (function(){
         //characterPicker();
     }
 
+    // 0
     function hello() {
         main.writeStory('DM', DM[0][0]);
         //main.createBtnOpts(['Yes', 'Sort of', 'No'], [basicRules0, basicRules1, basicRules2]);
@@ -28,6 +29,7 @@ var Intro = (function(){
         });
     }
 
+    // 1
     var basicRules0 = function() {
         main.writeStory('DM', DM[1][0]);
         main.createBtnOpts(['Got it.', 'Wait, I want you to hold my hand.'], [function(){confirmNoob("pro");}, function(){confirmNoob("noob");}])
@@ -39,19 +41,21 @@ var Intro = (function(){
     }
 
     var basicRules2 = function() {
-        Player.dndNoob = true;
+        Player.setData('dndNoob', true);
         main.writeStory('DM', DM[1][2]);
         main.createBtnOpts(['Got it.', "Don't bother explaining the rules."], [function(){confirmNoob("noob");}, function(){confirmNoob("pro");}]);
     }
 
+    // 2
     var confirmNoob = function(noob) {
-        Player.dndNoob = noob;
+        Player.setData('dndNoob', 'noob');
         concept();
     }
 
     var concept = function() {
         let extraWords = "";
-        switch(Player.dndNoob) {
+        let noob = Player.getData('dndNoob');
+        switch(noob) {
             case 'pro': extraWords = DM[2][2]; break;
             case 'mid': extraWords = DM[2][0]; break;
             case 'noob': extraWords = DM[2][1]; break;
@@ -60,6 +64,7 @@ var Intro = (function(){
         main.createBtnOpts(['Go on...'], [textAdventure]);
     }
 
+    // 3
     var textAdventure = function() {
         main.writeStory('DM', DM[4][0]);
         main.sentenceBuilder(SENTENCE_1(), function(result) {
@@ -68,55 +73,60 @@ var Intro = (function(){
         });
     }
 
+    // 4
     var textAdventure2 = function() {
         main.writeStory('DM', DM[5][0]);
         main.createBtnOpts(["Let me pick my character!"], [characterPicker]);
     }
 
+    // 5
     var characterPicker = function() {
         main.writeStory('DM', DM[6][0]);
         main.createBtnOpts(["Dwarf<br>Acolyte", "Elf<br>Soldier", "Human<br>Sage", "Halfling<br>Criminal"], [pickDwarf, pickElf, pickHuman, pickHalfling]);
     }
 
+    // 6
     var pickDwarf = function() {
-        Player.charName = "Travok";
-        Player.PC.race = 'dwarf';
-        Player.PC.class = 'cleric';
+        Player.setData('charName', "Travok");
+        Player.setData('race', 'dwarf');
+        Player.setData('class', 'cleric');
         main.writeStory('DM', DM[7][0]);
         confirmCharacter();
     }
 
     var pickElf = function() {
-        Player.charName = "Rhinn";
-        Player.PC.race = 'elf';
-        Player.PC.class = 'fighter';
+        Player.setData('charName', "Rhinn");
+        Player.setData('race', 'elf');
+        Player.setData('class', 'fighter');
         main.writeStory('DM', DM[7][1]);
         confirmCharacter();
     }
 
     var pickHuman = function() {
-        Player.charName = "Darvin";
-        Player.PC.race = 'human';
-        Player.PC.class = 'wizard';
+        Player.setData('charName', "Darvin");
+        Player.setData('race', 'human');
+        Player.setData('class', 'wizard');
         main.writeStory('DM', DM[7][2]);
         confirmCharacter();
     }
 
     var pickHalfling = function() {
-        Player.charName = "Poe";
-        Player.PC.race = 'halfling';
-        Player.PC.class = 'rogue';
+        Player.setData('charName', "Poe");
+        Player.setData('race', 'halfling');
+        Player.setData('class', 'rogue');
         main.writeStory('DM', DM[7][3]);
         confirmCharacter();
     }
 
+    // 7
     function confirmCharacter() {
         main.createBtnOpts(["Let's roll some dice!", "Choose a different character."], [diceIntro, characterPicker]);
     }
 
     function diceIntro() {
         let p1 = "";
-        switch(Player.dndNoob) {
+        let noob = Player.getData('dndNoob');
+        switch(noob) {
             case "noob": 
                 p1 = DM[8][0];
                 break;
@@ -127,7 +137,7 @@ var Intro = (function(){
                 p1 = DM[8][2];
                 break;
             default:
-                console.log('unknown dndNoob level: ' + Player.dndNoob);
+                console.log('unknown dndNoob level: ' + noob);
                 break;
         }
         main.writeStory('DM', p1 + "<br><br>" + DM[9]);
@@ -144,17 +154,17 @@ var Intro = (function(){
                     function() {
                         let p1 = null;
                         if(roll === 1) {
-                            Player.sex = 'none';
+                            Player.setData('sex', 'none');
                             p1 = DM[10][0];
                         } else if(roll === 20) {
-                            Player.sex = 'hermaphrodite';
+                            Player.setData('sex', 'hermaphrodite');
                             p1 = DM[10][3];
                         } else {
                             if(roll % 2 === 0) { //evens
-                                Player.sex = 'female';
+                                Player.setData('sex', 'female');
                                 p1 = DM[10][1];
                             } else {
-                                Player.sex = 'male';
+                                Player.setData('sex', 'male');
                                 p1 = DM[10][2];
                             }
                         }
@@ -174,16 +184,17 @@ var Intro = (function(){
     }
 
     function setPronouns(pronouns) {
-        Player.PC.pronouns = pronouns;
+        Player.setData('pronouns', pronouns);
         rollForSize();
     }
 
     function rollForSize() {   
         let p1 = DM[12][0];
-        p1 = p1.replace("<pronouns>", Player.PC.pronouns);
+        p1 = p1.replace("<pronouns>", Player.getData('pronouns'));
         let p2 = '';
         let dice = '';
-        switch(Player.PC.race) {
+        let race = Player.getData('race');
+        switch(race) {
             case 'human': 
                 p2 = DM[13][0]; 
                 dice = '2d10';
@@ -201,7 +212,7 @@ var Intro = (function(){
                 dice = '2d4';
                 break;
             default: 
-                console.log('unknown race: ' + Player.PC.race);
+                console.log('unknown race: ' + race);
                 break;
         }
         main.writeStory('DM', p1 + "<br><br>" + p2);
@@ -220,8 +231,9 @@ var Intro = (function(){
     function rollForWeight(result) {
         let heightMod = result.resultTotal;
         let height = 0;
-        let weightDice = '';
-        switch(Player.PC.race) {
+        let weightDice = '';        
+        let race = Player.getData('race');
+        switch(race) {
             case 'human': 
                 height = 56 + heightMod;
                 weightDice = '2d4';
@@ -238,15 +250,15 @@ var Intro = (function(){
                 height = 31 + heightMod;
                 break;
             default: 
-                console.log('unknown race: ' + Player.PC.race);
+                console.log('unknown race: ' + race);
                 break;
         }
-        Player.PC.height = height; //in inches
-        let p1 = (Player.PC.race === 'halfling') ? DM[14][1] : DM[14][0];
-        p1 = p1.replace('<charName>', Player.charName);
+        Player.setData('height', height); //in inches
+        let p1 = (race === 'halfling') ? DM[14][1] : DM[14][0];
+        p1 = p1.replace('<charName>', Player.getData('charName'));
         p1 = p1.replace('<height>', Player.getHeightString());
         main.writeStory('DM', p1);
-        if(Player.PC.race === 'halfling') {
+        if(race === 'halfling') {
             halflingWeight();
         } else {
             main.createBtnOpts(['Roll ' + weightDice + '.'], [
@@ -266,14 +278,15 @@ var Intro = (function(){
 
         function confirmWeight(result) {
             secondRoll = result.resultTotal;
-            let baseWeight = 0;
-            switch(Player.PC.race) {
+            let baseWeight = 0;            
+            let race = Player.getData('race');
+            switch(race) {
                 case 'human': baseWeight = 110; break;
                 case 'dwarf': baseWeight = 115; break;
                 case 'elf': baseWeight = 100; break;
                 case 'halfling': baseWeight = 35; break;
                 default: 
-                    console.log('unknown race: ' + Player.PC.race);
+                    console.log('unknown race: ' + race);
                     break;
             }
             let weight1 = baseWeight + (heightMod * firstRoll);
@@ -297,12 +310,15 @@ var Intro = (function(){
     }
 
     function rollForColouring() {
-        if(Player.eyeColour && Player.hairColour && Player.skinColour) {
+        let eyeColour = Player.getData('eyeColour');
+        let hairColour = Player.getData('hairColour');
+        let skinColour = Player.getData('skinColour');
+        if(eyeColour && hairColour && skinColour) {
             let p = DM[16][0];
-            p = p.replace("<charName>", Player.charName);
-            p = p.replace("<skinColour>", Player.skinColour);
-            p = p.replace("<hairColour>", Player.hairColour);
-            p = p.replace("<eyeColour>", Player.eyeColour);
+            p = p.replace("<charName>", Player.getData('charName'));
+            p = p.replace("<skinColour>", skinColour);
+            p = p.replace("<hairColour>", hairColour);
+            p = p.replace("<eyeColour>", eyeColour);
             main.writeStory('DM', p);
             main.createBtnOpts(['End demo.'], [theEnd]);
             return;
@@ -310,30 +326,31 @@ var Intro = (function(){
 
         let buttonText = [];
         let callbacks = [];
-        if(!Player.eyeColour) {
+        if(!eyeColour) {
             buttonText.push('Roll for eye colour.');
             callbacks.push(rollForEyes);
         }
-        if(!Player.hairColour) {
+        if(!hairColour) {
             buttonText.push('Roll for hair colour.');
             callbacks.push(rollForHair);
         }
-        if(!Player.skinColour) {
+        if(!skinColour) {
             buttonText.push('Roll for skin colour.');
             callbacks.push(rollForSkin);
         }
 
         main.createBtnOpts(buttonText, callbacks);
 
-        let dice = (Player.PC.race === 'halfling') ? '1d4' : '1d6';
-        let eyeColours = COLOURS[Player.PC.race].eyes;
-        let hairColours = COLOURS[Player.PC.race].hair;
-        let skinColours = COLOURS[Player.PC.race].skin;
+        let race = Player.getData('race');
+        let dice = (race === 'halfling') ? '1d4' : '1d6';
+        let eyeColours = COLOURS[race].eyes;
+        let hairColours = COLOURS[race].hair;
+        let skinColours = COLOURS[race].skin;
 
         function rollForEyes() {            
             main.rollDice(dice, (result)=> {
                 let idx = result.resultTotal - 1;
-                Player.eyeColour = eyeColours[idx];
+                Player.setData('eyeColour', eyeColours[idx]);
                 rollForColouring();
             });
         }
@@ -341,7 +358,7 @@ var Intro = (function(){
         function rollForHair() {
             main.rollDice(dice, (result)=> {
                 let idx = result.resultTotal - 1;
-                Player.hairColour = hairColours[idx];
+                Player.setData('hairColour', hairColours[idx]);
                 rollForColouring();
             });
         }
@@ -349,7 +366,7 @@ var Intro = (function(){
         function rollForSkin() {
             main.rollDice(dice, (result)=> {
                 let idx = result.resultTotal - 1;
-                Player.skinColour = skinColours[idx];
+                Player.setData('skinColour', skinColours[idx]);
                 rollForColouring();
             });
         }
@@ -357,7 +374,7 @@ var Intro = (function(){
 
 
     var theEnd = function() {      
-        main.writeStory('DM', "That's it for now. This game is still under development, so come back soon to begin " + Player.charName + "'s story.");
+        main.writeStory('DM', "That's it for now. This game is still under development, so come back soon to begin " + Player.getData('charName') + "'s story.");
         main.createBtnOpts(["I will!", "I probably won't."],[happyFace, sadFace]);
     }
 

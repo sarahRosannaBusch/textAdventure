@@ -13,7 +13,8 @@ var main = (function() {
     var elem = {};
     var vars = {
         bubbleCount: 0, //number of text bubbles displayed
-        diceShowing: false
+        diceShowing: false,
+        playerChoice: 0 //choice count for the encounter
     }  
     
     var sentence = {
@@ -52,7 +53,6 @@ var main = (function() {
         showDiceBox(false);
 
         vars.bubbleCount = 0;
-        Intro.start();
     }
 
     that.login = function(e, username, password) {
@@ -63,6 +63,7 @@ var main = (function() {
             ack = JSON.parse(ack);
             if(ack.login) {
                 elem.login.style.display = 'none';
+                Intro.start();
             } else {
                 elem.loginError.style.display = 'block';
             }
@@ -72,7 +73,13 @@ var main = (function() {
     that.rollDice = function(diceToRoll, callback) {
         showDiceBox(true);
         diceRoller.setDice(diceToRoll);
-        diceRoller.start_throw(null, callback); //result will be passed to callback
+        diceRoller.start_throw(null, (result) => {
+            if(result === -1) {
+                elem.buttonContainer.innerText = "Ooops, your dice rolled off the table. Refresh the page and try again."
+            } else {
+                callback(result);
+            }
+        });
     }
 
     function showDiceBox(show) {
