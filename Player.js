@@ -11,10 +11,10 @@ var Player = (function(){
     var that = {}; //public methods
 
     let data = {
-        dndNoob: "noob",
+        dndNoob: "",
         charName: '',
-        curEncounter: "Intro",
-        playerChoices: [],
+        encounter: "",
+        choices: [], //for the current encounter
         race: '',
         class: '',
         sex: '',

@@ -1,10 +1,9 @@
 {
-    "username": "admin",
-    "password": "password",
-    
     "player": {
         "dndNoob": "",
-        "curChar": ""
+        "charName": "",
+        "encounter": "Intro",
+        "choices": []
     },
 
     "Travok": {

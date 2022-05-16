@@ -34,10 +34,23 @@ const server = new http.createServer(function (req, res) {
                     case 'login':
                         let username = data.login.username;
                         let password = data.login.password;
+                        res.writeHead(200, {'Content-Type': 'application/json'});
                         if(USERS[username]) {
                             if(USERS[username] === password) {
                                 console.log(username + ' has logged in.');
-                                res.write(JSON.stringify({login:true}));
+                                let responseData = {login: true}
+                                let userData = fs.readFileSync('./user/users/' + username + '.json');
+                                userData = JSON.parse(userData);
+                                let player = {};
+                                for(key in userData['player']) {
+                                    player[key] = userData['player'][key];
+                                }
+                                let curChar = player.charName;
+                                for(key in userData[curChar]) {
+                                    player[key] = userData[curChar][key];
+                                }
+                                responseData['userData'] = player;
+                                res.write(JSON.stringify(responseData));
                             } else {
                                 console.log(username + ' has wrong password');
                                 res.write(JSON.stringify({login:false}));
