@@ -10,7 +10,7 @@
 var Player = (function(){
     var that = {}; //public methods
 
-    let data = {
+    let data = { //this gets overwritten by data from server
         dndNoob: "",
         charName: '',
         encounter: "",
@@ -26,18 +26,47 @@ var Player = (function(){
         skinColour: ''
     };
 
-    that.setData = function(key, value) {
-        data[key] = value;
+    let username = '';
+
+    that.setUser = function(user) {
+        username = user;
+    }
+
+    that.initData = function(d) {
+        data = d.userData;
     }
 
     that.getData = function(key) {
         return data[key];
     }
 
+    that.setData = function(key, value) {
+        data[key] = value;        
+        console.log('player data: ' + key + ' = ' + value);
+        //save to server
+        let pd = {
+            'username': username,
+            'playerData': {}
+        };
+        pd.playerData[key] = value;
+        let str = JSON.stringify(pd);
+        f.ajax.post('playerData', str, function(ack) {
+            console.log(ack);
+        }); 
+    }
+
     // track each player choice in an array
     that.saveChoice = function(choice) {
-        data.playerChoices.push(choice);
-        console.log('player choices: ' + data.playerChoices);
+        data.choices.push(choice); //save locally
+        console.log('player choices: ' + data.choices);
+        //save to server
+        let str = JSON.stringify({
+            'username': username,
+            'playerChoices': data.choices
+        });
+        f.ajax.post('playerChoices', str, function(ack) {
+            console.log(ack);
+        }); 
     }
 
     that.getSubjectivePronoun = function() {

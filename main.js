@@ -62,6 +62,8 @@ var main = (function() {
             console.log(ack);
             ack = JSON.parse(ack);
             if(ack.login) {
+                Player.setUser(ack.username);
+                Player.initData(ack);
                 elem.login.style.display = 'none';
                 Intro.start();
             } else {
@@ -147,8 +149,7 @@ var main = (function() {
             }
             btn.onclick = function() {
                 let choice = this.innerText;
-                main.writeStory('You', choice);
-                //f.ajax.post('playerChoice', choice);                
+                main.writeStory('You', choice);             
                 Player.saveChoice(this.data);
                 this.callback(choice);
             }
@@ -211,8 +212,7 @@ var main = (function() {
                         if(possibleResults.length !== 1) {
                             console.error('hmmmm....')
                         }
-                        //f.ajax.post('playerSentence', sentence);
-                        Player.saveChoice(possibleResults);
+                        Player.saveChoice(possibleResults[0]);
                         callback(sentenceOpts[possibleResults][RESULT]); //should just be one at this point
                     } else {
                         wordIdx++;
