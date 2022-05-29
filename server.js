@@ -12,6 +12,7 @@ const fs = require('fs');
 
 const PORT = 8080;
 const USERS = require('./user/users.json');
+const SAVEDATA = false;
 
 const server = new http.createServer(function (req, res) {
     var query = url.parse(req.url, true);  
@@ -49,10 +50,12 @@ const server = new http.createServer(function (req, res) {
                                 } catch(e) {
                                     userData = fs.readFileSync('user/users/_template.json');
                                     userData = JSON.parse(userData);
-                                    fs.writeFile(userFile, JSON.stringify(userData, null, 2), function(err) {
-                                        if(err) console.log('failed to create file for ' + username);
-                                        else console.log('created new game file for ' + username);
-                                    });
+                                    if(SAVEDATA) {
+                                        fs.writeFile(userFile, JSON.stringify(userData, null, 2), function(err) {
+                                            if(err) console.log('failed to create file for ' + username);
+                                            else console.log('created new game file for ' + username);
+                                        });
+                                    }
                                 }
                                 let player = {};
                                 for(key in userData['player']) {
@@ -84,12 +87,14 @@ const server = new http.createServer(function (req, res) {
                                         savedData = JSON.parse(savedData);
                                         savedData.player.choices = data.playerChoices;
                                         savedData = JSON.stringify(savedData, null, 2);
-                                        fs.writeFile(filename, savedData, function(e) {
-                                            if(e) {
-                                                console.log('error writing to ' + filename);
-                                            }
-                                            console.log('game data saved to ' + filename);
-                                        });
+                                        if(SAVEDATA) {
+                                            fs.writeFile(filename, savedData, function(e) {
+                                                if(e) {
+                                                    console.log('error writing to ' + filename);
+                                                }
+                                                console.log('game data saved to ' + filename);
+                                            });
+                                        }
                                     }          
                                 });
                             } catch(e) {
@@ -118,12 +123,14 @@ const server = new http.createServer(function (req, res) {
                                             }
                                         }
                                         savedData = JSON.stringify(savedData, null, 2);
-                                        fs.writeFile(filename, savedData, function(e) {
-                                            if(e) {
-                                                console.log('error writing to ' + filename);
-                                            }
-                                            console.log('game data saved to ' + filename);
-                                        });
+                                        if(SAVEDATA) {
+                                            fs.writeFile(filename, savedData, function(e) {
+                                                if(e) {
+                                                    console.log('error writing to ' + filename);
+                                                }
+                                                console.log('game data saved to ' + filename);
+                                            });
+                                        }
                                     }          
                                 });
                             } catch(e) {

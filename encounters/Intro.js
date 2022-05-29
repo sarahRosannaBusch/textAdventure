@@ -3,8 +3,8 @@
  * @file       Intro.js
  * @brief      Encounter: Game Intro
  * @author     Sarah Rosanna Busch
- * @version    0.3
- * @date       16 May 2022
+ * @version    0.4
+ * @date       27 May 2022
  * */
 
 var Intro = (function(){
@@ -392,8 +392,8 @@ var Intro = (function(){
         ],
         [
             "Ok cool, I won't hold your hand through all the basic stuff then. FYI, this campaign is based entirely on the <a href='https://dnd.wizards.com/articles/features/basicrules' target='_blank'>D&D 5e Basic Rules</a>. You can reference them if you'd like, but you don't need to since the code will take care of all the rules stuff for you.",
-            "Ok great, I'll only explain the important rules to you then. If you want to reference the <a href='https://dnd.wizards.com/articles/features/basicrules' target='_blank'>D&D 5e Basic Rules</a> you can, but it's not necessary to play this text adventure. Go with your gut, all choices lead to adventure.",
-            "That's ok, this game is designed to familiarize you with the rules and language of D&D. You can read the <a href='https://dnd.wizards.com/articles/features/basicrules' target='_blank'>D&D 5e Basic Rules</a> if you're curious, but it's not necessary to play this text adventure. I'll explain the rules and terms as they come up."
+
+            "That's ok, this game will familiarize you with the rules and language of D&D. You can read the <a href='https://dnd.wizards.com/articles/features/basicrules' target='_blank'>5th edition Basic Rules</a> if you're curious, but it's not necessary to play this text adventure. I'll explain any rules and terms you need to know as they come up."
         ],
         [
             "You're gonna do great.",
@@ -401,26 +401,42 @@ var Intro = (function(){
             "Alrighty then, no hand-holding for you."
         ],
         [
-            "All you really need to know to get started is that I have created a fantasy world full of lively characters, fearsome monsters, and epic adventures. I'll tell you all about it as we go. You, the player, will be playing a single character. An adventurer ready to start questing to prove their worth. You get to decide who this character is and what they do, through exploration, social interaction, and combat."
+            "All you really need to know to get started is that I, the DM, have created a fantasy world full of lively characters, fearsome monsters, and epic adventures. I'll tell you all about it as we go. You, the player, will be playing a single character. An adventurer ready to start questing to prove their worth. You get to decide who this character is and what they do, through exploration, social interaction, and combat."
+        ],
+        [
+            "Don't worry, that's the last time you'll have to read a novel to find out what your choices are at each step in this adventure. At its heart D&D is a story-telling game so I want to keep your head in the story. Because of its improvisational nature, player options are virtually limitless when this game is played live around a table. For obvious reasons, your choices in this text-adventure format are limited, but, in order to feel like a real role-playing game, they are still plentiful."
+        ],
+        [
+            "No, I wouldn't want to either. I find that kind of thing takes me out of the flow of the story.",
+
+            "Alright alright! You'll be able to explore every option before you commit to one, if that's how you want to play it."
+        ],
+        [
+            "Either way, if you're really going to write your character's story, you'll need to use your imagination to write some sentences yourself. Instead of making you guess what words the program will recognize, like some old-school text-adventures did, I'll show you a selection of words or sentence fragments that you can choose from. For example, ask me that question you chose from the list again."
+        ],
+        [
+            "Good work! Now we're ready to write a story together.",
+
+            "Well, that is <i>a</i> sentence, but not quite the same as the one you picked earlier. Try again. "
         ],
         [
             "Normally, in D&D, you would come to the table with a level-one character already decked out in adventuring gear and with a small arsenal of supernatural abilities. But how hard was it for you to master those spells? How many hours did it take to become proficient with that sword? Where the hell did this trinket come from? Was there a defining moment when you chose good over evil? Law over chaos?"
         ],
         [
-            "You can certainly try. For the purposes of this text-adventure, I have created four level-zero characters for you to choose from. You will be picking up their story as they take their very first step towards becoming a hero. Guide them on their journey wisely. Each choice will help determine exactly what kind of hero they will become."
+            "You can certainly try. (There were over 600 sentences you could have written there, by the way.)<br><br>For the purposes of this text-adventure, I have created four level-zero characters for you to choose from. You will be picking up their story as they take their very first step towards becoming a hero. Guide them on their journey wisely. Each choice will help determine exactly what kind of hero they will become."
         ],
         [
-            "Character choices: <br><br> 1. A dwarven acolyte who aspires to channel the power of a god. <br><br> 2. An elven soldier who aims to become a champion on the battlefield. <br><br> 3. A human bookworm itching to test their carefully crafted spells. <br><br> 4. A halfling with sticky fingers and an air of mystery."
+            "Character choices: <br><br> 1. A dwarven acolyte who aspires to channel the power of a god. <br><br> 2. An elven soldier who aims to become a champion on the battlefield. <br><br> 3. A human bookworm itching to test their carefully crafted spells. <br><br> 4. A lightfoot halfling with sticky fingers and an air of mystery."
         ],
         [
             "Good choice! You will be playing Travok Ironfist, the hill dwarf acolyte chosen by the gods to become a mighty cleric.",
             "Good choice! You will be playing Rhinn Galanodel, the wood elf soldier training to become an epic fighter.",
             "Good choice! You will be playing Darvyn Dotsk, the human sage who's studying to become a powerful wizard.",
-            "Good choice! You will be playing Poe Ungart, the lightfoot halfling criminal who was born to be a sneaky rogue."
+            "Good choice! You will be playing Poe Ungart, the halfling criminal who was born to be a sneaky rogue."
         ],
         [
             "In D&D, the DM describes the scene then the player describes what their character tries to do. Whenever an outcome is uncertain, we roll dice to see what happens.",
-            "As a reminder, in RPGs we roll dice whenever the outcome of an action is uncertain.", 
+            
             "As you know, in D&D we roll dice whenever the outcome of an action is uncertain."
         ],
         [
@@ -439,13 +455,17 @@ var Intro = (function(){
             "Got it, <pronouns> it is. You'll be able to change this at any time, if you find it doesn't feel right. Next, let's determine your character's size."
         ],
         [
-            "Humans vary as widely in height and weight in the world of D&D as they do in real life, standing from under 5 to well over 6 feet tall and weighing between 125 to 250 pounds. Roll 2d10 to see how many inches over 4'8\" your character is.",
-            "Though dwarves are all well under 5 feet tall, they are so wide and dense that they can weigh the same as any human. Roll 2d4 to see how many inches over 3'8\" your character is.",
-            "Elves are graceful with fine features, and tend to be a bit shorter and more slender than humans. Roll 2d10 to see how many inches over 4'6\" your character is.",
-            "Halflings are short and stout and are all pretty much the same size, coming in at about 3 feet and between 40 and 45 pounds. Roll 2d4 to see how many inches over 2'7\" and how many pounds over 35 lbs your character is."
+            "Humans vary as widely in height and weight in the world of D&D as they do in real life, standing from under 5 to well over 6 feet tall and weighing between 125 to 250 pounds. Roll 2d10 to see how many inches over 4'8\" <charName> is.",
+
+            "Though dwarves are all well under 5 feet tall, they are so wide and dense that they can weigh the same as any human. Roll 2d4 to see how many inches over 3'8\" <charName> is.",
+
+            "Elves are graceful with fine features, and tend to be a bit shorter and more slender than humans. Roll 2d10 to see how many inches over 4'6\" <charName> is.",
+
+            "Halflings are short and stout and are all pretty much the same size, coming in at about 3 feet and between 40 and 45 pounds. Roll 2d4 to see how many inches over 2'7\" and how many pounds over 35 lbs <charName> is."
         ],
         [
-            "<charName> is <height> tall. You pretty much have to take the height you get. Your weight on the other hand you do have some control over, within a reasonable range for your height and body type. So roll twice for your weight modifier and pick the result you prefer.",
+            "<charName> is <height> tall. You pretty much have to take the height you get. Your weight, on the other hand, you do have some control over—within a range determined by your height and body type. So roll twice for your weight modifier and pick the result you prefer.",
+
             "<charName> is <height> tall. Since halflings don't vary much in size, we'll just use that roll to determine <possessivePronoun> weight as well."
         ],
         [
@@ -459,7 +479,7 @@ var Intro = (function(){
     const COLOURS = {
         human: {
             eyes: ["amber", "blue", "brown", "grey", "green", "hazel"],
-            hair: ["black", "dark brown", "red", "blond", "dirty blond", "orange"],
+            hair: ["black", "dark brown", "brown", "red", "blond", "dirty blond"],
             skin: ["ivory", "beige", "light brown", "medium brown", "dark brown", "very dark brown"]
         },
         dwarf: {
@@ -479,35 +499,51 @@ var Intro = (function(){
         },
     }
 
-    const SENTENCE_0 = [
-        ["pro", "Yes", "."],
-        ["pro", "Yes", ", ", "I've played ", "5th edition."],
-        ["mid", "Yes", ", ", "I've played ", "an older version."],
-        ["noob", "No", "."],
-        ["pro", "No", ", ", "but I ", "know ", "the 5e rules."],
-        ["mid", "No", ", ", "but I ", "know ", "older edition rules."],
-        ["mid", "No", ", ", "but I ", "have ", "watched people play."],
-        ["noob", "No", ", ", "but I ", "have ", "heard of it."],
-        ["mid", "No", ", ", "but I ", "have ", "played other RPGs."],
+    const SENTENCE_LIST = [
+        "But isn't D&D a table-top game?",
+        "But isn't D&D an improv game?",
+        "But isn't D&D an imagination game?",
+        "But how will I know what my character can do?",
+        "But how will I know who to interact with?",
+        "But how will I choose what my character does?",
+        "But how will I choose my own adventure?",
+        "What kind of choices can I make in game?",
+        "What kind of actions can my character take?",
+        "What are the options I can choose from?",
+        "What are we talking about again?"
     ];
 
-    
-    const SENTENCE_1 = function() {
-        let sentence = [
-            [0, "I'll ", "slay all the ", "monsters."],
-            [1, "I'll ", "slay all the ", "beasts."],
-            [2, "I'll ", "slay all the ", "dragons."],
-            [3, "I'll ", "slay all the ", "zombies."],
-            [4, "I'm ", "down to ", "find all the ", "loot."],
-            [5, "I'm ", "down to ", "find all the ", "secret doors."],
-            [6, "I'm ", "down to ", "find all the ", "traps."],
-            [7, "I'm ", "down to ", "sow a little ", "chaos."],
-            [8, "I'm ", "down to ", "sow a little ", "kindness."],
-            [9, "I'm ", "down to ", "pick some ", "locks."],
-            [10, "I'm ", "down to ", "pick some ", "pockets."]
-        ];
+    const SENTENCE_0 = [
+        ["But ", "isn't D&D ", "a table-top game?"],
+        ["But ", "isn't D&D ", "an improv game?"],
+        ["But ", "isn't D&D ", "an imagination game?"],
+        ["But ", "how will I ", "know ", "what my character can do?"],
+        ["But ", "how will I ", "know ", "who to interact with?"],
+        ["But ", "how will I ", "choose ", "what my character does?"],
+        ["But ", "how will I ", "choose ", "my own adventure?"],
+        ["What ", "kind of ", "choices can I make in game?"],
+        ["What ", "kind of ", "actions can my character take?"],
+        ["What ", "are ", "the options I can choose from?"],
+        ["What ", "are ", "we talking about again?"]
+    ];
 
-        let result = 11;
+    const SENTENCE_1 = (function() {
+        let sentence = [
+            ["I'll ", "slay all the ", "monsters."],
+            ["I'll ", "slay all the ", "beasts."],
+            ["I'll ", "slay all the ", "dragons."],
+            ["I'll ", "slay all the ", "zombies."],
+            ["I'm ", "gonna ", "find all the ", "loot."],
+            ["I'm ", "gonna", "find all the ", "secret doors."],
+            ["I'm ", "gonna ", "find all the ", "traps."],
+            ["I'm ", "down to ", "sow a little ", "chaos."],
+            ["I'm ", "down to ", "sow a little ", "kindness."],
+            ["I'm ", "down to ", "pick some ", "locks."],
+            ["I'm ", "down to ", "pick some ", "pockets."],
+            ["I'm ", "down to ", "loot some ", "dungeons."],
+            ["I'm ", "down to ", "loot some ", "houses."],
+            ["I'm ", "down to ", "loot some ", "shops."]
+        ];
 
         let goodMonsters = [
             'beasts.',
@@ -540,17 +576,15 @@ var Intro = (function(){
         let numEvilMonsters = evilMonsters.length;
 
         for(let i = 0; i < numGoodMonsters; i++) {
-            sentence.push([result, "I'll ", "slay all the ", "good ", goodMonsters[i]]);
-            result++;
-            sentence.push([result, "I'm ", "down to ", "slay all the ", "good ", goodMonsters[i]]);
-            result++;
+            sentence.push(["I'll ", "slay all the ", "good ", goodMonsters[i]]);
+            sentence.push(["I'm ", "down to ", "slay all the ", "good ", goodMonsters[i]]);
+            sentence.push(["I'm ", "gonna ", "slay all the ", "good ", goodMonsters[i]]);
         }
 
         for(let i = 0; i < numEvilMonsters; i++) {
-            sentence.push([result, "I'll ", "slay all the ", "evil ", evilMonsters[i]]);
-            result++;
-            sentence.push([result, "I'm ", "down to ", "slay all the ", "evil ", evilMonsters[i]]);
-            result++;
+            sentence.push(["I'll ", "slay all the ", "evil ", evilMonsters[i]]);
+            sentence.push(["I'm ", "down to ", "slay all the ", "evil ", evilMonsters[i]]);
+            sentence.push(["I'm ", "gonna ", "slay all the ", "evil ", goodMonsters[i]]);
         }
 
         let adjectives = [
@@ -563,7 +597,8 @@ var Intro = (function(){
             'greediest ',
             'sexiest ',
             'most successful ',
-            'richest '
+            'richest ',
+            'stupidest '
         ];
 
         let nouns = [
@@ -572,15 +607,16 @@ var Intro = (function(){
             'cleric ',
             'fighter ',
             'bad-ass ',
-            'adventurer '
+            'adventurer ',
+            'hero ',
+            'villain '
         ];
 
         let terminators = [
             'ever!',
             'off all time!',
             'in the world!',
-            'in my family!',
-            'from my hometown!'
+            'in the universe!'
         ];
 
         let numAdj = adjectives.length;
@@ -590,16 +626,15 @@ var Intro = (function(){
         for(let i = 0; i < numAdj; i++) {
             for(let j = 0; j < numNouns; j++) {
                 for(let k = 0; k < numTerm; k++) {
-                    sentence.push([result, "I'll ", "be the ", adjectives[i], nouns[j], terminators[k]]);
-                    result++;
-                    sentence.push([result, "I'm ", "gonna ", "be the ", adjectives[i], nouns[j], terminators[k]]);
-                    result++;
+                    sentence.push(["I'll ", "be the ", adjectives[i], nouns[j], terminators[k]]);
+                    sentence.push(["I'm ", "gonna ", "be the ", adjectives[i], nouns[j], terminators[k]]);
                 }
             }
         }
 
+        console.log('SENTENCE_2.length = ' + sentence.length);
         return sentence;
-    }
+    }());
 
     return that;
 }());

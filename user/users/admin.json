@@ -1,36 +1,32 @@
 {
-    "player": {
-        "dndNoob": "",
-        "charName": "",
-        "encounter": "Intro",
-        "choices": []
-    },
-
-    "Travok": {
-        "lastName": "Ironfist",
-        "race": "dwarf",
-        "class": "cleric",
-        "background": "acolyte"
-    },
-
-    "Rhinn": {
-        "lastName": "Galanodel",
-        "race": "elf",
-        "class": "fighter",
-        "background": "soldier"
-    },
-
-    "Darvyn": {
-        "lastName": "Dotsk",
-        "race": "human",
-        "class": "wizard",
-        "background": "sage"
-    },
-
-    "Poe": {
-        "lastName": "Ungart",
-        "race": "halfling",
-        "class": "rogue",
-        "background": "criminal"
-    }
+  "player": {
+    "dndNoob": "noob",
+    "charName": "Travok",
+    "encounter": "Intro",
+    "choices": []
+  },
+  "Travok": {
+    "lastName": "Ironfist",
+    "race": "dwarf",
+    "class": "cleric",
+    "background": "acolyte"
+  },
+  "Rhinn": {
+    "lastName": "Galanodel",
+    "race": "elf",
+    "class": "fighter",
+    "background": "soldier"
+  },
+  "Darvyn": {
+    "lastName": "Dotsk",
+    "race": "human",
+    "class": "wizard",
+    "background": "sage"
+  },
+  "Poe": {
+    "lastName": "Ungart",
+    "race": "halfling",
+    "class": "rogue",
+    "background": "criminal"
+  }
 }
