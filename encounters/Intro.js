@@ -3,8 +3,8 @@
  * @file       Intro.js
  * @brief      Encounter: Game Intro
  * @author     Sarah Rosanna Busch
- * @version    0.4
- * @date       27 May 2022
+ * @version    0.3
+ * @date       31 May 2022
  * */
 
 var Intro = (function(){
@@ -15,39 +15,25 @@ var Intro = (function(){
         //characterPicker();
     }
 
-    // 0
     function hello() {
         main.writeStory('DM', DM[0][0]);
-        //main.createBtnOpts(['Yes', 'Sort of', 'No'], [basicRules0, basicRules1, basicRules2]);
-        main.sentenceBuilder(SENTENCE_0, function(result) {
-            switch(result) {
-                case "pro": basicRules0(); break;
-                case "mid": basicRules1(); break;
-                case "noob": basicRules2(); break;
-                default: console.log('unknown noob lvl: ' + JSON.stringify(result)); break;
-            }
-        });
+        main.createBtnOpts(PC[0], basicRules);
     }
 
-    // 1
-    var basicRules0 = function() {
-        main.writeStory('DM', DM[1][0]);
-        main.createBtnOpts(['Got it.', 'Wait, I want you to hold my hand.'], [function(){confirmNoob("pro");}, function(){confirmNoob("noob");}])
-    }
-    
-    var basicRules1 = function() {
-        main.writeStory('DM', DM[1][1]);
-        main.createBtnOpts(['Got it.', "I don't trust my gut, explain the rules to me.", "Don't bother explaining the rules."], [function(){confirmNoob("mid");}, function(){confirmNoob("noob");}, function(){confirmNoob("pro");}]);
-    }
-
-    var basicRules2 = function() {
-        Player.setData('dndNoob', true);
-        main.writeStory('DM', DM[1][2]);
-        main.createBtnOpts(['Got it.', "Don't bother explaining the rules."], [function(){confirmNoob("noob");}, function(){confirmNoob("pro");}]);
+    var basicRules = function(choice) {
+        main.writeStory('DM', DM[1][choice]);
+        let excludes = [];
+        if(choice === 0) {
+            excludes.push(2);
+            Player.setData('dndNoob', false);
+        } else {
+            excludes.push(1);
+            Player.setData('dndNoob', true);
+        }
+        main.createBtnOpts(PC[1], confirmNoob, excludes);
     }
 
-    // 2
-    var confirmNoob = function(noob) {
+    var confirmNoob = function(choice) {
         Player.setData('dndNoob', 'noob');
         concept();
     }
@@ -389,72 +375,55 @@ var Intro = (function(){
     const DM = [
         [
             'Hi! My name is Sarah, but for this adventure you can call me Dungeon Master. Welcome to my "table." <br><br> Have you played Dungeons and Dragons before?'
-        ],
-        [
+        ],[
             "Ok cool, I won't hold your hand through all the basic stuff then. FYI, this campaign is based entirely on the <a href='https://dnd.wizards.com/articles/features/basicrules' target='_blank'>D&D 5e Basic Rules</a>. You can reference them if you'd like, but you don't need to since the code will take care of all the rules stuff for you.",
 
             "That's ok, this game will familiarize you with the rules and language of D&D. You can read the <a href='https://dnd.wizards.com/articles/features/basicrules' target='_blank'>5th edition Basic Rules</a> if you're curious, but it's not necessary to play this text adventure. I'll explain any rules and terms you need to know as they come up."
-        ],
-        [
+        ],[
             "You're gonna do great.",
             "No worries, I got you.",
             "Alrighty then, no hand-holding for you."
-        ],
-        [
+        ],[
             "All you really need to know to get started is that I, the DM, have created a fantasy world full of lively characters, fearsome monsters, and epic adventures. I'll tell you all about it as we go. You, the player, will be playing a single character. An adventurer ready to start questing to prove their worth. You get to decide who this character is and what they do, through exploration, social interaction, and combat."
-        ],
-        [
+        ],[
             "Don't worry, that's the last time you'll have to read a novel to find out what your choices are at each step in this adventure. At its heart D&D is a story-telling game so I want to keep your head in the story. Because of its improvisational nature, player options are virtually limitless when this game is played live around a table. For obvious reasons, your choices in this text-adventure format are limited, but, in order to feel like a real role-playing game, they are still plentiful."
-        ],
-        [
+        ],[
             "No, I wouldn't want to either. I find that kind of thing takes me out of the flow of the story.",
 
             "Alright alright! You'll be able to explore every option before you commit to one, if that's how you want to play it."
-        ],
-        [
+        ],[
             "Either way, if you're really going to write your character's story, you'll need to use your imagination to write some sentences yourself. Instead of making you guess what words the program will recognize, like some old-school text-adventures did, I'll show you a selection of words or sentence fragments that you can choose from. For example, ask me that question you chose from the list again."
-        ],
-        [
+        ],[
             "Good work! Now we're ready to write a story together.",
 
             "Well, that is <i>a</i> sentence, but not quite the same as the one you picked earlier. Try again. "
-        ],
-        [
+        ],[
             "Normally, in D&D, you would come to the table with a level-one character already decked out in adventuring gear and with a small arsenal of supernatural abilities. But how hard was it for you to master those spells? How many hours did it take to become proficient with that sword? Where the hell did this trinket come from? Was there a defining moment when you chose good over evil? Law over chaos?"
-        ],
-        [
+        ],[
             "You can certainly try. (There were over 600 sentences you could have written there, by the way.)<br><br>For the purposes of this text-adventure, I have created four level-zero characters for you to choose from. You will be picking up their story as they take their very first step towards becoming a hero. Guide them on their journey wisely. Each choice will help determine exactly what kind of hero they will become."
-        ],
-        [
+        ],[
             "Character choices: <br><br> 1. A dwarven acolyte who aspires to channel the power of a god. <br><br> 2. An elven soldier who aims to become a champion on the battlefield. <br><br> 3. A human bookworm itching to test their carefully crafted spells. <br><br> 4. A lightfoot halfling with sticky fingers and an air of mystery."
-        ],
-        [
+        ],[
             "Good choice! You will be playing Travok Ironfist, the hill dwarf acolyte chosen by the gods to become a mighty cleric.",
             "Good choice! You will be playing Rhinn Galanodel, the wood elf soldier training to become an epic fighter.",
             "Good choice! You will be playing Darvyn Dotsk, the human sage who's studying to become a powerful wizard.",
             "Good choice! You will be playing Poe Ungart, the halfling criminal who was born to be a sneaky rogue."
-        ],
-        [
+        ],[
             "In D&D, the DM describes the scene then the player describes what their character tries to do. Whenever an outcome is uncertain, we roll dice to see what happens.",
             
             "As you know, in D&D we roll dice whenever the outcome of an action is uncertain."
-        ],
-        [
+        ],[
             "You can think of the dice as fate, chance, the Universe, God, Satan, or whatever works for you. Basically, the dice decide the things that we don't get to decide for ourselves. For example, we don't get to choose the body we are born with. So let's roll a d20 to see what you're working with. Evens for female, odds for male."
-        ],
-        [
+        ],[
             "Sorry to say this friend, but no sex for you. You're smooth as a Ken doll down there.",
             "Congratulations, you get a vagina!",
             "Congratulations, you get a penis!",
             "Natural 20! I think that means you get both a penis and a vagina!"
-        ],
-        [
+        ],[
             "Hopefully you're happy with what the dice have given you. But if you're not, you can seek out ways to change it in game. Don't worry though, sex has no bearing on the choices you can make or your ability to become a hero. Common language does tend to be gendered, however, so pick your character's preferred pronouns."
-        ],
-        [
+        ],[
             "Got it, <pronouns> it is. You'll be able to change this at any time, if you find it doesn't feel right. Next, let's determine your character's size."
-        ],
-        [
+        ],[
             "Humans vary as widely in height and weight in the world of D&D as they do in real life, standing from under 5 to well over 6 feet tall and weighing between 125 to 250 pounds. Roll 2d10 to see how many inches over 4'8\" <charName> is.",
 
             "Though dwarves are all well under 5 feet tall, they are so wide and dense that they can weigh the same as any human. Roll 2d4 to see how many inches over 3'8\" <charName> is.",
@@ -462,20 +431,75 @@ var Intro = (function(){
             "Elves are graceful with fine features, and tend to be a bit shorter and more slender than humans. Roll 2d10 to see how many inches over 4'6\" <charName> is.",
 
             "Halflings are short and stout and are all pretty much the same size, coming in at about 3 feet and between 40 and 45 pounds. Roll 2d4 to see how many inches over 2'7\" and how many pounds over 35 lbs <charName> is."
-        ],
-        [
+        ],[
             "<charName> is <height> tall. You pretty much have to take the height you get. Your weight, on the other hand, you do have some control over—within a range determined by your height and body type. So roll twice for your weight modifier and pick the result you prefer.",
 
             "<charName> is <height> tall. Since halflings don't vary much in size, we'll just use that roll to determine <possessivePronoun> weight as well."
-        ],
-        [
+        ],[
             "Alrighty, last but not least, let's roll for your character's colouring."
-        ],
-        [
+        ],[
             "Beautiful! <charName> has a <skinColour> complexion, with naturally <hairColour> hair, and <eyeColour> eyes. Feel free to add whatever adjectives you like to that as you build your mental picture of this character."
         ]
     ];
 
+    const PC = [
+        [
+            "Yes.", "No."
+        ],[
+            "Got it.",
+            "Wait, I want you to hold my hand.",
+            "Don't bother explaining the rules."
+        ],[
+            "But isn't D&D a table-top game?",
+            "But isn't D&D an improv game?",
+            "But isn't D&D an imagination game?",
+            "But how will I know what my character can do?",
+            "But how will I know who to interact with?",
+            "But how will I choose what my character does?",
+            "But how will I choose my own adventure?",
+            "What kind of choices can I make in game?",
+            "What kind of actions can my character take?",
+            "What are the options I can choose from?",
+            "What are we talking about again?"
+        ],[
+            "I don't want to read dozens of options every turn!",
+            "I need to know ALL of my options!!"
+        ],[
+            "Let me pick my character!"
+        ],[
+            "Dwarf Acolyte",
+            "Elf Soldier",
+            "Human Sage",
+            "Halfling Criminal"
+        ],[
+            "Let me choose a different character.",
+            "Let's roll some dice!"
+        ],[
+            "I rolled a <result>"
+        ],[
+            "she/her",
+            "he/him",
+            "they/them",
+            "he/they",
+            "she/they",
+            "any/all"
+        ],[
+            "<die1> + <die2> = <result></result>"
+        ],[
+            "First roll.",
+            "*goto PC[10] option 1 only"
+        ],[
+            "Second roll."
+        ],[
+            "<die1> + <die2> = <result1>",
+            "<die1> + <die2> = <result2>"
+        ],[
+            "Roll for eye colour.",
+            "Roll for hair colour.",
+            "Roll for skin colour."
+        ]
+    ];
+    
     const COLOURS = {
         human: {
             eyes: ["amber", "blue", "brown", "grey", "green", "hazel"],
