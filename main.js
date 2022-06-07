@@ -5,7 +5,7 @@
  * @brief  D&D Backstories main functionality
  * @author Sarah Rosanna Busch
  * @version 0.2
- * @date   16 May 2022
+ * @date   6 June 2022
  */
 
 var main = (function() {
@@ -134,23 +134,21 @@ var main = (function() {
     }
 
     //param opts = array of strings to be printed in buttons
-    //param callbacks = array of functions
-    that.createBtnOpts = function(opts, callbacks) {
+    //param callbacks -> pass opts idx selected back
+    //param excludes (optional) -> indexes of items to exclude from opts
+    that.createBtnOpts = function(opts, callback, excludes) {
         f.html.empty(elem.buttonContainer);
         var numButtons = opts.length;
         for(var i = 0; i < numButtons; i++) {
+            if(excludes && excludes.includes(i)) {
+                continue;
+            }
             var btn = f.html.spawn(elem.buttonContainer, 'button', i);
             btn.innerHTML = opts[i];
-            btn.data = i;
-            if(callbacks.length === 1) {
-                btn.callback = callbacks[0];
-            } else {
-                btn.callback = callbacks[i];
-            }
+            btn.callback = callback;
             btn.onclick = function() {
-                let choice = this.innerText;
-                main.writeStory('You', choice);             
-                Player.saveChoice(this.data);
+                let choice = JSON.parse(this.id);           
+                Player.saveChoice(choice);
                 this.callback(choice);
             }
         }

@@ -4,7 +4,7 @@
  * @brief      Encounter: Game Intro
  * @author     Sarah Rosanna Busch
  * @version    0.3
- * @date       31 May 2022
+ * @date       6 June 2022
  * */
 
 var Intro = (function(){
@@ -21,6 +21,7 @@ var Intro = (function(){
     }
 
     var basicRules = function(choice) {
+        main.writeStory('You', PC[0][choice]);
         main.writeStory('DM', DM[1][choice]);
         let excludes = [];
         if(choice === 0) {
