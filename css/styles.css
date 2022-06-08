@@ -1,7 +1,7 @@
 /** filename: styles.scss
  *  description: main styles for D&D Text Adventure
  *  author: Sarah Rosanna Busch
- *  date: 10 Sept 2021
+ *  date: 7 June 2022
  */
 /*************************** Scrollbar ******************************/
 /* width */
@@ -134,14 +134,16 @@ header, footer {
   position: relative;
   background: #121212;
   flex: 0.25;
+  max-height: 40%;
   padding: 0.5em;
-  text-align: center;
-  display: table;
-  overflow-y: auto; }
+  text-align: center; }
   #playerMat #buttonContainer {
-    display: table-cell;
-    vertical-align: middle;
-    overflow-y: auto; }
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll; }
   #playerMat button {
     padding: 1em;
     margin: 0.75em;

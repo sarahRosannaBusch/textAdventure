@@ -158,8 +158,7 @@ var main = (function() {
         let bubbleElem = null;
         let p = null;
         let numOpts = sentenceOpts.length;
-        const RESULT = 0; //result is always first in the array,
-        let wordIdx = 1; //followed by the word options
+        let wordIdx = 0; 
         let chosenWords = [];
 
         //track indices of remaining sentenceOpts
@@ -211,7 +210,7 @@ var main = (function() {
                             console.error('hmmmm....')
                         }
                         Player.saveChoice(possibleResults[0]);
-                        callback(sentenceOpts[possibleResults][RESULT]); //should just be one at this point
+                        callback(possibleResults[0]); //should just be one at this point
                     } else {
                         wordIdx++;
                         createUserOptions();

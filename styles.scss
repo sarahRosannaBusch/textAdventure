@@ -1,7 +1,7 @@
 /** filename: styles.scss
  *  description: main styles for D&D Text Adventure
  *  author: Sarah Rosanna Busch
- *  date: 10 Sept 2021
+ *  date: 7 June 2022
  */
 
 //sass --watch styles.scss styles.css
@@ -174,15 +174,17 @@ header, footer { //indicators, error messages
     position: relative;
     background: $playerMatBackground;
     flex: 0.25;
+    max-height: 40%;
     padding: 0.5em;
     text-align: center;
-    display: table;  
-    overflow-y: auto;
     
-    #buttonContainer {
-        display: table-cell;
-        vertical-align: middle;
-        overflow-y: auto;
+    #buttonContainer {   
+        height: 100%;  
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        overflow-y: scroll;
     }  
 
     button {

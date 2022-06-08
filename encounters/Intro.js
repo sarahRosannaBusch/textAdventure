@@ -9,10 +9,11 @@
 
 var Intro = (function(){
     var that = {};
+    var vars = {};
 
     that.start = function() {
-        hello();
-        //characterPicker();
+        //hello();
+        characterPicker();
     }
 
     function hello() {
@@ -35,103 +36,118 @@ var Intro = (function(){
     }
 
     var confirmNoob = function(choice) {
-        Player.setData('dndNoob', 'noob');
-        concept();
-    }
-
-    var concept = function() {
-        let extraWords = "";
-        let noob = Player.getData('dndNoob');
-        switch(noob) {
-            case 'pro': extraWords = DM[2][2]; break;
-            case 'mid': extraWords = DM[2][0]; break;
-            case 'noob': extraWords = DM[2][1]; break;
+        main.writeStory('You', PC[1][choice]);
+        if(choice === 1) {
+            Player.setData('dndNoob', true);
+        } else if(choice === 2) {
+            Player.setData('dndNoob', false);
         }
-        main.writeStory('DM', extraWords + "<br><br>" + DM[3][0]);
-        main.createBtnOpts(['Go on...'], [textAdventure]);
+        main.writeStory('DM', DM[2][choice] + "<br><br>" + DM[3][0]);
+        main.createBtnOpts(PC[2], writeSentences);
     }
 
-    // 3
-    var textAdventure = function() {
+    var writeSentences = function(choice) {     
+        vars.pc2 = choice;   
+        main.writeStory('You', PC[2][choice]);
         main.writeStory('DM', DM[4][0]);
-        main.sentenceBuilder(SENTENCE_1(), function(result) {
-            //console.log(result);
-            textAdventure2();
-        });
+        main.createBtnOpts(PC[3], sentenceTutorial);
     }
 
-    // 4
-    var textAdventure2 = function() {
-        main.writeStory('DM', DM[5][0]);
-        main.createBtnOpts(["Let me pick my character!"], [characterPicker]);
+    var sentenceTutorial = function(choice) {            
+        main.writeStory('You', PC[3][choice]);        
+        main.writeStory('DM', DM[5][choice] + "<br><br>" + DM[6][0]);
+        main.sentenceBuilder(SENTENCE_0, sentenceMatcher);
     }
 
-    // 5
-    var characterPicker = function() {
-        main.writeStory('DM', DM[6][0]);
-        main.createBtnOpts(["Dwarf<br>Acolyte", "Elf<br>Soldier", "Human<br>Sage", "Halfling<br>Criminal"], [pickDwarf, pickElf, pickHuman, pickHalfling]);
+    var sentenceMatcher = function(choice) {                   
+        main.writeStory('You', PC[2][choice]);
+        if(choice === vars.pc2) {
+            main.writeStory('DM', DM[7][0] + "<br><br>" + DM[8][0]);
+            main.sentenceBuilder(SENTENCE_1, textAdventure);
+        } else { //try again
+            main.writeStory('DM', DM[7][1]);
+            main.sentenceBuilder(SENTENCE_0, sentenceMatcher);
+        }
     }
 
-    // 6
+    var textAdventure = function(choice) {
+        let sentence = SENTENCE_1[choice].join('');
+        main.writeStory('You', sentence);
+        main.writeStory('DM', DM[9][0]);
+        main.createBtnOpts(PC[4], characterPicker);
+    }
+
+    // CHARACTER PICKER
+
+    var characterPicker = function(choice) {
+        main.writeStory('You', PC[4]);
+        main.writeStory('DM', DM[10][0]);
+        main.createBtnOpts(PC[5], pickedChar);
+    }
+
+    var pickedChar = function(choice) {
+        main.writeStory('You', PC[5][choice]);
+        main.writeStory('DM', DM[11][choice]);
+        switch(choice) {
+            case 0: pickDwarf(); break;
+            case 1: pickElf(); break;
+            case 2: pickHuman(); break;
+            case 3: pickHalfling(); break;
+            default: break;
+        }        
+        main.createBtnOpts(PC[6], confirmCharacter);
+    }
+
     var pickDwarf = function() {
         Player.setData('charName', "Travok");
         Player.setData('race', 'dwarf');
         Player.setData('class', 'cleric');
-        main.writeStory('DM', DM[7][0]);
-        confirmCharacter();
     }
 
     var pickElf = function() {
         Player.setData('charName', "Rhinn");
         Player.setData('race', 'elf');
         Player.setData('class', 'fighter');
-        main.writeStory('DM', DM[7][1]);
-        confirmCharacter();
     }
 
     var pickHuman = function() {
         Player.setData('charName', "Darvin");
         Player.setData('race', 'human');
         Player.setData('class', 'wizard');
-        main.writeStory('DM', DM[7][2]);
-        confirmCharacter();
     }
 
     var pickHalfling = function() {
         Player.setData('charName', "Poe");
         Player.setData('race', 'halfling');
         Player.setData('class', 'rogue');
-        main.writeStory('DM', DM[7][3]);
-        confirmCharacter();
     }
 
-    // 7
-    function confirmCharacter() {
-        main.createBtnOpts(["Let's roll some dice!", "Choose a different character."], [diceIntro, characterPicker]);
+    function confirmCharacter(choice) {
+        main.writeStory('You', PC[5][choice]);
+        if(choice === 0) {
+            main.createBtnOpts(PC[5], pickedChar);
+        } else {
+            diceIntro();
+        }
     }
+
+    // DICE
 
     function diceIntro() {
+        main.writeStory('You', PC[6][1]);
         let p1 = "";
         let noob = Player.getData('dndNoob');
-        switch(noob) {
-            case "noob": 
-                p1 = DM[8][0];
-                break;
-            case "mid":
-                p1 = DM[8][1];
-                break;
-            case "pro":
-                p1 = DM[8][2];
-                break;
-            default:
-                console.log('unknown dndNoob level: ' + noob);
-                break;
+        if(noob) {
+            p1 = DM[12][0];
+        } else {
+            p1 = DM[12][1];
         }
-        main.writeStory('DM', p1 + "<br><br>" + DM[9]);
-        main.createBtnOpts(["Roll for sex."], [rollForSex]);
+        main.writeStory('DM', p1 + "<br><br>" + DM[13]);
+        main.createBtnOpts(["Roll for sex."], rollForSex);
     }
 
     function rollForSex() {
+        main.writeStory('You', "Roll for sex.");
         main.rollDice('1d20', function(result) {
             let roll = result.resultTotal;
             console.log(roll);
@@ -142,20 +158,20 @@ var Intro = (function(){
                         let p1 = null;
                         if(roll === 1) {
                             Player.setData('sex', 'none');
-                            p1 = DM[10][0];
+                            p1 = DM[14][0];
                         } else if(roll === 20) {
                             Player.setData('sex', 'hermaphrodite');
-                            p1 = DM[10][3];
+                            p1 = DM[14][3];
                         } else {
                             if(roll % 2 === 0) { //evens
                                 Player.setData('sex', 'female');
-                                p1 = DM[10][1];
+                                p1 = DM[14][1];
                             } else {
                                 Player.setData('sex', 'male');
-                                p1 = DM[10][2];
+                                p1 = DM[14][2];
                             }
                         }
-                        main.writeStory('DM', p1 + "<br><br>" + DM[11]);
+                        main.writeStory('DM', p1 + "<br><br>" + DM[15]);
                         main.createBtnOpts([
                             "she/her",
                             "he/him",
@@ -176,26 +192,26 @@ var Intro = (function(){
     }
 
     function rollForSize() {   
-        let p1 = DM[12][0];
+        let p1 = DM[16][0];
         p1 = p1.replace("<pronouns>", Player.getData('pronouns'));
         let p2 = '';
         let dice = '';
         let race = Player.getData('race');
         switch(race) {
             case 'human': 
-                p2 = DM[13][0]; 
+                p2 = DM[17][0]; 
                 dice = '2d10';
                 break;
             case 'dwarf': 
-                p2 = DM[13][1]; 
+                p2 = DM[17][1]; 
                 dice = '2d4';
                 break;
             case 'elf': 
-                p2 = DM[13][2]; 
+                p2 = DM[17][2]; 
                 dice = '2d10';
                 break;
             case 'halfling': 
-                p2 = DM[13][3]; 
+                p2 = DM[17][3]; 
                 dice = '2d4';
                 break;
             default: 
@@ -241,7 +257,7 @@ var Intro = (function(){
                 break;
         }
         Player.setData('height', height); //in inches
-        let p1 = (race === 'halfling') ? DM[14][1] : DM[14][0];
+        let p1 = (race === 'halfling') ? DM[18][1] : DM[18][0];
         p1 = p1.replace('<charName>', Player.getData('charName'));
         p1 = p1.replace('<height>', Player.getHeightString());
         main.writeStory('DM', p1);
@@ -291,7 +307,7 @@ var Intro = (function(){
         }
 
         function next() {
-            main.writeStory('DM', DM[15]);
+            main.writeStory('DM', DM[19]);
             rollForColouring();
         }
     }
@@ -301,7 +317,7 @@ var Intro = (function(){
         let hairColour = Player.getData('hairColour');
         let skinColour = Player.getData('skinColour');
         if(eyeColour && hairColour && skinColour) {
-            let p = DM[16][0];
+            let p = DM[20][0];
             p = p.replace("<charName>", Player.getData('charName'));
             p = p.replace("<skinColour>", skinColour);
             p = p.replace("<hairColour>", hairColour);
