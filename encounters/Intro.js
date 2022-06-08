@@ -123,7 +123,6 @@ var Intro = (function(){
     }
 
     function confirmCharacter(choice) {
-        main.writeStory('You', PC[5][choice]);
         if(choice === 0) {
             main.createBtnOpts(PC[5], pickedChar);
         } else {
@@ -147,46 +146,40 @@ var Intro = (function(){
     }
 
     function rollForSex() {
-        main.writeStory('You', "Roll for sex.");
         main.rollDice('1d20', function(result) {
             let roll = result.resultTotal;
             console.log(roll);
+            let pcWords = PC[7][0].replace("<result>", roll)
             main.createBtnOpts(
-                ["I rolled a " + roll + '.'], 
-                [
-                    function() {
-                        let p1 = null;
-                        if(roll === 1) {
-                            Player.setData('sex', 'none');
-                            p1 = DM[14][0];
-                        } else if(roll === 20) {
-                            Player.setData('sex', 'hermaphrodite');
-                            p1 = DM[14][3];
+                [pcWords],
+                function() {
+                    let p1 = null;
+                    if(roll === 1) {
+                        Player.setData('sex', 'none');
+                        p1 = DM[14][0];
+                    } else if(roll === 20) {
+                        Player.setData('sex', 'hermaphrodite');
+                        p1 = DM[14][3];
+                    } else {
+                        if(roll % 2 === 0) { //evens
+                            Player.setData('sex', 'female');
+                            p1 = DM[14][1];
                         } else {
-                            if(roll % 2 === 0) { //evens
-                                Player.setData('sex', 'female');
-                                p1 = DM[14][1];
-                            } else {
-                                Player.setData('sex', 'male');
-                                p1 = DM[14][2];
-                            }
+                            Player.setData('sex', 'male');
+                            p1 = DM[14][2];
                         }
-                        main.writeStory('DM', p1 + "<br><br>" + DM[15]);
-                        main.createBtnOpts([
-                            "she/her",
-                            "he/him",
-                            "they/them",
-                            "he/they",
-                            "she/they",
-                            "any/all"
-                        ], [setPronouns]);
                     }
-                ]
+                    main.writeStory('You', pcWords);
+                    main.writeStory('DM', p1 + "<br><br>" + DM[15]);
+                    main.createBtnOpts(PC[8], setPronouns);
+                }
             );
         });
     }
 
-    function setPronouns(pronouns) {
+    function setPronouns(choice) {
+        let pronouns = PC[8][choice];
+        main.writeStory('You', pronouns);
         Player.setData('pronouns', pronouns);
         rollForSize();
     }
@@ -219,20 +212,32 @@ var Intro = (function(){
                 break;
         }
         main.writeStory('DM', p1 + "<br><br>" + p2);
-        main.createBtnOpts(["Roll " + dice + '.'], [
+        main.createBtnOpts(["Roll " + dice + '.'], 
             ()=>{main.rollDice(dice, confirmHeight);}
-        ]);
+        );
         
         function confirmHeight(result) {
-            main.createBtnOpts([result.result[0] + ' + ' + result.result[1] + ' = ' + result.resultTotal], [
-                ()=>{rollForWeight(result);}
-            ]);
+            let pcWords = PC[9][0];
+            pcWords = pcWords.replace("<die1>", result.result[0]);
+            pcWords = pcWords.replace("<die2>", result.result[1]);
+            pcWords = pcWords.replace("<result>", result.resultTotal);
+            main.createBtnOpts([pcWords], 
+                ()=>{
+                    main.writeStory('You', pcWords);
+                    rollForWeight(result);
+                }
+            );
         }
     }
 
-
     function rollForWeight(result) {
         let heightMod = result.resultTotal;
+        let firstRoll = 0;
+        let secondRoll = 0;
+        let weight1 = 0;
+        let weight2 = 0;
+        let btn1Text = '';
+        let btn2Text = '';
         let height = 0;
         let weightDice = '';        
         let race = Player.getData('race');
@@ -264,23 +269,24 @@ var Intro = (function(){
         if(race === 'halfling') {
             halflingWeight();
         } else {
-            main.createBtnOpts(['Roll ' + weightDice + '.'], [
+            main.createBtnOpts(['Roll ' + weightDice + '.'], 
                 ()=>{main.rollDice(weightDice, roll2);}
-            ]);
+            );
         } 
-
-        let firstRoll = 0;
-        let secondRoll = 0;
 
         function roll2(result) {
             firstRoll = result.resultTotal;            
-            main.createBtnOpts(['Second roll.'], [
-                ()=>{main.rollDice(weightDice, confirmWeight);}
-            ]);
+            main.createBtnOpts(['Second roll.'], 
+                ()=>{
+                    main.writeStory('You', PC[10][0] + firstRoll);
+                    main.rollDice(weightDice, confirmWeight);
+                }
+            );
         }
 
         function confirmWeight(result) {
             secondRoll = result.resultTotal;
+            main.writeStory('You', PC[11][0] + secondRoll);
             let baseWeight = 0;            
             let race = Player.getData('race');
             switch(race) {
@@ -292,21 +298,30 @@ var Intro = (function(){
                     console.log('unknown race: ' + race);
                     break;
             }
-            let weight1 = baseWeight + (heightMod * firstRoll);
-            let weight2 = baseWeight + (heightMod * secondRoll);
-            let btn1Text = baseWeight + ' lb + (' + heightMod + ' * ' + firstRoll + ') = ' + weight1 + 'lbs';
-            let btn2Text = baseWeight + ' lb + (' + heightMod + ' * ' + secondRoll + ') = ' + weight2 + 'lbs';
-            main.createBtnOpts([btn1Text, btn2Text], [next]);
+            weight1 = baseWeight + (heightMod * firstRoll);
+            weight2 = baseWeight + (heightMod * secondRoll);
+            btn1Text = baseWeight + ' lb + (' + heightMod + ' * ' + firstRoll + ') = ' + weight1 + 'lbs';
+            btn2Text = baseWeight + ' lb + (' + heightMod + ' * ' + secondRoll + ') = ' + weight2 + 'lbs';
+            main.createBtnOpts([btn1Text, btn2Text], next);
         }       
 
         function halflingWeight() {
             let baseWeight = 35;
-            let weight = baseWeight + heightMod;
-            let btnText = baseWeight + ' lb + (' + heightMod + ' * 1lb) = ' + weight + 'lbs';
-            main.createBtnOpts([btnText], [next]);
+            weight1 = baseWeight + heightMod;
+            btn1Text = baseWeight + ' lb + (' + heightMod + ' * 1lb) = ' + weight1 + 'lbs';
+            main.createBtnOpts([btn1Text], next);
         }
 
-        function next() {
+        function next(choice) {
+            let pcWords = '';
+            if(choice === 1) {
+                pcWords = btn2Text;
+                Player.setData('weight', weight2);
+            } else {
+                pcWords = btn1Text;                
+                Player.setData('weight', weight1);
+            }
+            main.writeStory('You', pcWords);
             main.writeStory('DM', DM[19]);
             rollForColouring();
         }
@@ -323,26 +338,29 @@ var Intro = (function(){
             p = p.replace("<hairColour>", hairColour);
             p = p.replace("<eyeColour>", eyeColour);
             main.writeStory('DM', p);
-            main.createBtnOpts(['End demo.'], [theEnd]);
+            main.createBtnOpts(['End demo.'], theEnd);
             return;
         }
 
-        let buttonText = [];
-        let callbacks = [];
-        if(!eyeColour) {
-            buttonText.push('Roll for eye colour.');
-            callbacks.push(rollForEyes);
+        let excludes = [];
+        if(eyeColour) {
+            excludes.push(0);
         }
-        if(!hairColour) {
-            buttonText.push('Roll for hair colour.');
-            callbacks.push(rollForHair);
+        if(hairColour) {
+            excludes.push(1);
         }
-        if(!skinColour) {
-            buttonText.push('Roll for skin colour.');
-            callbacks.push(rollForSkin);
+        if(skinColour) {
+            excludes.push(2);
         }
 
-        main.createBtnOpts(buttonText, callbacks);
+        main.createBtnOpts(PC[13], function(choice) {
+            switch(choice) {
+                case 0: rollForEyes(); break;
+                case 1: rollForHair(); break;
+                case 2: rollForSkin(); break;
+                default: break;
+            }
+        }, excludes);
 
         let race = Player.getData('race');
         let dice = (race === 'halfling') ? '1d4' : '1d6';
@@ -378,15 +396,15 @@ var Intro = (function(){
 
     var theEnd = function() {      
         main.writeStory('DM', "That's it for now. This game is still under development, so come back soon to begin " + Player.getData('charName') + "'s story.");
-        main.createBtnOpts(["I will!", "I probably won't."],[happyFace, sadFace]);
+        main.createBtnOpts(["I will!", "I probably won't."], smiley);
     }
 
-    function happyFace() {
-        main.writeStory('DM', ":)");
-    }
-
-    function sadFace() {
-        main.writeStory('DM', ":(");
+    function smiley(choice) {
+        if(choice === 0) {
+            main.writeStory('DM', ":)");
+        } else {
+            main.writeStory('DM', ":(");
+        }
     }
 
     const DM = [
@@ -492,7 +510,7 @@ var Intro = (function(){
             "Let me choose a different character.",
             "Let's roll some dice!"
         ],[
-            "I rolled a <result>"
+            "I rolled a <result>."
         ],[
             "she/her",
             "he/him",
@@ -503,10 +521,10 @@ var Intro = (function(){
         ],[
             "<die1> + <die2> = <result></result>"
         ],[
-            "First roll.",
+            "First roll: ",
             "*goto PC[10] option 1 only"
         ],[
-            "Second roll."
+            "Second roll: "
         ],[
             "<die1> + <die2> = <result1>",
             "<die1> + <die2> = <result2>"

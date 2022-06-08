@@ -194,15 +194,15 @@ var main = (function() {
                 btn.innerHTML = key;
                 btn.data = wordOpts[key];
                 btn.onclick = (e) => {
-                    if(bubbleElem === null) {
-                        bubbleElem = that.writeStory('You', '...');
-                        p = f.html.getElem('p', bubbleElem);
-                    }
+                    // if(bubbleElem === null) {
+                    //     bubbleElem = that.writeStory('You', '...');
+                    //     p = f.html.getElem('p', bubbleElem);
+                    // }
                     let lastWords = e.currentTarget.id;
                     possibleResults = e.currentTarget.data;
                     chosenWords.push(lastWords);
                     let sentence = chosenWords.join('');
-                    p.innerHTML = sentence;
+                    //p.innerHTML = sentence;
                     //console.log(JSON.stringify(lastWords));
                     //console.log(JSON.stringify(possibleResults));
                     if(lastWords.endsWith('.') || lastWords.endsWith('!') || lastWords.endsWith('?')) {
