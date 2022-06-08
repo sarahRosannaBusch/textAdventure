@@ -3,7 +3,8 @@
         "dndNoob": "",
         "charName": "",
         "encounter": "Intro",
-        "choices": []
+        "choices": [],
+        "diceRolls": []
     },
 
     "Travok": {

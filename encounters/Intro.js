@@ -211,6 +211,7 @@ var Intro = (function(){
                 console.log('unknown race: ' + race);
                 break;
         }
+        p2 = p2.replace("<charName>", Player.getData('charName'));
         main.writeStory('DM', p1 + "<br><br>" + p2);
         main.createBtnOpts(["Roll " + dice + '.'], 
             ()=>{main.rollDice(dice, confirmHeight);}

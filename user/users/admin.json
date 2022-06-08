@@ -3,7 +3,9 @@
     "dndNoob": "noob",
     "charName": "Travok",
     "encounter": "Intro",
-    "choices": []
+    "choices": [
+    ],
+    "diceRolls": []
   },
   "Travok": {
     "lastName": "Ironfist",

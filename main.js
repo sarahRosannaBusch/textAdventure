@@ -79,6 +79,7 @@ var main = (function() {
             if(result === -1) {
                 elem.buttonContainer.innerText = "Oops, your dice rolled off the table. Refresh your browser and try again."
             } else {
+                Player.saveDiceRolls(result);
                 callback(result);
             }
         });

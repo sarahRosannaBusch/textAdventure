@@ -102,6 +102,32 @@ const server = new http.createServer(function (req, res) {
                             }
                         }
                     break;
+                    case 'diceRolls':
+                        if(data.username) {
+                            let filename = './user/users/' + data.username + '.json';
+                            try {
+                                fs.readFile(filename, function(err, savedData) {
+                                    if(err) {
+                                        console.log('cannot read ' + filename);
+                                    } else {
+                                        savedData = JSON.parse(savedData);
+                                        savedData.player.diceRolls = data.diceRolls;
+                                        savedData = JSON.stringify(savedData, null, 2);
+                                        if(SAVEDATA) {
+                                            fs.writeFile(filename, savedData, function(e) {
+                                                if(e) {
+                                                    console.log('error writing to ' + filename);
+                                                }
+                                                console.log('game data saved to ' + filename);
+                                            });
+                                        }
+                                    }          
+                                });
+                            } catch(e) {
+                                console.log('could not find game file for' + data.username);
+                            }
+                        }
+                    break;
                     case 'playerData':
                         if(data.username) {                            
                             let filename = './user/users/' + data.username + '.json';

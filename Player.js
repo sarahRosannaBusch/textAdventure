@@ -15,6 +15,7 @@ var Player = (function(){
         charName: '',
         encounter: "",
         choices: [], //for the current encounter
+        diceRolls: [],
         race: '',
         class: '',
         sex: '',
@@ -65,6 +66,19 @@ var Player = (function(){
             'playerChoices': data.choices
         });
         f.ajax.post('playerChoices', str, function(ack) {
+            console.log(ack);
+        }); 
+    }
+
+    that.saveDiceRolls = function(results) {
+        console.log('dice results: ' + JSON.stringify(results));
+        let resultArr = results.result;
+        data.diceRolls.push(resultArr);
+        let str = JSON.stringify({
+            'username': username,
+            'diceRolls': data.diceRolls
+        });
+        f.ajax.post('diceRolls', str, function(ack) {
             console.log(ack);
         }); 
     }
