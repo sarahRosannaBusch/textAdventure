@@ -1,0 +1,37 @@
+{
+    "player": {
+        "dndNoob": "",
+        "charName": "",
+        "encounter": "Intro",
+        "choices": [],
+        "diceRolls": []
+    },
+
+    "Travok": {
+        "lastName": "Ironfist",
+        "race": "dwarf",
+        "class": "cleric",
+        "background": "acolyte"
+    },
+
+    "Rhinn": {
+        "lastName": "Galanodel",
+        "race": "elf",
+        "class": "fighter",
+        "background": "soldier"
+    },
+
+    "Darvyn": {
+        "lastName": "Dotsk",
+        "race": "human",
+        "class": "wizard",
+        "background": "sage"
+    },
+
+    "Poe": {
+        "lastName": "Ungart",
+        "race": "halfling",
+        "class": "rogue",
+        "background": "criminal"
+    }
+}

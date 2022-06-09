@@ -48,6 +48,21 @@
   <defs
      id="defs2" />
   <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="background">
+    <rect
+       style="fill:#ffffff;fill-opacity:0.995984;stroke:none;stroke-width:0.0895551"
+       id="rect10098"
+       width="218.41148"
+       height="280.45831"
+       x="-1.4531555"
+       y="291.04059"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_diceRoller.png"
+       inkscape:export-xdpi="900"
+       inkscape:export-ydpi="900" />
+  </g>
+  <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">

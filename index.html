@@ -2,13 +2,13 @@
 <html lang='en-US'> 
 <head>
   <meta charset='UTF-8' />
-  <title> D&D Text Adventure </title>
+  <title> Backstories</title>
   <meta name='author' content='Sarah Rosanna Busch' />
   <meta name='description' content='D&D Backstories: A Text Adventure' />
   <meta name='date' content='4 Oct 2021' />
   <meta name='keywords' content='text adventure, game, d&d, dungeons and dragons, backstories, character creation, campaign, basic rules, game, browser' />
   <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-  <!-- <link rel='icon shortcut' href='icon.png' /> -->
+  <link rel='icon shortcut' href='img/icon.png' />
   <link rel='stylesheet' href='css/styles.css' />
   <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -16,7 +16,21 @@
 </head>
 <body onload='main.init()'>
 <div class='viewContainer'>
-<main>  
+<login>
+    <form method="post">
+        <label for="username">User:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br>
+        <br>
+        <button onclick="main.login(event, username.value, password.value)">Login</button>
+        <br><br>
+        <p id="loginError" style="display:none">
+            Sorry, the username or password that you have entered is invalid.
+        </p>
+    </form>
+</login>
+<main id='game'>  
     <header>
         <!-- time, date, weather, light conditions, etc-->
     </header>
@@ -25,7 +39,7 @@
             <div id='storyHeading'>  
                 <fieldset>
                     <legend>A TEXT ADVENTURE</legend>
-                    <h1>D&D Backstories</h1>
+                    <h1>Backstories</h1>
                 </fieldset>          
                 <h3>by Sarah Rosanna Busch</h3>
             </div> 
@@ -33,10 +47,16 @@
                 <!-- text added dynamically here -->
             </div>
         </div>
+        <!-- fade to show you can scroll up and/or down-->
         <div id='dmTop' style='display:none'></div>
         <div id='dmBtm' style='display:none'></div>
+        <div id="diceBox"></div>
     </section>
     <section id='playerMat'>
+        <div id="sentencePreview" style="display:none">
+            <p id="playerSentence"></p>
+            <button id='undoBtn' class="undo">&#9100;</button>
+        </div>
         <div id='buttonContainer'></div>
         <div id='playerMatCover'></div>
     </section>
@@ -71,7 +91,16 @@
 
 <!-- *********** Scripts ************ -->
 
-<script src='libs/f.js'></script>
+<!-- dom helpers -->
+<script src='https://cdn.jsdelivr.net/gh/sarahRosannaBusch/f.js/f.js'></script>
+
+<!-- dice roller -->
+<script src="libs/dice/libs/three.min.js"></script>
+<script src="libs/dice/libs/cannon.min.js"></script>
+<script src="libs/dice/libs/teal.js"></script>
+<script src="libs/dice/dice.js"></script>
+
+<!-- game -->
 <script src='main.js'></script>
 <script src='Player.js'></script>
 <script src='refs/backgrounds/Acolyte.js'></script>
