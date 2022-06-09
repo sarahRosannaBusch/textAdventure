@@ -4,8 +4,8 @@
  * @file main.js
  * @brief  D&D Backstories main functionality
  * @author Sarah Rosanna Busch
- * @version 0.1
- * @date   9 Feb 2022
+ * @version 0.2
+ * @date   8 June 2022
  */
 
 var main = (function() {
@@ -13,27 +13,24 @@ var main = (function() {
     var elem = {};
     var vars = {
         bubbleCount: 0, //number of text bubbles displayed
-        diceShowing: false
+        diceShowing: false,
+        playerChoice: 0 //choice count for the encounter
     }  
-    
-    var sentence = {
-        move: '',
-        action: '',
-        connector: '',
-        target: '',
-        moveResult: '',
-        actionResult: ''
-    };
 
     var diceRoller = null;
 
     that.init = function() {
+        elem.login = f.html.getElem('login');
+        elem.loginError = f.html.getElem('#loginError');
         elem.main = f.html.getElem('main');
         elem.header = f.html.getElem('header');
         elem.storyBody = f.html.getElem('#storyBody');
         elem.storyText = f.html.getElem('#storyText');
         elem.dmTop = f.html.getElem('#dmTop');
         elem.dmBtm = f.html.getElem('#dmBtm');
+        elem.sentencePreview = f.html.getElem('#sentencePreview');
+        elem.playerSentence = f.html.getElem('#playerSentence');
+        elem.undoBtn = f.html.getElem('#undoBtn');
         elem.playerOpts = f.html.getElem('#playerOpts');
         elem.playerMatCover = f.html.getElem('#playerMatCover');
         elem.dmTable = f.html.getElem('#dmTable');
@@ -50,13 +47,36 @@ var main = (function() {
         showDiceBox(false);
 
         vars.bubbleCount = 0;
-        Intro.start();
+    }
+
+    that.login = function(e, username, password) {
+        e.preventDefault();
+        let str = JSON.stringify({'login':{'username':username, 'password':password}});
+        f.ajax.post('users.json', str, function(ack) {
+            console.log(ack);
+            ack = JSON.parse(ack);
+            if(ack.login) {
+                Player.setUser(ack.username);
+                Player.initData(ack);
+                elem.login.style.display = 'none';
+                Intro.start();
+            } else {
+                elem.loginError.style.display = 'block';
+            }
+        });
     }
 
     that.rollDice = function(diceToRoll, callback) {
         showDiceBox(true);
         diceRoller.setDice(diceToRoll);
-        diceRoller.start_throw(null, callback); //result will be passed to callback
+        diceRoller.start_throw(null, (result) => {
+            if(result === -1) {
+                elem.buttonContainer.innerText = "Oops, your dice rolled off the table. Refresh your browser and try again."
+            } else {
+                Player.saveDiceRolls(result);
+                callback(result);
+            }
+        });
     }
 
     function showDiceBox(show) {
@@ -109,48 +129,58 @@ var main = (function() {
     }
 
     //param opts = array of strings to be printed in buttons
-    //param callbacks = array of functions
-    that.createBtnOpts = function(opts, callbacks) {
+    //param callbacks -> pass opts idx selected back
+    //param excludes (optional) -> indexes of items to exclude from opts
+    that.createBtnOpts = function(opts, callback, excludes) {
         f.html.empty(elem.buttonContainer);
         var numButtons = opts.length;
         for(var i = 0; i < numButtons; i++) {
+            if(excludes && excludes.includes(i)) {
+                continue;
+            }
             var btn = f.html.spawn(elem.buttonContainer, 'button', i);
             btn.innerHTML = opts[i];
-            if(callbacks.length === 1) {
-                btn.callback = callbacks[0];
-            } else {
-                btn.callback = callbacks[i];
-            }
+            btn.className = 'words';
+            btn.callback = callback;
             btn.onclick = function() {
-                let choice = this.innerText;
-                main.writeStory('You', choice);
-                f.http.post('playerChoice', choice);
+                let choice = JSON.parse(this.id);           
+                Player.saveChoice(choice);
                 this.callback(choice);
             }
         }
     }
 
     that.sentenceBuilder = function(sentenceOpts, callback) {
-        let bubbleElem = null;
-        let p = null;
+        elem.sentencePreview.style.display = 'flex';
         let numOpts = sentenceOpts.length;
-        const RESULT = 0; //result is always first in the array,
-        let wordIdx = 1; //followed by the word options
+        let wordIdx = 0; 
         let chosenWords = [];
 
         //track indices of remaining sentenceOpts
         let possibleResults = []; 
+        possibleResults.push([]);
         for(let i = 0; i < numOpts; i++) {
-            possibleResults.push(i);
+            possibleResults[wordIdx].push(i);
         }
         
         createUserOptions();
+        
+        //undo last words chosen in sentence Builder
+        elem.undoBtn.onclick = function() {
+            if(wordIdx === 0) return;
+            chosenWords.pop();
+            possibleResults.pop();
+            wordIdx--;
+            let sentence = chosenWords.join('');
+            elem.playerSentence.innerHTML = sentence;
+            createUserOptions();
+        }
         
         function createUserOptions() {           
             //find next word options to show user
             let wordOpts = {};
             for(let i = 0; i < numOpts; i++) {
-                if(!possibleResults.includes(i)) continue;
+                if(!possibleResults[wordIdx].includes(i)) continue;
                 let sentence = sentenceOpts[i];
                 if(sentence[wordIdx]) { //sentence arrays are not all same length
                     let words = sentence[wordIdx]
@@ -171,32 +201,26 @@ var main = (function() {
                 btn.innerHTML = key;
                 btn.data = wordOpts[key];
                 btn.onclick = (e) => {
-                    if(bubbleElem === null) {
-                        bubbleElem = that.writeStory('You', '...');
-                        p = f.html.getElem('p', bubbleElem);
-                    }
                     let lastWords = e.currentTarget.id;
-                    possibleResults = e.currentTarget.data;
+                    let results = e.currentTarget.data;
                     chosenWords.push(lastWords);
                     let sentence = chosenWords.join('');
-                    p.innerHTML = sentence;
-                    //console.log(JSON.stringify(lastWords));
-                    //console.log(JSON.stringify(possibleResults));
+                    elem.playerSentence.innerHTML = sentence;
                     if(lastWords.endsWith('.') || lastWords.endsWith('!') || lastWords.endsWith('?')) {
-                        if(possibleResults.length !== 1) {
+                        if(results.length !== 1) {
                             console.error('hmmmm....')
                         }
-                        f.http.post('playerSentence', sentence);
-                        callback(sentenceOpts[possibleResults][RESULT]); //should just be one at this point
+                        Player.saveChoice(results[0]);
+                        elem.sentencePreview.style.display = 'none';
+                        f.html.empty(elem.playerSentence);
+                        callback(results[0]); //should just be one at this point
                     } else {
                         wordIdx++;
+                        possibleResults[wordIdx] = e.currentTarget.data;
                         createUserOptions();
                     }
                 }
             } 
-            if(bubbleElem){
-                bubbleElem.scrollIntoView(true);
-            }
         }
     }
 
