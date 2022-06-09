@@ -136,15 +136,26 @@ header, footer {
   flex: 0.25;
   max-height: 30%;
   padding: 0.5em;
-  text-align: center; }
+  text-align: center;
+  display: flex;
+  flex-direction: column; }
+  #playerMat #sentencePreview {
+    min-height: 2em;
+    display: flex; }
+  #playerMat #playerSentence {
+    flex: 1;
+    min-height: 1em;
+    background: #090909;
+    padding: 0.25em; }
   #playerMat #buttonContainer {
     height: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    overflow-y: scroll; }
-  #playerMat button {
+    overflow-y: scroll;
+    flex: 1; }
+  #playerMat button.words {
     padding: 1em;
     margin: 0.75em;
     margin-top: 0.25em;
@@ -154,8 +165,14 @@ header, footer {
     box-shadow: 1px 1px 5px rgba(255, 0, 0, 0.75), -1px -1px 5px rgba(255, 0, 0, 0.75);
     font-size: 13pt;
     min-width: 40%; }
-  #playerMat button.words {
-    min-width: 5em; }
+  #playerMat button.undo {
+    width: 2.5em;
+    height: 100%;
+    background: #080808;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    margin-left: 0.5em; }
 
 #playerMatCover {
   position: absolute;

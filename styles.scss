@@ -177,6 +177,20 @@ header, footer { //indicators, error messages
     max-height: 30%;
     padding: 0.5em;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    #sentencePreview {
+        min-height: 2em;
+        display: flex;
+    }
+
+    #playerSentence {
+        flex: 1;
+        min-height: 1em;
+        background: #090909;
+        padding: 0.25em;
+    }
     
     #buttonContainer {   
         height: 100%;  
@@ -185,9 +199,10 @@ header, footer { //indicators, error messages
         align-items: center;
         justify-content: center;
         overflow-y: scroll;
+        flex: 1;
     }  
 
-    button {
+    button.words {
         padding: 1em;
         margin: 0.75em;
         margin-top: 0.25em;
@@ -199,8 +214,14 @@ header, footer { //indicators, error messages
         min-width: 40%;
     }
 
-    button.words { //for sentence builder
-        min-width: 5em;
+    button.undo {
+        width: 2.5em;
+        height: 100%;
+        background: #080808;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        margin-left: 0.5em;
     }
 }
 

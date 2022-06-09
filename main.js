@@ -5,7 +5,7 @@
  * @brief  D&D Backstories main functionality
  * @author Sarah Rosanna Busch
  * @version 0.2
- * @date   6 June 2022
+ * @date   8 June 2022
  */
 
 var main = (function() {
@@ -16,15 +16,6 @@ var main = (function() {
         diceShowing: false,
         playerChoice: 0 //choice count for the encounter
     }  
-    
-    var sentence = {
-        move: '',
-        action: '',
-        connector: '',
-        target: '',
-        moveResult: '',
-        actionResult: ''
-    };
 
     var diceRoller = null;
 
@@ -37,6 +28,9 @@ var main = (function() {
         elem.storyText = f.html.getElem('#storyText');
         elem.dmTop = f.html.getElem('#dmTop');
         elem.dmBtm = f.html.getElem('#dmBtm');
+        elem.sentencePreview = f.html.getElem('#sentencePreview');
+        elem.playerSentence = f.html.getElem('#playerSentence');
+        elem.undoBtn = f.html.getElem('#undoBtn');
         elem.playerOpts = f.html.getElem('#playerOpts');
         elem.playerMatCover = f.html.getElem('#playerMatCover');
         elem.dmTable = f.html.getElem('#dmTable');
@@ -146,6 +140,7 @@ var main = (function() {
             }
             var btn = f.html.spawn(elem.buttonContainer, 'button', i);
             btn.innerHTML = opts[i];
+            btn.className = 'words';
             btn.callback = callback;
             btn.onclick = function() {
                 let choice = JSON.parse(this.id);           
@@ -156,25 +151,36 @@ var main = (function() {
     }
 
     that.sentenceBuilder = function(sentenceOpts, callback) {
-        let bubbleElem = null;
-        let p = null;
+        elem.sentencePreview.style.display = 'flex';
         let numOpts = sentenceOpts.length;
         let wordIdx = 0; 
         let chosenWords = [];
 
         //track indices of remaining sentenceOpts
         let possibleResults = []; 
+        possibleResults.push([]);
         for(let i = 0; i < numOpts; i++) {
-            possibleResults.push(i);
+            possibleResults[wordIdx].push(i);
         }
         
         createUserOptions();
+        
+        //undo last words chosen in sentence Builder
+        elem.undoBtn.onclick = function() {
+            if(wordIdx === 0) return;
+            chosenWords.pop();
+            possibleResults.pop();
+            wordIdx--;
+            let sentence = chosenWords.join('');
+            elem.playerSentence.innerHTML = sentence;
+            createUserOptions();
+        }
         
         function createUserOptions() {           
             //find next word options to show user
             let wordOpts = {};
             for(let i = 0; i < numOpts; i++) {
-                if(!possibleResults.includes(i)) continue;
+                if(!possibleResults[wordIdx].includes(i)) continue;
                 let sentence = sentenceOpts[i];
                 if(sentence[wordIdx]) { //sentence arrays are not all same length
                     let words = sentence[wordIdx]
@@ -195,32 +201,26 @@ var main = (function() {
                 btn.innerHTML = key;
                 btn.data = wordOpts[key];
                 btn.onclick = (e) => {
-                    // if(bubbleElem === null) {
-                    //     bubbleElem = that.writeStory('You', '...');
-                    //     p = f.html.getElem('p', bubbleElem);
-                    // }
                     let lastWords = e.currentTarget.id;
-                    possibleResults = e.currentTarget.data;
+                    let results = e.currentTarget.data;
                     chosenWords.push(lastWords);
                     let sentence = chosenWords.join('');
-                    //p.innerHTML = sentence;
-                    //console.log(JSON.stringify(lastWords));
-                    //console.log(JSON.stringify(possibleResults));
+                    elem.playerSentence.innerHTML = sentence;
                     if(lastWords.endsWith('.') || lastWords.endsWith('!') || lastWords.endsWith('?')) {
-                        if(possibleResults.length !== 1) {
+                        if(results.length !== 1) {
                             console.error('hmmmm....')
                         }
-                        Player.saveChoice(possibleResults[0]);
-                        callback(possibleResults[0]); //should just be one at this point
+                        Player.saveChoice(results[0]);
+                        elem.sentencePreview.style.display = 'none';
+                        f.html.empty(elem.playerSentence);
+                        callback(results[0]); //should just be one at this point
                     } else {
                         wordIdx++;
+                        possibleResults[wordIdx] = e.currentTarget.data;
                         createUserOptions();
                     }
                 }
             } 
-            if(bubbleElem){
-                bubbleElem.scrollIntoView(true);
-            }
         }
     }
 
