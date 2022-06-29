@@ -12,7 +12,7 @@ const fs = require('fs');
 
 const PORT = 8080;
 const USERS = require('./user/users.json');
-const SAVEDATA = false;
+const SAVEDATA = false; //set to true on server
 
 const server = new http.createServer(function (req, res) {
     var query = url.parse(req.url, true);  
@@ -28,7 +28,13 @@ const server = new http.createServer(function (req, res) {
         req.setEncoding('utf8');
         req.on('data', function(data) {
             console.log(Date.now() + ' ' + clientIP + ': ' + data);
-            data = JSON.parse(data);
+            try {
+                data = JSON.parse(data);
+            } catch(e) {
+                res.writeHead(400, {'Content-Type': 'text/plain'});
+                res.end('What ya trying to do here, bud?');
+                return;
+            }
             res.writeHead(200, {'Content-Type': 'application/json'});
             for(key in data) {
                 switch(key) {

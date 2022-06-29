@@ -67,6 +67,7 @@ var main = (function() {
     }
 
     that.rollDice = function(diceToRoll, callback) {
+        disableUI(true);
         showDiceBox(true);
         diceRoller.setDice(diceToRoll);
         diceRoller.start_throw(null, (result) => {
@@ -74,6 +75,7 @@ var main = (function() {
                 elem.buttonContainer.innerText = "Oops, your dice rolled off the table. Refresh your browser and try again."
             } else {
                 Player.saveDiceRolls(result);
+                disableUI(false);
                 callback(result);
             }
         });

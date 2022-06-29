@@ -9,7 +9,11 @@
 
 var Intro = (function(){
     var that = {};
-    var vars = {};
+    var vars = {
+        eyeRoll: -1,
+        hairRoll: -1,
+        skinRoll: -1
+    };
 
     that.start = function() {
         hello();
@@ -125,6 +129,7 @@ var Intro = (function(){
 
     function confirmCharacter(choice) {
         if(choice === 0) {
+            main.writeStory('You', PC[6][0]);
             main.createBtnOpts(PC[5], pickedChar);
         } else {
             diceIntro();
@@ -334,6 +339,7 @@ var Intro = (function(){
         let hairColour = Player.getData('hairColour');
         let skinColour = Player.getData('skinColour');
         if(eyeColour && hairColour && skinColour) {
+            main.writeStory('You', 'I rolled ' + vars.eyeRoll + ' for eyes, ' + vars.hairRoll + ' for hair, and ' + vars.skinRoll + ' for skin.')
             let p = DM[20][0];
             p = p.replace("<charName>", Player.getData('charName'));
             p = p.replace("<skinColour>", skinColour);
@@ -372,6 +378,7 @@ var Intro = (function(){
 
         function rollForEyes() {            
             main.rollDice(dice, (result)=> {
+                vars.eyeRoll = result.resultTotal;
                 let idx = result.resultTotal - 1;
                 Player.setData('eyeColour', eyeColours[idx]);
                 rollForColouring();
@@ -380,6 +387,7 @@ var Intro = (function(){
 
         function rollForHair() {
             main.rollDice(dice, (result)=> {
+                vars.hairRoll = result.resultTotal;
                 let idx = result.resultTotal - 1;
                 Player.setData('hairColour', hairColours[idx]);
                 rollForColouring();
@@ -387,7 +395,8 @@ var Intro = (function(){
         }
 
         function rollForSkin() {
-            main.rollDice(dice, (result)=> {
+            main.rollDice(dice, (result)=> { 
+                vars.skinRoll = result.resultTotal;
                 let idx = result.resultTotal - 1;
                 Player.setData('skinColour', skinColours[idx]);
                 rollForColouring();
@@ -396,22 +405,25 @@ var Intro = (function(){
     }
 
 
-    var theEnd = function() {      
+    var theEnd = function() {          
+        main.writeStory('You', 'End demo.');    
         main.writeStory('DM', "That's it for now. This game is still under development, so come back soon to begin " + Player.getData('charName') + "'s story.");
         main.createBtnOpts(["I will!", "I probably won't."], smiley);
     }
 
     function smiley(choice) {
-        if(choice === 0) {
+        if(choice === 0) {            
+            main.writeStory('You', 'I will!');
             main.writeStory('DM', ":)");
         } else {
+            main.writeStory('You', "I probably won't.");
             main.writeStory('DM', ":(");
         }
     }
 
     const DM = [
         [
-            'Hi! My name is Sarah, but for this adventure you can call me Dungeon Master. Welcome to my "table." <br><br> Have you played Dungeons and Dragons before?'
+            'Hi! My name is Sarah, but for this adventure you can call me Dragon Master. Welcome to my "table." <br><br> Have you played Dungeons and Dragons before?'
         ],[
             "Ok cool, I won't hold your hand through all the basic stuff then. FYI, this campaign is based entirely on the <a href='https://dnd.wizards.com/articles/features/basicrules' target='_blank'>D&D 5e Basic Rules</a>. You can reference them if you'd like, but you don't need to since the code will take care of all the rules stuff for you.",
 
@@ -423,9 +435,9 @@ var Intro = (function(){
         ],[
             "All you really need to know to get started is that I, the DM, have created a fantasy world full of lively characters, fearsome monsters, and epic adventures. I'll tell you all about it as we go. You, the player, will be playing a single character. An adventurer ready to start questing to prove their worth. You get to decide who this character is and what they do, through exploration, social interaction, and combat."
         ],[
-            "Don't worry, that's the last time you'll have to read a novel to find out what your choices are at each step in this adventure. At its heart D&D is a story-telling game so I want to keep your head in the story. Because of its improvisational nature, player options are virtually limitless when this game is played live around a table. For obvious reasons, your choices in this text-adventure format are limited, but, in order to feel like a real role-playing game, they are still plentiful."
+            "Don't worry, that's the last time you'll have to read a novel to find out what your choices are at each step in this adventure. At its heart D&D is a story-telling game, so I want to keep your head in the story. Because of its improvisational nature, player options are virtually limitless when this game is played live around a table. For obvious reasons, your choices in this text-adventure format are limited, but, in order to feel like a real role-playing game, they are still plentiful."
         ],[
-            "No, I wouldn't want to either. I find that kind of thing takes me out of the flow of the story.",
+            "No, I wouldn't want to either.",
 
             "Alright alright! You'll be able to explore every option before you commit to one, if that's how you want to play it."
         ],[
@@ -437,7 +449,7 @@ var Intro = (function(){
         ],[
             "Normally, in D&D, you would come to the table with a level-one character already decked out in adventuring gear and with a small arsenal of supernatural abilities. But how hard was it for you to master those spells? How many hours did it take to become proficient with that sword? Where the hell did this trinket come from? Was there a defining moment when you chose good over evil? Law over chaos?"
         ],[
-            "You can certainly try. (There were over 600 sentences you could have written there, by the way.)<br><br>For the purposes of this text-adventure, I have created four level-zero characters for you to choose from. You will be picking up their story as they take their very first step towards becoming a hero. Guide them on their journey wisely. Each choice will help determine exactly what kind of hero they will become."
+            "You can certainly try. (There were 781 sentences you could have written there, by the way.)<br><br>For the purposes of this text-adventure, I have created four level-zero characters for you to choose from. You will be picking up their story as they take their very first step towards becoming a hero. Guide them on their journey wisely. Each choice will help determine exactly what kind of hero they will become."
         ],[
             "Character choices: <br><br> 1. A dwarven acolyte who aspires to channel the power of a god. <br><br> 2. An elven soldier who aims to become a champion on the battlefield. <br><br> 3. A human bookworm itching to test their carefully crafted spells. <br><br> 4. A lightfoot halfling with sticky fingers and an air of mystery."
         ],[
@@ -595,7 +607,7 @@ var Intro = (function(){
             ["I'll ", "slay all the ", "dragons."],
             ["I'll ", "slay all the ", "zombies."],
             ["I'm ", "gonna ", "find all the ", "loot."],
-            ["I'm ", "gonna", "find all the ", "secret doors."],
+            ["I'm ", "gonna ", "find all the ", "secret doors."],
             ["I'm ", "gonna ", "find all the ", "traps."],
             ["I'm ", "down to ", "sow a little ", "chaos."],
             ["I'm ", "down to ", "sow a little ", "kindness."],

@@ -198,7 +198,7 @@ header, footer { //indicators, error messages
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        overflow-y: scroll;
+        overflow-y: auto;
         flex: 1;
     }  
 
