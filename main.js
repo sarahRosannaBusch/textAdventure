@@ -14,7 +14,10 @@ var main = (function() {
     var vars = {
         bubbleCount: 0, //number of text bubbles displayed
         diceShowing: false,
-        playerChoice: 0 //choice count for the encounter
+        choiceIdx: 0, //which choice is the user on
+        choices: [], //chosen choices for current encounter
+        diceIdx: 0,
+        diceRolls: []
     }  
 
     var diceRoller = null;
@@ -58,6 +61,8 @@ var main = (function() {
             if(ack.login) {
                 Player.setUser(ack.username);
                 Player.initData(ack);
+                vars.choices = Player.getData('choices');
+                vars.diceRolls = Player.getData('diceRolls');
                 elem.login.style.display = 'none';
                 Intro.start();
             } else {
@@ -67,13 +72,21 @@ var main = (function() {
     }
 
     that.rollDice = function(diceToRoll, callback) {
+        if(vars.diceRolls.length >= vars.diceIdx + 1) {
+            vars.diceIdx++;
+            callback(vars.diceRolls[vars.diceIdx - 1]);
+            return;
+        }
+        disableUI(true);
         showDiceBox(true);
         diceRoller.setDice(diceToRoll);
         diceRoller.start_throw(null, (result) => {
             if(result === -1) {
                 elem.buttonContainer.innerText = "Oops, your dice rolled off the table. Refresh your browser and try again."
             } else {
+                vars.diceIdx++;
                 Player.saveDiceRolls(result);
+                disableUI(false);
                 callback(result);
             }
         });
@@ -132,25 +145,36 @@ var main = (function() {
     //param callbacks -> pass opts idx selected back
     //param excludes (optional) -> indexes of items to exclude from opts
     that.createBtnOpts = function(opts, callback, excludes) {
-        f.html.empty(elem.buttonContainer);
-        var numButtons = opts.length;
-        for(var i = 0; i < numButtons; i++) {
-            if(excludes && excludes.includes(i)) {
-                continue;
-            }
-            var btn = f.html.spawn(elem.buttonContainer, 'button', i);
-            btn.innerHTML = opts[i];
-            btn.className = 'words';
-            btn.callback = callback;
-            btn.onclick = function() {
-                let choice = JSON.parse(this.id);           
-                Player.saveChoice(choice);
-                this.callback(choice);
+        if(vars.choices.length >= vars.choiceIdx + 1) {
+            vars.choiceIdx++; //doesn't execute if i put it after the callback...
+            callback(vars.choices[vars.choiceIdx - 1]);
+        } else {
+            f.html.empty(elem.buttonContainer);
+            var numButtons = opts.length;
+            for(var i = 0; i < numButtons; i++) {
+                if(excludes && excludes.includes(i)) {
+                    continue;
+                }
+                var btn = f.html.spawn(elem.buttonContainer, 'button', i);
+                btn.innerHTML = opts[i];
+                btn.className = 'words';
+                btn.callback = callback;
+                btn.onclick = function() {
+                    let choice = JSON.parse(this.id);
+                    vars.choiceIdx++;           
+                    Player.saveChoice(choice);
+                    this.callback(choice);
+                }
             }
         }
     }
 
     that.sentenceBuilder = function(sentenceOpts, callback) {
+        if(vars.choices.length >= vars.choiceIdx + 1) {
+            vars.choiceIdx++;
+            callback(vars.choices[vars.choiceIdx - 1]);
+            return;
+        }
         elem.sentencePreview.style.display = 'flex';
         let numOpts = sentenceOpts.length;
         let wordIdx = 0; 
@@ -209,7 +233,8 @@ var main = (function() {
                     if(lastWords.endsWith('.') || lastWords.endsWith('!') || lastWords.endsWith('?')) {
                         if(results.length !== 1) {
                             console.error('hmmmm....')
-                        }
+                        }                        
+                        vars.choiceIdx++;     
                         Player.saveChoice(results[0]);
                         elem.sentencePreview.style.display = 'none';
                         f.html.empty(elem.playerSentence);

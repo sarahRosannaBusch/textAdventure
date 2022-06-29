@@ -71,9 +71,8 @@ var Player = (function(){
     }
 
     that.saveDiceRolls = function(results) {
-        console.log('dice results: ' + JSON.stringify(results));
-        let resultArr = results.result;
-        data.diceRolls.push(resultArr);
+        data.diceRolls.push(results);
+        console.log('dice rolls: ' + JSON.stringify(data.diceRolls));
         let str = JSON.stringify({
             'username': username,
             'diceRolls': data.diceRolls

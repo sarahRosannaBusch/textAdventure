@@ -27,16 +27,16 @@
      inkscape:document-units="mm"
      showgrid="true"
      units="in"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="333.7544"
-     inkscape:cy="1632.0025"
+     inkscape:zoom="1.0343137"
+     inkscape:cx="506.61611"
+     inkscape:cy="1614.5972"
      inkscape:window-width="1479"
      inkscape:window-height="1299"
      inkscape:window-x="1065"
      inkscape:window-y="7"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer2"
-     inkscape:snap-global="false">
+     inkscape:current-layer="layer1"
+     inkscape:snap-global="true">
     <inkscape:grid
        type="xygrid"
        id="grid824"
@@ -67,252 +67,293 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       style="fill:#b3b3b3;stroke:#000000;stroke-width:0.5;stroke-linejoin:bevel"
-       d="m 121.17918,552.97916 h 7.9375"
-       id="path58595" />
+       style="fill:none;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
+       d="M 116.41667,508.91287 H 96.837499 c -34.277962,-0.51161 -31.887935,-48.79369 2.645833,-48.79369 h 14.287498"
+       id="path49687"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <path
-       style="fill:#b3b3b3;stroke:#000000;stroke-width:0.5;stroke-linejoin:bevel"
-       d="m 108.47917,534.45833 v 13.22916"
-       id="path58593" />
+       style="fill:none;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
+       d="m 128.32292,410.10416 v 41.01042"
+       id="path47505"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
+       d="m 138.90625,461.69791 13.22917,13.22917 -11.90625,11.90625"
+       id="path47177"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
+       d="m 133.61458,465.66667 3.96875,10.58333 -5.29166,7.9375"
+       id="path46602"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
+       d="m 123.03125,465.66666 -3.96875,9.26042 5.29167,9.26042"
+       id="path46600"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
+       d="m 117.73958,461.69791 -14.55208,14.55208 14.55208,10.58334"
+       id="path46598"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
+       d="m 90.48751,196.81491 h 31.75"
+       id="path34102"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
+       d="M 125.39496,195.79167 V 230.1875"
+       id="path32980"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
+       d="M 97.89697,304.27084 V 344.4875"
+       id="path31997"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
+       d="m 156.10537,298.97917 h 5.29167 c 17.65059,0.25581 15.77218,-26.71414 -2.64583,-26.45833 h -23.8125"
+       id="path28298"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
+       d="M 125.67829,268.55209 V 261.9375"
+       id="path27848"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 103.83646,528.88372 c 0,0 -87.312488,2.4444 -87.312488,-19.96219 0,-5.51414 3.541069,-8.85773 9.197852,-11.89982 1.3936,-0.74944 2.947724,-1.30091 4.656886,-1.74744"
-       id="path50606-3"
-       sodipodi:nodetypes="cssc" />
+       d="m 130.97008,277.28407 14.56623,21.46625"
+       id="path27484"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <path
-       id="path67778-0-5-5"
-       style="fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.25"
-       d="m 124.35417,460.37498 v 74.08335 H 89.693719 v -74.08335 z"
-       sodipodi:nodetypes="ccccc" />
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 120.91576,277.28407 -15.04405,21.71318"
+       id="path27486"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <path
-       style="fill:#b3b3b3;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
-       d="M 105.83333,510.64583 54.239583,500.0625"
-       id="path57432"
-       sodipodi:nodetypes="cc" />
+       style="fill:none;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
+       d="m 130.96996,235.47917 5.29166,7.9375 -3.96875,10.58334"
+       id="path21316"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <path
-       style="fill:#b3b3b3;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
-       d="m 105.83333,492.12499 -43.656247,2.64584"
-       id="path57430"
-       sodipodi:nodetypes="cc" />
+       style="fill:none;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
+       d="m 119.78825,235.97661 -4.69329,7.44006 3.96875,10.58334"
+       id="path21314"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <path
-       style="fill:#b3b3b3;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
-       d="M 105.83333,473.60416 54.239583,489.47917"
-       id="path57428"
-       sodipodi:nodetypes="cc" />
+       id="path19583"
+       style="fill:#ffffff;stroke-width:0.499999"
+       d="m 128.02715,241.88061 h 11.77893 v 5.80389 h -11.77893 z"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="129.83455"
+       y="246.09581"
+       id="text19587"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
+         sodipodi:role="line"
+         style="font-size:4.23333px;stroke-width:0.264583"
+         x="129.83455"
+         y="246.09581"
+         id="tspan19585">x=1</tspan></text>
     <path
-       style="fill:#b3b3b3;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
-       d="m 113.77083,444.5 -23.812497,5.29167"
-       id="path57426"
-       sodipodi:nodetypes="cc" />
+       id="path19589"
+       style="fill:#ffffff;stroke-width:0.499999"
+       d="m 110.56454,241.88061 h 11.77893 v 5.80389 h -11.77893 z"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="112.37178"
+       y="246.09581"
+       id="text19593"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
+         sodipodi:role="line"
+         style="font-size:4.23333px;stroke-width:0.264583"
+         x="112.37178"
+         y="246.09581"
+         id="tspan19591">x=0</tspan></text>
     <path
-       style="fill:#b3b3b3;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
-       d="M 68.791667,455.08333 39.6875,463.02083"
-       id="path57424"
-       sodipodi:nodetypes="cc" />
+       style="fill:#cccccc;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
+       d="M 124.35417,111.125 146.84375,91.281249"
+       id="path17123"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <path
-       style="fill:#b3b3b3;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
-       d="M 116.41667,431.79986 V 442.3832"
-       id="path50070" />
+       style="fill:#cccccc;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
+       d="M 115.09375,92.604166 V 127.79374"
+       id="path17121"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <path
-       style="fill:#b3b3b3;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
-       d="m 71.437499,410.6332 v 7.9375"
-       id="path48607" />
+       style="fill:#cccccc;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
+       d="M 83.343749,89.958332 104.51042,111.125"
+       id="path17119"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
+    <path
+       style="fill:#cccccc;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
+       d="m 103.1875,68.262499 7.9375,10.583333"
+       id="path14470"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
+    <path
+       style="fill:#cccccc;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
+       d="M 119.0625,78.845832 127,68.262499"
+       id="path14505"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 120.38554,42.333332 145.52083,79.375"
+       id="path14000"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 110.33122,42.333332 84.666667,79.375"
+       id="path4158"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 1;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 108.67853,473.37066 h 67.30746"
-       id="path51457"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 1;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 108.67853,492.42078 h 67.30746"
-       id="path51465"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 1;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 108.67853,510.41256 h 67.30746"
-       id="path51473"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:#b3b3b3;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
-       d="m 47.624999,462.49171 v 29.10416"
-       id="path56798" />
-    <path
-       style="fill:#b3b3b3;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
-       d="m 60.854166,317.5 -15.874999,0"
-       id="path56796"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:#b3b3b3;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
-       d="m 100.54167,322.79167 -13.229088,7.9375"
-       id="path48168" />
-    <path
-       style="fill:#b3b3b3;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
-       d="m 110.56373,395.69364 v 5.29166"
-       id="path48603" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 1;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 108.67853,446.91216 h 67.30746"
-       id="path50156"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 1;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 108.67853,426.02463 h 67.30746"
-       id="path48697"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:#b3b3b3;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
-       d="M 82.020832,426.5082 H 95.249999"
-       id="path48609" />
-    <path
-       style="fill:#b3b3b3;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
-       d="m 127,357.18738 -34.395833,-15.875"
-       id="path48346"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:#b3b3b3;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
-       d="m 97.895832,357.18738 -7.9375,-13.22917"
-       id="path48344" />
-    <path
-       style="fill:#b3b3b3;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
-       d="m 74.083332,357.18738 5.291667,-13.22917"
-       id="path48342" />
-    <path
-       style="fill:#b3b3b3;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
-       d="m 42.333333,357.18738 34.395834,-15.875"
-       id="path48340"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:#b3b3b3;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
-       d="m 87.312633,317.5 h 7.937455"
-       id="path48166" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 1;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 106.99328,386.61154 h 67.30746"
-       id="path24347"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 1;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 119.74155,232.36043 h 71.01164"
+       d="m 130.32488,524.98992 h 71.01164"
        id="path67520"
-       sodipodi:nodetypes="cc" />
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
+    <rect
+       style="fill:#ffffff;fill-opacity:0.995984;stroke:none;stroke-width:0.0895549"
+       id="rect10098"
+       width="49.078156"
+       height="39.773857"
+       x="-53.011734"
+       y="239.40402" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.50000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.50000001,1.00000003;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 110.26602,81.008092 h 71.01164"
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 1;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 92.80352,102.17478 h 88.47414"
        id="path56712"
-       sodipodi:nodetypes="cc" />
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 116.41667,240.77083 0,12.70006"
+       d="m 128.58751,517.52522 v 12.70006"
        id="path3389"
-       sodipodi:nodetypes="cc" />
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 50.270833,216.42923 55.562497,13.22916"
-       id="path3381" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 84.666666,216.42923 111.125,227.01256"
-       id="path3383" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 116.41667,216.42923 v 7.9375"
-       id="path3385" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 148.16666,216.42923 -26.45833,10.58333"
-       id="path3387" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 148.16666,205.84589 124.35417,187.85417"
-       id="path3379"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 84.666666,205.84589 111.125,187.85417"
-       id="path3377"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 119.0625,190.5 -2.64583,15.875"
-       id="path3375"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 113.77083,240.77083 c 0,0 -87.312497,-0.5291 -87.312497,-29.63327 0,-29.10417 78.142627,-27.7954 78.142627,-27.7954"
-       id="path50606"
-       sodipodi:nodetypes="csc" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 134.9375,170.92087 -10.58333,7.9375"
-       id="path3371" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 108.47917,165.62921 h 15.875"
-       id="path3369" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 124.35417,125.94171 h -15.875"
-       id="path3363" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 140.22916,84.1375 7.93751,16.40417"
-       id="path1636"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 124.35417,84.1375 -6.61459,16.40417"
-       id="path1634"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 105.83333,84.1375 7.9375,16.40417"
-       id="path1632"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 89.958332,84.1375 -7.937499,16.40417"
-       id="path1626"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 125.67708,44.979167 19.84375,13.229166"
-       id="path1620"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 115.09375,44.979167 V 58.208333"
-       id="path1622"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 104.51042,44.979167 84.666667,58.208333"
-       id="path1618"
-       sodipodi:nodetypes="cc" />
+       d="m 128.58751,493.18362 v 7.9375"
+       id="path3385"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <path
        style="fill:#ffff15;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 181.50413,227.0127 h 24.87083 l -5.29167,10.58333 h -24.87083 z"
+       d="m 180.44572,519.64219 h 24.87083 l -5.29167,10.58333 h -24.87083 z"
        id="path1342"
-       sodipodi:nodetypes="ccccc" />
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <rect
        style="fill:#b3b3b3;stroke:none;stroke-width:0.5"
        id="rect81380"
        width="55.5625"
        height="164.04167"
        x="0"
-       y="0" />
+       y="0"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <path
        id="path29"
        style="fill:#ff2c00;stroke:#000000;stroke-width:0.5;fill-opacity:1"
-       d="M 42.333334,18.52083 A 14.280319,7.7740102 0 0 1 28.053022,26.29484 14.280319,7.7740102 0 0 1 13.772701,18.52083 14.280319,7.7740102 0 0 1 28.053022,10.74682 14.280319,7.7740102 0 0 1 42.333334,18.52083 Z" />
+       d="M 42.333334,18.52083 A 14.280319,7.7740102 0 0 1 28.053022,26.29484 14.280319,7.7740102 0 0 1 13.772701,18.52083 14.280319,7.7740102 0 0 1 28.053022,10.74682 14.280319,7.7740102 0 0 1 42.333334,18.52083 Z"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <path
        style="fill:#ffff15;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
        d="m 18.520842,113.77083 h 23.812492 l -7.937495,15.875 H 10.583338 Z"
        id="path190"
-       sodipodi:nodetypes="ccccc" />
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <g
        id="g2879"
        transform="translate(7.9375004,-10.583335)"
-       style="stroke-width:0.5;fill:#28c746;fill-opacity:0.9558233">
+       style="stroke-width:0.5;fill:#28c746;fill-opacity:0.9558233"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024">
       <path
          style="fill:#28c746;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.9558233"
          d="M 5.2916666,58.208333 V 74.083332 H 34.395833 V 58.208333 Z"
@@ -330,27 +371,42 @@
     <path
        id="path1531"
        style="fill:#20ff8f;stroke:#000000;stroke-width:0.5;fill-opacity:1"
-       d="M 43.019694,77.390641 27.80616,87.312497 12.592614,77.390641 27.80616,67.468766 Z" />
+       d="M 43.019694,77.390641 27.80616,87.312497 12.592614,77.390641 27.80616,67.468766 Z"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <path
        id="path1613"
        style="fill:#8f3fbd;stroke:#000000;stroke-width:0.5;fill-opacity:1"
        d="m 35.693839,31.749992 c 7.937495,0 7.937495,10.583332 0,10.583332 H 19.818842 l -5.291666,-5.29166 5.291666,-5.291672 z"
-       sodipodi:nodetypes="cccccc" />
+       sodipodi:nodetypes="cccccc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <path
        style="fill:#4ffed4;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
        d="M 13.229169,92.604167 H 42.333331 L 37.041667,108.47917 H 18.520838 Z"
-       id="path2482" />
+       id="path2482"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <path
        style="fill:#2042ff;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.98393571"
        d="m 13.229164,137.58334 h 26.45833 v 10.58333 l -13.229161,7.9375 -13.229169,-7.9375 z"
        id="path2633"
-       sodipodi:nodetypes="cccccc" />
+       sodipodi:nodetypes="cccccc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5"
        x="27.927668"
        y="19.826979"
-       id="text4687"><tspan
+       id="text4687"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          id="tspan4685"
          style="font-size:4.23333px;text-align:center;text-anchor:middle;stroke-width:0.5"
@@ -361,7 +417,10 @@
        style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5"
        x="26.616791"
        y="120.75904"
-       id="text7487"><tspan
+       id="text7487"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          style="font-size:4.23333px;text-align:center;text-anchor:middle;stroke-width:0.5"
          x="26.616791"
@@ -377,7 +436,10 @@
        style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5"
        x="27.419226"
        y="54.115036"
-       id="text24479"><tspan
+       id="text24479"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          style="font-size:4.23333px;text-align:center;text-anchor:middle;stroke-width:0.5"
          x="27.419226"
@@ -392,19 +454,30 @@
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
        x="27.644224"
-       y="78.646584"
-       id="text28111"><tspan
+       y="76.529915"
+       id="text28111"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          id="tspan28109"
          style="text-align:center;text-anchor:middle;stroke-width:0.5"
          x="27.644224"
-         y="78.646584">decision</tspan></text>
+         y="76.529915">player</tspan><tspan
+         sodipodi:role="line"
+         style="text-align:center;text-anchor:middle;stroke-width:0.5"
+         x="27.644224"
+         y="81.821579"
+         id="tspan33084">choice</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
        x="29.622271"
        y="38.258854"
-       id="text29933"><tspan
+       id="text29933"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          style="text-align:center;text-anchor:middle;stroke-width:0.5"
          x="29.622271"
@@ -415,7 +488,10 @@
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
        x="27.944984"
        y="98.994682"
-       id="text31151"><tspan
+       id="text31151"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          id="tspan31149"
          style="text-align:center;text-anchor:middle;stroke-width:0.5"
@@ -431,7 +507,10 @@
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
        x="27.173346"
        y="143.26427"
-       id="text32117"><tspan
+       id="text32117"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          id="tspan32115"
          style="text-align:center;text-anchor:middle;stroke-width:0.5"
@@ -444,30 +523,42 @@
          id="tspan32119">connector</tspan></text>
     <path
        style="fill:#ffff15;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 181.50417,76.200001 H 206.375 l -5.29167,10.583333 H 176.2125 Z"
+       d="M 181.50417,97.366681 H 206.375 l -5.29167,10.583379 H 176.2125 Z"
        id="path81696"
-       sodipodi:nodetypes="ccccc" />
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5"
        x="190.65845"
-       y="82.948547"
-       id="text81702"><tspan
+       y="104.11523"
+       id="text81702"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          style="font-size:4.23333px;text-align:center;text-anchor:middle;stroke-width:0.5"
          x="190.65845"
-         y="82.948547"
+         y="104.11523"
          id="tspan606">dndNoob</tspan></text>
     <path
        id="path39437"
        style="fill:#ff2c00;stroke:#000000;stroke-width:0.5;fill-opacity:1"
-       d="m 92.604167,18.520833 a 14.280319,7.7740102 0 0 1 -14.280313,7.77401 14.280319,7.7740102 0 0 1 -14.28036,-7.77401 14.280319,7.7740102 0 0 1 14.28036,-7.77401 14.280319,7.7740102 0 0 1 14.280313,7.77401 z" />
+       d="m 92.604167,18.520833 a 14.280319,7.7740102 0 0 1 -14.280313,7.77401 14.280319,7.7740102 0 0 1 -14.28036,-7.77401 14.280319,7.7740102 0 0 1 14.28036,-7.77401 14.280319,7.7740102 0 0 1 14.280313,7.77401 z"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5"
        x="77.823235"
        y="19.826982"
-       id="text39441"><tspan
+       id="text39441"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          id="tspan39439"
          style="font-size:4.23333px;text-align:center;text-anchor:middle;stroke-width:0.5"
@@ -477,1367 +568,1016 @@
        id="path40460"
        style="fill:#8f3fbd;stroke:#000000;stroke-width:0.5;fill-opacity:1"
        d="m 121.70833,13.229167 c 7.9375,0 7.9375,10.58333 0,10.58333 h -15.87501 l -5.2917,-5.29166 5.2917,-5.29167 z"
-       sodipodi:nodetypes="cccccc" />
+       sodipodi:nodetypes="cccccc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
        x="115.2996"
        y="19.977697"
-       id="text40464"><tspan
+       id="text40464"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          style="text-align:center;text-anchor:middle;stroke-width:0.5"
          x="115.2996"
          y="19.977697"
-         id="tspan40462">DM.0.0</tspan></text>
+         id="tspan40462">DM[0]</tspan></text>
     <g
        id="g44462"
-       transform="translate(95.25,-29.104167)"
-       style="fill:#28c746;fill-opacity:0.9558233;stroke-width:0.5">
+       transform="translate(105.83451,206.90414)"
+       style="fill:#28c746;fill-opacity:0.955823;stroke-width:0.5"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024">
       <path
-         style="fill:#28c746;fill-opacity:0.9558233;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 5.2916666,58.208333 V 74.083332 H 34.395833 V 58.208333 Z"
+         style="fill:#28c746;fill-opacity:0.955823;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="M 7.9374999,60.854166 V 71.437499 H 31.75 V 60.854166 Z"
          id="path44456"
          sodipodi:nodetypes="ccccc" />
       <path
-         style="fill:#28c746;fill-opacity:0.9558233;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 7.9374999,58.208333 V 74.083332"
-         id="path44458" />
+         style="fill:#28c746;fill-opacity:0.955823;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="M 10.583333,60.854166 V 71.437499"
+         id="path44458"
+         sodipodi:nodetypes="cc" />
       <path
-         style="fill:#28c746;fill-opacity:0.9558233;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 31.75,58.208333 V 74.083332"
-         id="path44460" />
+         style="fill:#28c746;fill-opacity:0.955823;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="M 29.104167,60.854166 V 71.437499"
+         id="path44460"
+         sodipodi:nodetypes="cc" />
     </g>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5"
-       x="114.73169"
-       y="35.594204"
-       id="text44468"><tspan
+       x="125.71532"
+       y="274.24841"
+       id="text44468"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          style="font-size:4.23333px;text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="114.73169"
-         y="35.594204"
-         id="tspan44464">sentence</tspan><tspan
-         sodipodi:role="line"
-         style="font-size:4.23333px;text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="114.73169"
-         y="40.885864"
-         id="tspan44466">builder 0</tspan></text>
+         x="125.71532"
+         y="274.24841"
+         id="tspan44466">SB[0]</tspan></text>
     <path
        id="path45352"
        style="fill:#8f3fbd;fill-opacity:1;stroke:#000000;stroke-width:0.5"
-       d="m 121.70833,57.679168 c 7.9375,0 7.9375,10.58333 0,10.58333 h -15.875 l -5.29169,-5.29166 5.29169,-5.29167 z"
-       sodipodi:nodetypes="cccccc" />
+       d="m 105.55987,57.679168 c 7.9375,0 7.9375,10.58333 0,10.58333 H 89.684926 l -5.29166,-5.29166 5.29166,-5.29167 z"
+       sodipodi:nodetypes="cccccc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="114.82467"
+       x="98.676308"
        y="64.427696"
-       id="text45356"><tspan
+       id="text45356"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="114.82467"
+         x="98.676308"
          y="64.427696"
-         id="tspan45354">DM.1.1</tspan></text>
-    <path
-       id="path45358"
-       style="fill:#8f3fbd;fill-opacity:1;stroke:#000000;stroke-width:0.5"
-       d="m 89.958288,57.679168 c 7.937495,0 7.937495,10.58333 0,10.58333 h -15.875 l -5.291666,-5.29166 5.291666,-5.29167 z"
-       sodipodi:nodetypes="cccccc" />
-    <text
-       xml:space="preserve"
-       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="83.160461"
-       y="64.427696"
-       id="text45362"><tspan
-         sodipodi:role="line"
-         style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="83.160461"
-         y="64.427696"
-         id="tspan45360">DM.1.0</tspan></text>
-    <path
-       id="path45364"
-       style="fill:#8f3fbd;fill-opacity:1;stroke:#000000;stroke-width:0.5"
-       d="m 153.45833,57.679168 c 7.9375,0 7.9375,10.58333 0,10.58333 h -15.875 l -5.29167,-5.29166 5.29167,-5.29167 z"
-       sodipodi:nodetypes="cccccc" />
-    <text
-       xml:space="preserve"
-       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="146.66245"
-       y="64.427696"
-       id="text45368"><tspan
-         sodipodi:role="line"
-         style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="146.66245"
-         y="64.427696"
-         id="tspan45366">DM.1.2</tspan></text>
+         id="tspan45354">DM[1][0]</tspan></text>
     <path
        id="path49840"
        style="fill:#20ff8f;fill-opacity:1;stroke:#000000;stroke-width:0.5"
-       d="m 110.52818,80.963318 -12.632347,8.23848 -12.63238,-8.23848 12.63238,-8.23851 z" />
+       d="m 127.68657,37.427111 -12.63234,8.23848 -12.63238,-8.23848 12.63238,-8.23851 z"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="98.786964"
-       y="82.698601"
-       id="text49844"><tspan
+       x="115.14311"
+       y="38.633228"
+       id="text49844"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          id="tspan49842"
          style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="98.786964"
-         y="82.698601">Pro?</tspan></text>
+         x="115.14311"
+         y="38.633228">PC[0]</tspan></text>
     <path
        id="path49846"
        style="fill:#20ff8f;fill-opacity:1;stroke:#000000;stroke-width:0.5"
-       d="m 144.92401,80.963317 -12.63234,8.238481 -12.63235,-8.238481 12.63235,-8.238514 z" />
+       d="m 129.64583,84.649935 -14.56096,9.52418 -14.56098,-9.52418 14.56098,-9.524219 z"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="132.97513"
-       y="82.401367"
-       id="text49850"><tspan
+       x="114.98352"
+       y="86.087982"
+       id="text49850"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          id="tspan49848"
          style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="132.97513"
-         y="82.401367">Noob?</tspan></text>
+         x="114.98352"
+         y="86.087982">PC[1][0]</tspan></text>
     <path
        id="path50848"
        style="fill:#8f3fbd;fill-opacity:1;stroke:#000000;stroke-width:0.5"
-       d="m 88.710203,99.483341 c 7.937506,0 7.937506,10.583369 0,10.583369 h -15.875 l -5.291666,-5.29167 5.291666,-5.291699 z"
-       sodipodi:nodetypes="cccccc" />
+       d="m 131.7625,110.06668 c 7.93751,0 7.93751,10.58337 0,10.58337 H 95.249997 l -5.29166,-5.29167 5.29166,-5.2917 z"
+       sodipodi:nodetypes="cccccc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="81.912369"
-       y="106.23186"
-       id="text50852"><tspan
+       x="114.9105"
+       y="116.81409"
+       id="text50852"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="81.912369"
-         y="106.23186"
-         id="tspan50850">DM.2.0</tspan></text>
-    <path
-       id="path60330"
-       style="fill:#8f3fbd;fill-opacity:1;stroke:#000000;stroke-width:0.5"
-       d="m 121.70836,99.483341 c 7.9375,0 7.9375,10.583369 0,10.583369 h -15.87503 l -5.29164,-5.29167 5.29164,-5.291699 z"
-       sodipodi:nodetypes="cccccc" />
-    <text
-       xml:space="preserve"
-       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="114.82472"
-       y="106.23186"
-       id="text60334"><tspan
-         sodipodi:role="line"
-         style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="114.82472"
-         y="106.23186"
-         id="tspan60332">DM.2.1</tspan></text>
+         x="114.9105"
+         y="116.81409"
+         id="tspan50850">DM[2][x] + DM[3]</tspan></text>
     <path
        id="path60336"
        style="fill:#8f3fbd;fill-opacity:1;stroke:#000000;stroke-width:0.5"
-       d="m 154.85603,99.483338 c 7.9375,0 7.9375,10.583372 0,10.583372 h -15.875 l -5.29167,-5.29167 5.29167,-5.291702 z"
-       sodipodi:nodetypes="cccccc" />
+       d="m 132.29287,209.02071 c 7.9375,0 7.9375,10.58338 0,10.58338 h -15.875 l -5.29167,-5.29167 5.29167,-5.29171 z"
+       sodipodi:nodetypes="cccccc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="148.06013"
-       y="106.23186"
-       id="text60340"><tspan
+       x="125.4948"
+       y="215.76857"
+       id="text60340"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="148.06013"
-         y="106.23186"
-         id="tspan60338">DM.2.2</tspan></text>
-    <path
-       id="path62250"
-       style="fill:#8f3fbd;fill-opacity:1;stroke:#000000;stroke-width:0.5"
-       d="m 103.18754,120.65004 c 7.9375,0 7.9375,10.58333 0,10.58333 H 87.312513 l -5.29168,-5.29166 5.29168,-5.29167 z"
-       sodipodi:nodetypes="cccccc" />
-    <text
-       xml:space="preserve"
-       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="96.389626"
-       y="127.39854"
-       id="text62254"><tspan
-         sodipodi:role="line"
-         style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="96.389626"
-         y="127.39854"
-         id="tspan62252">DM.3.0</tspan></text>
-    <path
-       id="path62358"
-       style="fill:#8f3fbd;fill-opacity:1;stroke:#000000;stroke-width:0.5"
-       d="m 145.52088,120.65004 c 7.9375,0 7.9375,10.58333 0,10.58333 h -15.87503 l -5.29168,-5.29166 5.29168,-5.29167 z"
-       sodipodi:nodetypes="cccccc" />
-    <text
-       xml:space="preserve"
-       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="138.72296"
-       y="127.39851"
-       id="text62362"><tspan
-         sodipodi:role="line"
-         style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="138.72296"
-         y="127.39851"
-         id="tspan62360">DM.4.0</tspan></text>
-    <g
-       id="g63762"
-       transform="translate(97.895833,80.962506)"
-       style="fill:#28c746;fill-opacity:0.9558233;stroke-width:0.5">
-      <path
-         style="fill:#28c746;fill-opacity:0.9558233;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 5.2916666,58.208333 V 74.083332 H 34.395833 V 58.208333 Z"
-         id="path63756"
-         sodipodi:nodetypes="ccccc" />
-      <path
-         style="fill:#28c746;fill-opacity:0.9558233;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 7.9374999,58.208333 V 74.083332"
-         id="path63758" />
-      <path
-         style="fill:#28c746;fill-opacity:0.9558233;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 31.75,58.208333 V 74.083332"
-         id="path63760" />
-    </g>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5"
-       x="117.37759"
-       y="145.66078"
-       id="text63768"><tspan
-         sodipodi:role="line"
-         style="font-size:4.23333px;text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="117.37759"
-         y="145.66078"
-         id="tspan63764">sentence</tspan><tspan
-         sodipodi:role="line"
-         style="font-size:4.23333px;text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="117.37759"
-         y="150.95244"
-         id="tspan63766">builder 1</tspan></text>
+         x="125.4948"
+         y="215.76857"
+         id="tspan60338">DM[4]</tspan></text>
     <path
        id="path65498"
        style="fill:#8f3fbd;fill-opacity:1;stroke:#000000;stroke-width:0.5"
-       d="m 103.18754,160.33754 c 7.9375,0 7.9375,10.58333 0,10.58333 H 87.312513 l -5.29168,-5.29166 5.29168,-5.29167 z"
-       sodipodi:nodetypes="cccccc" />
+       d="m 142.8762,252.4124 c 7.9375,0 7.9375,10.58333 0,10.58333 h -37.04171 l -5.29171,-5.29166 5.29171,-5.29167 z"
+       sodipodi:nodetypes="cccccc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="96.389633"
-       y="167.08594"
-       id="text65502"><tspan
+       x="125.49272"
+       y="259.15976"
+       id="text65502"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="96.389633"
-         y="167.08594"
-         id="tspan65500">DM.5.0</tspan></text>
+         x="125.49272"
+         y="259.15976"
+         id="tspan65500">DM[5][x] + DM[6]</tspan></text>
     <path
        id="path65504"
        style="fill:#8f3fbd;fill-opacity:1;stroke:#000000;stroke-width:0.5"
-       d="m 145.52091,160.33754 c 7.9375,0 7.9375,10.58333 0,10.58333 h -15.87503 l -5.29168,-5.29166 5.29168,-5.29167 z"
-       sodipodi:nodetypes="cccccc" />
+       d="m 104.59514,325.43751 c 7.93751,0 7.93751,10.58333 0,10.58333 H 88.72011 l -5.29168,-5.29166 5.29168,-5.29167 z"
+       sodipodi:nodetypes="cccccc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="138.72301"
-       y="167.08594"
-       id="text65508"><tspan
+       x="97.794876"
+       y="332.18454"
+       id="text65508"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="138.72301"
-         y="167.08594"
-         id="tspan65506">DM.6.0</tspan></text>
+         x="97.794876"
+         y="332.18454"
+         id="tspan65506">DM[9]</tspan></text>
     <path
        id="path67778"
        style="fill:#20ff8f;fill-opacity:1;stroke:#000000;stroke-width:0.5"
-       d="m 132.97803,183.22401 -15.21354,9.92186 -15.21358,-9.92186 15.21358,-9.92187 z" />
+       d="m 143.56136,459.9784 -15.21354,9.92186 -15.21358,-9.92186 15.21358,-9.92187 z"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="117.73956"
-       y="180.88472"
-       id="text67782"><tspan
-         sodipodi:role="line"
-         id="tspan67780"
-         style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="117.73956"
-         y="180.88472">pick</tspan><tspan
+       x="128.32289"
+       y="461.3428"
+       id="text67782"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="117.73956"
-         y="186.17638"
-         id="tspan67806">character</tspan></text>
-    <path
-       id="path69068"
-       style="fill:#8f3fbd;fill-opacity:1;stroke:#000000;stroke-width:0.5"
-       d="m 55.562463,205.84591 c 7.9375,0 7.9375,10.58333 0,10.58333 h -15.875 l -5.29167,-5.29166 5.29167,-5.29167 z"
-       sodipodi:nodetypes="cccccc" />
-    <text
-       xml:space="preserve"
-       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="48.764626"
-       y="212.59424"
-       id="text69072"><tspan
-         sodipodi:role="line"
-         style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="48.764626"
-         y="212.59424"
-         id="tspan69070">DM.7.0</tspan></text>
-    <path
-       id="path70382"
-       style="fill:#8f3fbd;fill-opacity:1;stroke:#000000;stroke-width:0.5"
-       d="m 89.958322,205.8459 c 7.93751,0 7.93751,10.58333 0,10.58333 H 74.083296 l -5.29167,-5.29166 5.29167,-5.29167 z"
-       sodipodi:nodetypes="cccccc" />
-    <text
-       xml:space="preserve"
-       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="83.074669"
-       y="212.59424"
-       id="text70386"><tspan
-         sodipodi:role="line"
-         style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="83.074669"
-         y="212.59424"
-         id="tspan70384">DM.7.1</tspan></text>
+         x="128.32289"
+         y="461.3428"
+         id="tspan67806">PC[5]</tspan></text>
     <path
        id="path70388"
        style="fill:#8f3fbd;fill-opacity:1;stroke:#000000;stroke-width:0.5"
-       d="m 121.70833,205.8459 c 7.9375,0 7.9375,10.58333 0,10.58333 h -15.875 l -5.29167,-5.29166 5.29167,-5.29167 z"
-       sodipodi:nodetypes="cccccc" />
+       d="m 137.05418,482.60029 c 7.9375,0 7.9375,10.58333 0,10.58333 h -17.99166 l -5.29167,-5.29166 5.29167,-5.29167 z"
+       sodipodi:nodetypes="cccccc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="114.91246"
-       y="212.59424"
-       id="text70392"><tspan
+       x="129.19994"
+       y="489.349"
+       id="text70392"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="114.91246"
-         y="212.59424"
-         id="tspan70390">DM.7.2</tspan></text>
-    <path
-       id="path70394"
-       style="fill:#8f3fbd;fill-opacity:1;stroke:#000000;stroke-width:0.5"
-       d="m 156.10417,205.84589 c 7.93749,0 7.93749,10.58333 0,10.58333 h -15.875 l -5.29167,-5.29166 5.29167,-5.29167 z"
-       sodipodi:nodetypes="cccccc" />
-    <text
-       xml:space="preserve"
-       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="149.28656"
-       y="212.59424"
-       id="text70398"><tspan
-         sodipodi:role="line"
-         style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="149.28656"
-         y="212.59424"
-         id="tspan70396">DM.7.3</tspan></text>
+         x="129.19994"
+         y="489.349"
+         id="tspan70390">DM[11][x]</tspan></text>
     <path
        id="path74684"
        style="fill:#20ff8f;fill-opacity:1;stroke:#000000;stroke-width:0.5"
-       d="m 132.91451,232.12815 -16.49784,10.7594 -16.497879,-10.7594 16.497879,-10.75943 z" />
+       d="m 145.08535,508.88254 -16.49784,10.7594 -16.49788,-10.7594 16.49788,-10.75943 z"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="116.6314"
-       y="230.16852"
-       id="text74688"><tspan
-         sodipodi:role="line"
-         id="tspan74686"
-         style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="116.6314"
-         y="230.16852">confirm</tspan><tspan
+       x="128.80222"
+       y="510.09888"
+       id="text74688"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="116.6314"
-         y="235.46017"
-         id="tspan75900">character</tspan></text>
+         x="128.80222"
+         y="510.09888"
+         id="tspan75900">PC[6]</tspan></text>
     <path
-       style="fill:#2042ff;fill-opacity:0.98393571;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 103.18747,253.4709 h 26.45836 v 10.58333 l -13.22916,7.9375 -13.2292,-7.9375 z"
+       style="fill:#2042ff;fill-opacity:0.983936;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 115.35831,530.22529 h 26.45836 v 10.58333 l -13.22916,7.9375 -13.2292,-7.9375 z"
        id="path77964"
-       sodipodi:nodetypes="cccccc" />
+       sodipodi:nodetypes="cccccc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="117.19775"
-       y="259.15158"
-       id="text77970"><tspan
+       x="129.36855"
+       y="535.90759"
+       id="text77970"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="117.19775"
-         y="259.15158"
+         x="129.36855"
+         y="535.90759"
          id="tspan77968">go to</tspan><tspan
          sodipodi:role="line"
          style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="117.19775"
-         y="264.44324"
+         x="129.36855"
+         y="541.19928"
          id="tspan77996">dice roller</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5"
-       x="191.228"
-       y="233.7606"
-       id="text793"><tspan
+       x="190.16982"
+       y="526.39124"
+       id="text793"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          style="font-size:4.23333px;text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="191.228"
-         y="233.7606"
+         x="190.16982"
+         y="526.39124"
          id="tspan819">charName</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 92.604166,18.520833 h 7.937504"
-       id="path1614" />
+       id="path1614"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 115.09375,23.8125 0,5.291667"
        id="path1616"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 87.312499,68.2625 92.604166,76.2"
-       id="path1624" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 119.0625,68.2625 127,76.2"
-       id="path1628" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 137.58333,76.2 7.9375,-7.9375"
-       id="path1630" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 82.020832,110.06671 95.249999,120.65004 111.125,110.06671"
-       id="path3359" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 95.249999,120.65004 145.52083,110.06671"
-       id="path3361" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 134.9375,131.23338 -15.875,7.93749"
-       id="path3365" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 116.41667,155.04587 -15.875,5.29167"
-       id="path3367" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 105.83333,185.20833 50.270833,205.84589"
-       id="path3373"
-       sodipodi:nodetypes="cc" />
-    <path
-       id="rect39770"
-       style="fill:#ffffff;stroke-width:0.499999"
-       d="m 89.958333,49.212501 h 7.9375 v 5.291667 h -7.9375 z" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="90.487503"
-       y="52.916668"
-       id="text34468"><tspan
-         sodipodi:role="line"
-         id="tspan34466"
-         style="font-size:4.23333px;stroke-width:0.264583"
-         x="90.487503"
-         y="52.916668">pro</tspan></text>
-    <path
-       id="path40001"
-       style="fill:#ffffff;stroke-width:0.535791"
-       d="m 109.94794,49.212501 h 9.11456 v 5.291667 h -9.11456 z" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="110.59584"
-       y="52.916668"
-       id="text40005"><tspan
-         sodipodi:role="line"
-         id="tspan40003"
-         style="font-size:4.23333px;stroke-width:0.264583"
-         x="110.59584"
-         y="52.916668">mid</tspan></text>
-    <path
-       id="path40007"
-       style="fill:#ffffff;stroke-width:0.601539"
-       d="m 131.9295,49.212501 h 11.48876 v 5.291667 H 131.9295 Z" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="132.29167"
-       y="52.916668"
-       id="text40011"><tspan
-         sodipodi:role="line"
-         id="tspan40009"
-         style="font-size:4.23333px;stroke-width:0.264583"
-         x="132.29167"
-         y="52.916668">noob</tspan></text>
-    <path
-       id="path42203"
-       style="fill:#ffffff;stroke-width:0.530442"
-       d="m 82.020833,89.429169 h 8.933477 v 5.291667 h -8.933477 z" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="82.550003"
-       y="93.133339"
-       id="text42207"><tspan
-         sodipodi:role="line"
-         id="tspan42205"
-         style="font-size:4.23333px;stroke-width:0.264583"
-         x="82.550003"
-         y="93.133339">yes</tspan></text>
-    <path
-       id="path45653"
-       style="fill:#ffffff;stroke-width:0.519578"
-       d="m 116.41667,89.42917 h 8.5713 v 5.291667 h -8.5713 z" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="116.94583"
-       y="93.133339"
-       id="text45657"><tspan
-         sodipodi:role="line"
-         id="tspan45655"
-         style="font-size:4.23333px;stroke-width:0.264583"
-         x="116.94583"
-         y="93.133339">yes</tspan></text>
-    <path
-       id="path45659"
-       style="fill:#ffffff;stroke-width:0.458339"
-       d="m 105.83333,89.429169 h 6.66989 v 5.291667 h -6.66989 z" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="106.3625"
-       y="93.133339"
-       id="text45663"><tspan
-         sodipodi:role="line"
-         id="tspan45661"
-         style="font-size:4.23333px;stroke-width:0.264583"
-         x="106.3625"
-         y="93.133339">no</tspan></text>
-    <path
-       id="path46085"
-       style="fill:#ffffff;stroke-width:0.455217"
-       d="m 140.22917,89.429169 h 6.57935 v 5.291667 h -6.57935 z" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="140.75835"
-       y="93.133339"
-       id="text46089"><tspan
-         sodipodi:role="line"
-         id="tspan46087"
-         style="font-size:4.23333px;stroke-width:0.264583"
-         x="140.75835"
-         y="93.133339">no</tspan></text>
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <path
        id="path46091"
        style="fill:#ffffff;stroke-width:0.645496"
-       d="m 60.854167,196.32089 h 13.229166 v 5.29166 H 60.854167 Z" />
+       d="m 97.895843,473.07528 h 11.862417 v 5.29166 H 97.895843 Z"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="61.383339"
-       y="200.55406"
-       id="text46095"><tspan
+       x="99.704056"
+       y="477.30847"
+       id="text46095"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          id="tspan46093"
          style="font-size:4.23333px;stroke-width:0.264583"
-         x="61.383339"
-         y="200.55406">dwarf</tspan></text>
+         x="99.704056"
+         y="477.30847">x=0</tspan></text>
     <path
        id="path46097"
        style="fill:#ffffff;stroke-width:0.707105"
-       d="m 110.06664,196.32089 h 15.875 v 5.29166 h -15.875 z" />
+       d="m 130.73932,473.07528 h 11.5263 v 5.29166 h -11.5263 z"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="110.59583"
-       y="200.55406"
-       id="text46101"><tspan
+       x="132.29161"
+       y="477.30847"
+       id="text46101"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          id="tspan46099"
          style="font-size:4.23333px;stroke-width:0.264583"
-         x="110.59583"
-         y="200.55406">human</tspan></text>
+         x="132.29161"
+         y="477.30847">x=2</tspan></text>
     <path
        id="path46103"
        style="fill:#ffffff;stroke-width:0.499999"
-       d="m 89.958336,196.32089 h 7.937497 v 5.29166 h -7.937497 z" />
+       d="m 114.84681,473.07528 h 10.49556 v 5.29166 h -10.49556 z"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="90.487511"
-       y="200.55406"
-       id="text46107"><tspan
+       x="115.88752"
+       y="477.30847"
+       id="text46107"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          id="tspan46105"
          style="font-size:4.23333px;stroke-width:0.264583"
-         x="90.487511"
-         y="200.55406">elf</tspan></text>
+         x="115.88752"
+         y="477.30847">x=1</tspan></text>
     <path
        id="path46109"
        style="fill:#ffffff;stroke-width:0.721082"
-       d="m 132.29165,196.32089 h 16.5088 v 5.29166 h -16.5088 z" />
+       d="M 147.10834,473.07528 H 157.222 v 5.29166 h -10.11366 z"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="132.82088"
-       y="200.55406"
-       id="text46113"><tspan
+       x="147.63748"
+       y="477.30847"
+       id="text46113"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          id="tspan46111"
          style="font-size:4.23333px;stroke-width:0.264583"
-         x="132.82088"
-         y="200.55406">halfling</tspan></text>
+         x="147.63748"
+         y="477.30847">x=3</tspan></text>
     <path
        id="path50567"
        style="fill:#ffffff;stroke-width:0.499999"
-       d="m 112.71251,245.5334 h 7.9375 v 5.29166 h -7.9375 z" />
+       d="m 123.82501,522.28779 h 10.05415 v 5.29166 h -10.05415 z"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="113.24165"
-       y="249.23738"
-       id="text50571"><tspan
+       x="124.35416"
+       y="525.99323"
+       id="text50571"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          id="tspan50569"
          style="font-size:4.23333px;stroke-width:0.264583"
-         x="113.24165"
-         y="249.23738">yes</tspan></text>
+         x="124.35416"
+         y="525.99323">x=1</tspan></text>
     <path
        id="path50561"
        style="fill:#ffffff;stroke-width:0.455217"
-       d="m 89.958333,237.06673 h 6.579349 v 5.29166 h -6.579349 z" />
+       d="m 96.308332,506.41251 h 10.583328 v 5.29166 H 96.308332 Z"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="90.487511"
-       y="240.77072"
-       id="text50565"><tspan
+       x="97.221207"
+       y="510.3735"
+       id="text50565"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          id="tspan50563"
          style="font-size:4.23333px;stroke-width:0.264583"
-         x="90.487511"
-         y="240.77072">no</tspan></text>
+         x="97.221207"
+         y="510.3735">x=0</tspan></text>
     <path
        style="fill:#000000;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 99.99135,181.97802 2.64584,1.32292 -2.64584,1.32291 z"
-       id="path66113" />
+       d="m 110.57468,458.73241 2.64584,1.32292 -2.64584,1.32291 z"
+       id="path66113"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 1;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 38.629167,362.47913 135.369473,0.14003"
-       id="path56712-3"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:#ffff15;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 176.21251,357.71667 h 24.87083 L 195.79167,368.3 h -24.87083 z"
-       id="path81696-3"
-       sodipodi:nodetypes="ccccc" />
+       id="path4050"
+       style="fill:#ffffff;stroke-width:0.499999"
+       d="m 120.08846,47.675928 h 11.77893 v 5.803857 h -11.77893 z"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5"
-       x="185.36681"
-       y="364.46564"
-       id="text81702-3"><tspan
+       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="121.89795"
+       y="51.892288"
+       id="text4054"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
-         style="font-size:4.23333px;text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="185.36681"
-         y="364.46564"
-         id="tspan606-6">sex</tspan></text>
+         style="font-size:4.23333px;stroke-width:0.264583"
+         x="121.89795"
+         y="51.892288"
+         id="tspan4052">x=1</tspan></text>
     <path
-       id="path39437-5"
-       style="fill:#ff2c00;fill-opacity:1;stroke:#000000;stroke-width:0.5"
-       d="m 157.16242,551.92081 a 14.280319,7.7740102 0 0 1 -14.28032,7.77401 14.280319,7.7740102 0 0 1 -14.28035,-7.77401 14.280319,7.7740102 0 0 1 14.28035,-7.77401 14.280319,7.7740102 0 0 1 14.28032,7.77401 z" />
+       id="rect39770"
+       style="fill:#ffffff;stroke-width:0.499999"
+       d="m 97.863335,47.675928 h 11.778915 v 5.803857 H 97.863335 Z"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5"
-       x="142.38171"
-       y="553.22791"
-       id="text39441-9"><tspan
+       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="99.672966"
+       y="51.892288"
+       id="text34468"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
-         id="tspan39439-6"
-         style="font-size:4.23333px;text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="142.38171"
-         y="553.22791">End Intro</tspan></text>
+         style="font-size:4.23333px;stroke-width:0.264583"
+         x="99.672966"
+         y="51.892288"
+         id="tspan3886">x=0</tspan></text>
     <path
-       id="path45358-2"
+       id="path11486"
        style="fill:#8f3fbd;fill-opacity:1;stroke:#000000;stroke-width:0.5"
-       d="m 82.020966,312.20833 c 7.937502,0 7.937502,10.58333 0,10.58333 h -15.875 L 60.8543,317.5 l 5.291666,-5.29167 z"
-       sodipodi:nodetypes="cccccc" />
+       d="m 139.95592,57.679168 c 7.9375,0 7.9375,10.58333 0,10.58333 h -15.875 l -5.29169,-5.29166 5.29169,-5.29167 z"
+       sodipodi:nodetypes="cccccc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="75.223137"
-       y="318.95657"
-       id="text45362-7"><tspan
+       x="133.07205"
+       y="64.427696"
+       id="text11490"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="75.223137"
-         y="318.95657"
-         id="tspan45360-0">DM.8.0</tspan></text>
+         x="133.07205"
+         y="64.427696"
+         id="tspan11488">DM[1][1]</tspan></text>
     <path
-       id="path67778-0"
+       id="path14082"
        style="fill:#20ff8f;fill-opacity:1;stroke:#000000;stroke-width:0.5"
-       d="m 125.6771,386.29155 -15.21354,9.92186 -15.21356,-9.92186 15.21356,-9.92187 z" />
+       d="m 95.249807,84.649935 -14.560876,9.52418 -14.560896,-9.52418 14.560896,-9.524219 z"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="110.43865"
-       y="383.42276"
-       id="text67782-1"><tspan
+       x="80.587685"
+       y="86.087982"
+       id="text14086"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
-         id="tspan67780-8"
+         id="tspan14084"
          style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="110.43865"
-         y="383.42276">pick</tspan><tspan
+         x="80.587685"
+         y="86.087982">PC[1][1]</tspan></text>
+    <path
+       id="path14088"
+       style="fill:#20ff8f;fill-opacity:1;stroke:#000000;stroke-width:0.5"
+       d="m 164.04188,84.649935 -14.56096,9.52418 -14.56098,-9.52418 14.56098,-9.524219 z"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
+       x="149.37906"
+       y="86.087982"
+       id="text14092"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
+         sodipodi:role="line"
+         id="tspan14090"
+         style="text-align:center;text-anchor:middle;stroke-width:0.5"
+         x="149.37906"
+         y="86.087982">PC[1][2]</tspan></text>
+    <path
+       id="path16969"
+       style="fill:#ffffff;stroke-width:0.499999"
+       d="m 109.2817,98.971144 h 11.77893 v 5.803866 H 109.2817 Z"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="111.09119"
+       y="103.18753"
+       id="text16973"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
+         sodipodi:role="line"
+         style="font-size:4.23333px;stroke-width:0.264583"
+         x="111.09119"
+         y="103.18753"
+         id="tspan16971">x=1</tspan></text>
+    <path
+       id="path16975"
+       style="fill:#ffffff;stroke-width:0.499999"
+       d="m 87.312376,98.971144 h 11.778915 v 5.803866 H 87.312376 Z"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="89.122009"
+       y="103.18753"
+       id="text16979"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
+         sodipodi:role="line"
+         style="font-size:4.23333px;stroke-width:0.264583"
+         x="89.122009"
+         y="103.18753"
+         id="tspan16977">x=0</tspan></text>
+    <path
+       id="path16981"
+       style="fill:#ffffff;stroke-width:0.499999"
+       d="m 130.70431,98.971144 h 11.77893 v 5.803866 h -11.77893 z"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="132.51361"
+       y="103.18753"
+       id="text16985"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
+         sodipodi:role="line"
+         style="font-size:4.23333px;stroke-width:0.264583"
+         x="132.51361"
+         y="103.18753"
+         id="tspan16983">x=1</tspan></text>
+    <path
+       id="path18616"
+       style="fill:#20ff8f;fill-opacity:1;stroke:#000000;stroke-width:0.5"
+       d="m 138.27111,196.70651 -12.63234,8.23853 -12.63238,-8.23853 12.63238,-8.23855 z"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
+       x="125.72548"
+       y="197.91241"
+       id="text18620"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
+         sodipodi:role="line"
+         id="tspan18618"
+         style="text-align:center;text-anchor:middle;stroke-width:0.5"
+         x="125.72548"
+         y="197.91241">PC[2]</tspan></text>
+    <path
+       id="path19471"
+       style="fill:#20ff8f;fill-opacity:1;stroke:#000000;stroke-width:0.5"
+       d="m 138.27111,231.63173 -12.63234,8.23853 -12.63238,-8.23853 12.63238,-8.23855 z"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
+       x="125.72548"
+       y="232.83694"
+       id="text19475"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
+         sodipodi:role="line"
+         id="tspan19473"
+         style="text-align:center;text-anchor:middle;stroke-width:0.5"
+         x="125.72548"
+         y="232.83694">PC[3]</tspan></text>
+    <path
+       id="path23306"
+       style="fill:#ffffff;stroke-width:0.499999"
+       d="m 99.34713,282.59195 h 25.0081 v 5.80389 h -25.0081 z"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="101.15422"
+       y="286.80713"
+       id="text23310"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
+         sodipodi:role="line"
+         style="font-size:4.23333px;stroke-width:0.264583"
+         x="101.15422"
+         y="286.80713"
+         id="tspan23308">== PC[2]</tspan></text>
+    <path
+       id="path23414"
+       style="fill:#ffffff;stroke-width:0.499999"
+       d="m 130.03899,282.59195 h 25.0081 v 5.80389 h -25.0081 z"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="131.84636"
+       y="286.80713"
+       id="text23418"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
+         sodipodi:role="line"
+         style="font-size:4.23333px;stroke-width:0.264583"
+         x="131.84636"
+         y="286.80713"
+         id="tspan23416">!= PC[2]</tspan></text>
+    <path
+       id="path23800"
+       style="fill:#8f3fbd;fill-opacity:1;stroke:#000000;stroke-width:0.5"
+       d="m 116.41766,293.68751 c 7.9375,0 7.9375,10.58333 0,10.58333 H 79.37587 l -5.29169,-5.29166 5.29169,-5.29167 z"
+       sodipodi:nodetypes="cccccc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
+       x="99.477341"
+       y="300.43604"
+       id="text23804"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="110.43865"
-         y="388.71442"
-         id="tspan67806-4">pronouns</tspan></text>
+         x="99.477341"
+         y="300.43604"
+         id="tspan23802">DM[7][0] + DM[8]</tspan></text>
+    <path
+       id="path23806"
+       style="fill:#8f3fbd;fill-opacity:1;stroke:#000000;stroke-width:0.5"
+       d="m 150.81371,293.68751 c 7.9375,0 7.9375,10.58333 0,10.58333 h -15.875 l -5.29169,-5.29166 5.29169,-5.29167 z"
+       sodipodi:nodetypes="cccccc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
+       x="143.92802"
+       y="300.43604"
+       id="text23810"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
+         sodipodi:role="line"
+         style="text-align:center;text-anchor:middle;stroke-width:0.5"
+         x="143.92802"
+         y="300.43604"
+         id="tspan23808">DM[7][1]</tspan></text>
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 140.23037,271.19793 -2.64584,1.32292 2.64584,1.32291 z"
+       id="path28555"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
+    <g
+       id="g28700"
+       transform="translate(78.13679,248.70834)"
+       style="fill:#28c746;fill-opacity:0.955823;stroke-width:0.5"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024">
+      <path
+         style="fill:#28c746;fill-opacity:0.955823;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="M 7.9374999,60.854166 V 71.437499 H 31.75 V 60.854166 Z"
+         id="path28694"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         style="fill:#28c746;fill-opacity:0.955823;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="M 10.583333,60.854166 V 71.437499"
+         id="path28696"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:#28c746;fill-opacity:0.955823;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="M 29.104167,60.854166 V 71.437499"
+         id="path28698"
+         sodipodi:nodetypes="cc" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5"
+       x="98.01738"
+       y="316.05261"
+       id="text28704"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
+         sodipodi:role="line"
+         style="font-size:4.23333px;text-align:center;text-anchor:middle;stroke-width:0.5"
+         x="98.01738"
+         y="316.05261"
+         id="tspan28702">SB[1]</tspan></text>
     <path
        style="fill:#2042ff;fill-opacity:0.983936;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 19.050234,322.79177 h 26.458242 v -12.7 l -13.229085,-7.9375 -13.229157,7.9375 z"
-       id="path77964-3"
-       sodipodi:nodetypes="cccccc" />
+       d="m 101.87336,128.05834 h 26.45833 v 14.2875 l -13.22916,7.9375 -13.22917,-7.9375 z"
+       id="path32254"
+       sodipodi:nodetypes="cccccc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="33.060493"
-       y="309.3808"
-       id="text77970-0"><tspan
+       x="115.05011"
+       y="132.97183"
+       id="text32260"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_00.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="33.060493"
-         y="309.3808"
-         id="tspan77996-4">from </tspan><tspan
+         x="115.05011"
+         y="132.97183"
+         id="tspan32258">go to</tspan><tspan
          sodipodi:role="line"
          style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="33.060493"
-         y="314.67245"
-         id="tspan2872">character </tspan><tspan
+         x="115.05011"
+         y="138.26349"
+         id="tspan32352">sentence</tspan><tspan
          sodipodi:role="line"
          style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="33.060493"
-         y="319.96411"
-         id="tspan2874">picker</tspan></text>
+         x="115.05011"
+         y="143.55516"
+         id="tspan32354">builder</tspan></text>
     <path
-       style="fill:#000000;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 29.35172,494.09749 2.889521,0.63345 -2.240471,1.93154 z"
-       id="path66113-0"
-       sodipodi:nodetypes="cccc" />
-    <path
-       style="fill:#4ffed4;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 69.849989,328.08322 h 29.104037 l -5.29163,15.875 H 75.141658 Z"
-       id="path2482-7" />
+       style="fill:#2042ff;fill-opacity:0.983936;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 84.66667,340.25417 H 111.125 v 14.2875 l -13.22916,7.9375 -13.22917,-7.9375 z"
+       id="path33484"
+       sodipodi:nodetypes="cccccc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="84.565811"
-       y="334.47391"
-       id="text31151-2"><tspan
+       x="97.843399"
+       y="345.16766"
+       id="text33492"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="84.565811"
-         y="334.47391"
-         id="tspan31153-3">dice</tspan><tspan
+         x="97.843399"
+         y="345.16766"
+         id="tspan33486">go to</tspan><tspan
          sodipodi:role="line"
          style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="84.565811"
-         y="339.76556"
-         id="tspan11426">roller 0</tspan></text>
-    <path
-       id="path46091-6-4"
-       style="fill:#ffffff;stroke-width:0.645496"
-       d="m 55.562501,346.60405 h 6.638623 v 5.29166 h -6.638623 z" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="57.679199"
-       y="350.8374"
-       id="text46095-4-8"><tspan
+         x="97.843399"
+         y="350.45932"
+         id="tspan33490">character</tspan><tspan
          sodipodi:role="line"
-         id="tspan46093-0-1"
-         style="font-size:4.23333px;stroke-width:0.264583"
-         x="57.679199"
-         y="350.8374">1</tspan></text>
+         style="text-align:center;text-anchor:middle;stroke-width:0.5"
+         x="97.843399"
+         y="355.75098"
+         id="tspan33518">picker</tspan></text>
     <path
-       id="path46097-7-2"
-       style="fill:#ffffff;stroke-width:0.707105"
-       d="m 88.370756,346.60405 h 12.033504 v 5.29166 H 88.370756 Z" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="88.900032"
-       y="350.8374"
-       id="text46101-0-6"><tspan
-         sodipodi:role="line"
-         id="tspan46099-8-4"
-         style="font-size:4.23333px;stroke-width:0.264583"
-         x="88.900032"
-         y="350.8374">odds</tspan></text>
-    <path
-       id="path46103-4-0"
-       style="fill:#ffffff;stroke-width:0.499999"
-       d="m 69.850026,346.60405 h 14.083747 v 5.29166 H 69.850026 Z" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="70.379196"
-       y="350.8374"
-       id="text46107-5-1"><tspan
-         sodipodi:role="line"
-         id="tspan46105-5-6"
-         style="font-size:4.23333px;stroke-width:0.264583"
-         x="70.379196"
-         y="350.8374">evens</tspan></text>
-    <path
-       id="path46109-1-5"
-       style="fill:#ffffff;stroke-width:0.721083"
-       d="m 105.304,346.60405 h 7.28937 v 5.29166 H 105.304 Z" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="105.83347"
-       y="350.8374"
-       id="text46113-1-0"><tspan
-         sodipodi:role="line"
-         id="tspan46111-6-0"
-         style="font-size:4.23333px;stroke-width:0.264583"
-         x="105.83347"
-         y="350.8374">20</tspan><tspan
-         sodipodi:role="line"
-         style="font-size:4.23333px;stroke-width:0.264583"
-         x="105.83347"
-         y="356.12906"
-         id="tspan15032" /></text>
-    <path
-       id="path69068-7-6"
-       style="fill:#8f3fbd;fill-opacity:1;stroke:#000000;stroke-width:0.5"
-       d="m 42.333307,357.18739 c 7.9375,0 7.9375,10.58333 0,10.58333 h -15.875 l -5.29167,-5.29166 5.29167,-5.29167 z"
-       sodipodi:nodetypes="cccccc" />
+       style="fill:#2042ff;fill-opacity:0.983936;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 77.78755,203.2 h 26.45833 V 192.0875 L 91.01672,184.15 77.78755,192.0875 Z"
+       id="path33852"
+       sodipodi:nodetypes="cccccc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="35.535473"
-       y="363.93591"
-       id="text69072-6-8"><tspan
+       x="90.96434"
+       y="193.78445"
+       id="text33860"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="35.535473"
-         y="363.93591"
-         id="tspan69070-5-3">DM.10.0</tspan></text>
+         x="90.96434"
+         y="193.78445"
+         id="tspan33858">from</tspan><tspan
+         sodipodi:role="line"
+         style="text-align:center;text-anchor:middle;stroke-width:0.5"
+         x="90.96434"
+         y="199.07611"
+         id="tspan33888">Intro</tspan></text>
     <path
-       id="path70382-8-0"
-       style="fill:#8f3fbd;fill-opacity:1;stroke:#000000;stroke-width:0.5"
-       d="m 76.729166,357.18738 c 7.937511,0 7.937511,10.58333 0,10.58333 H 60.85414 l -5.29167,-5.29166 5.29167,-5.29167 z"
-       sodipodi:nodetypes="cccccc" />
+       style="fill:#2042ff;fill-opacity:0.983936;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 115.35835,411.16257 h 26.45833 v -14.2875 l -13.22916,-7.9375 -13.22917,7.9375 z"
+       id="path32254-4"
+       sodipodi:nodetypes="cccccc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="69.845512"
-       y="363.93591"
-       id="text70386-1-5"><tspan
+       x="128.53508"
+       y="396.98465"
+       id="text32260-9"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="69.845512"
-         y="363.93591"
-         id="tspan70384-9-4">DM.10.1</tspan></text>
+         x="128.53508"
+         y="396.98465"
+         id="tspan32258-3">from</tspan><tspan
+         sodipodi:role="line"
+         style="text-align:center;text-anchor:middle;stroke-width:0.5"
+         x="128.53508"
+         y="402.27631"
+         id="tspan32352-9">sentence</tspan><tspan
+         sodipodi:role="line"
+         style="text-align:center;text-anchor:middle;stroke-width:0.5"
+         x="128.53508"
+         y="407.56796"
+         id="tspan32354-3">builder</tspan></text>
     <path
-       id="path70388-9-2"
-       style="fill:#8f3fbd;fill-opacity:1;stroke:#000000;stroke-width:0.5"
-       d="m 108.47916,357.18738 c 7.9375,0 7.9375,10.58333 0,10.58333 H 92.604167 l -5.29167,-5.29166 5.29167,-5.29167 z"
-       sodipodi:nodetypes="cccccc" />
-    <text
-       xml:space="preserve"
-       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="101.68331"
-       y="363.93591"
-       id="text70392-0-2"><tspan
-         sodipodi:role="line"
-         style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="101.68331"
-         y="363.93591"
-         id="tspan70390-0-7">DM.10.2</tspan></text>
-    <path
-       id="path70394-1-5"
-       style="fill:#8f3fbd;fill-opacity:1;stroke:#000000;stroke-width:0.5"
-       d="m 142.875,357.18737 c 7.93749,0 7.93749,10.58333 0,10.58333 H 127 L 121.70833,362.47904 127,357.18737 Z"
-       sodipodi:nodetypes="cccccc" />
-    <text
-       xml:space="preserve"
-       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="136.05742"
-       y="363.93591"
-       id="text70398-6-3"><tspan
-         sodipodi:role="line"
-         style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="136.05742"
-         y="363.93591"
-         id="tspan70396-8-1">DM.10.3</tspan></text>
-    <path
-       id="path69068-7-6-1"
-       style="fill:#8f3fbd;fill-opacity:1;stroke:#000000;stroke-width:0.5"
-       d="m 116.41667,312.20833 c 7.93751,0 7.93751,10.58333 0,10.58333 H 100.54171 L 95.250038,317.5 l 5.291672,-5.29167 z"
-       sodipodi:nodetypes="cccccc" />
-    <text
-       xml:space="preserve"
-       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="109.61886"
-       y="318.95688"
-       id="text69072-6-8-2"><tspan
-         sodipodi:role="line"
-         style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="109.61886"
-         y="318.95688"
-         id="tspan69070-5-3-7">DM.9</tspan></text>
-    <path
-       id="path69068-7-6-1-6"
-       style="fill:#8f3fbd;fill-opacity:1;stroke:#000000;stroke-width:0.5"
-       d="m 60.854167,380.99988 c 7.93751,0 7.93751,10.58333 0,10.58333 H 44.979164 l -5.29167,-5.29166 5.29167,-5.29167 z"
-       sodipodi:nodetypes="cccccc" />
-    <text
-       xml:space="preserve"
-       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="54.056324"
-       y="387.74844"
-       id="text69072-6-8-2-3"><tspan
-         sodipodi:role="line"
-         style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="54.056324"
-         y="387.74844"
-         id="tspan69070-5-3-7-5">DM.11</tspan></text>
-    <path
-       style="fill:#ffff15;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 176.51461,381.70905 h 24.87083 l -5.29167,10.58333 h -24.87083 z"
-       id="path24349"
-       sodipodi:nodetypes="ccccc" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5"
-       x="185.6689"
-       y="388.45837"
-       id="text24353"><tspan
-         sodipodi:role="line"
-         style="font-size:4.23333px;text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="185.6689"
-         y="388.45837"
-         id="tspan24351">pronouns</tspan></text>
-    <path
-       id="path69068-7-6-1-6-2"
-       style="fill:#8f3fbd;fill-opacity:1;stroke:#000000;stroke-width:0.5"
-       d="m 116.41667,401.10821 c 7.93751,0 7.93751,10.58333 0,10.58333 h -15.875 l -5.291675,-5.29166 5.291675,-5.29167 z"
-       sodipodi:nodetypes="cccccc" />
-    <text
-       xml:space="preserve"
-       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="109.61882"
-       y="407.85675"
-       id="text69072-6-8-2-3-2"><tspan
-         sodipodi:role="line"
-         style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="109.61882"
-         y="407.85675"
-         id="tspan69070-5-3-7-5-5">DM.12</tspan></text>
-    <path
-       id="path69068-7-6-1-6-9"
-       style="fill:#8f3fbd;fill-opacity:1;stroke:#000000;stroke-width:0.5"
-       d="m 79.374997,401.10821 c 7.93751,0 7.93751,10.58333 0,10.58333 H 63.499994 l -5.29167,-5.29166 5.29167,-5.29167 z"
-       sodipodi:nodetypes="cccccc" />
-    <text
-       xml:space="preserve"
-       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="72.577164"
-       y="407.85675"
-       id="text69072-6-8-2-3-3"><tspan
-         sodipodi:role="line"
-         style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="72.577164"
-         y="407.85675"
-         id="tspan69070-5-3-7-5-6">DM.13</tspan></text>
-    <path
-       style="fill:#4ffed4;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 58.208332,418.5707 H 87.3125 l -5.29166,15.875 H 63.500001 Z"
-       id="path2482-7-7" />
-    <text
-       xml:space="preserve"
-       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="72.924149"
-       y="424.9614"
-       id="text31151-2-8"><tspan
-         sodipodi:role="line"
-         style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="72.924149"
-         y="424.9614"
-         id="tspan31153-3-7">dice</tspan><tspan
-         sodipodi:role="line"
-         style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="72.924149"
-         y="430.25305"
-         id="tspan11426-3">roller 1</tspan></text>
-    <path
-       id="path69068-7-6-1-6-9-0"
-       style="fill:#8f3fbd;fill-opacity:1;stroke:#000000;stroke-width:0.5"
-       d="m 116.41667,421.21654 c 7.93751,0 7.93751,10.58334 0,10.58334 h -15.875 l -5.291673,-5.29166 5.291673,-5.29168 z"
-       sodipodi:nodetypes="cccccc" />
-    <text
-       xml:space="preserve"
-       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="109.61884"
-       y="427.96506"
-       id="text69072-6-8-2-3-3-9"><tspan
-         sodipodi:role="line"
-         style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="109.61884"
-         y="427.96506"
-         id="tspan69070-5-3-7-5-6-1">DM.14</tspan></text>
-    <path
-       style="fill:#4ffed4;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 103.1875,439.20818 h 29.10417 l -5.29166,15.875 h -18.52084 z"
-       id="path2482-7-7-5" />
-    <text
-       xml:space="preserve"
-       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="117.90331"
-       y="445.59891"
-       id="text31151-2-8-3"><tspan
-         sodipodi:role="line"
-         style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="117.90331"
-         y="445.59891"
-         id="tspan31153-3-7-2">dice</tspan><tspan
-         sodipodi:role="line"
-         style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="117.90331"
-         y="450.89056"
-         id="tspan11426-3-3">roller 2</tspan></text>
-    <path
-       id="path67778-0-5"
+       id="path35930"
        style="fill:#20ff8f;fill-opacity:1;stroke:#000000;stroke-width:0.5"
-       d="M 95.25,452.96667 80.03646,462.88853 64.822897,452.96667 80.03646,443.0448 Z" />
+       d="m 143.53646,423.73025 -15.21354,9.92186 -15.21358,-9.92186 15.21358,-9.92187 z"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="79.746971"
-       y="451.68494"
-       id="text67782-1-3"><tspan
-         sodipodi:role="line"
-         id="tspan67780-8-6"
-         style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="79.746971"
-         y="451.68494">pick</tspan><tspan
+       x="128.29794"
+       y="425.09433"
+       id="text35934"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="79.746971"
-         y="456.97659"
-         id="tspan67806-4-9">weight</tspan></text>
+         x="128.29794"
+         y="425.09433"
+         id="tspan35932">PC[4]</tspan></text>
     <path
-       id="path69068-7-6-1-6-9-0-6"
+       id="path36938"
        style="fill:#8f3fbd;fill-opacity:1;stroke:#000000;stroke-width:0.5"
-       d="m 52.916667,457.72917 c 7.93751,0 7.93751,10.58334 0,10.58334 H 37.041661 l -5.291669,-5.29166 5.291669,-5.29168 z"
-       sodipodi:nodetypes="cccccc" />
+       d="m 104.59514,325.43751 c 7.93751,0 7.93751,10.58333 0,10.58333 H 88.72011 l -5.29168,-5.29166 5.29168,-5.29167 z"
+       sodipodi:nodetypes="cccccc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="46.118835"
-       y="464.4772"
-       id="text69072-6-8-2-3-3-9-7"><tspan
+       x="97.794876"
+       y="332.18454"
+       id="text36942"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_01.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="46.118835"
-         y="464.4772"
-         id="tspan69070-5-3-7-5-6-1-3">DM.15</tspan></text>
+         x="97.794876"
+         y="332.18454"
+         id="tspan36940">DM[9]</tspan></text>
     <path
-       id="path67778-0-5-0"
-       style="fill:#20ff8f;fill-opacity:1;stroke:#000000;stroke-width:0.5"
-       d="m 62.70625,494.77082 -15.21354,9.92186 -15.213562,-9.92186 15.213562,-9.92187 z" />
-    <text
-       xml:space="preserve"
-       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="47.732391"
-       y="493.22458"
-       id="text67782-1-3-7"><tspan
-         sodipodi:role="line"
-         id="tspan67780-8-6-7"
-         style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="47.732391"
-         y="493.22458">pick</tspan><tspan
-         sodipodi:role="line"
-         style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="47.732391"
-         y="498.51624"
-         id="tspan67806-4-9-8">colours</tspan></text>
-    <path
-       id="path46091-6-4-5"
-       style="fill:#ffffff;stroke-width:0.645497"
-       d="m 71.966665,478.89582 h 9.019841 v 5.29166 h -9.019841 z" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="72.495834"
-       y="483.12863"
-       id="text46095-4-8-7"><tspan
-         sodipodi:role="line"
-         id="tspan46093-0-1-9"
-         style="font-size:4.23333px;stroke-width:0.264583"
-         x="72.495834"
-         y="483.12863">eye</tspan></text>
-    <path
-       id="path46097-7-2-6"
-       style="fill:#ffffff;stroke-width:0.707105"
-       d="m 71.966665,502.70832 h 10.97523 v 5.29166 h -10.97523 z" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="72.495735"
-       y="506.94116"
-       id="text46101-0-6-2"><tspan
-         sodipodi:role="line"
-         id="tspan46099-8-4-2"
-         style="font-size:4.23333px;stroke-width:0.264583"
-         x="72.495735"
-         y="506.94116">skin</tspan></text>
-    <path
-       id="path46103-4-0-7"
-       style="fill:#ffffff;stroke-width:0.499999"
-       d="m 71.966665,491.06665 h 10.9088 v 5.29166 h -10.9088 z" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="72.49585"
-       y="495.29947"
-       id="text46107-5-1-8"><tspan
-         sodipodi:role="line"
-         id="tspan46105-5-6-9"
-         style="font-size:4.23333px;stroke-width:0.264583"
-         x="72.49585"
-         y="495.29947">hair</tspan></text>
-    <path
-       style="fill:#4ffed4;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 92.604142,465.66655 h 29.104128 l -5.29166,15.875 H 97.895782 Z"
-       id="path2482-7-7-5-6" />
-    <text
-       xml:space="preserve"
-       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="107.31998"
-       y="472.05685"
-       id="text31151-2-8-3-3"><tspan
-         sodipodi:role="line"
-         style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="107.31998"
-         y="472.05685"
-         id="tspan31153-3-7-2-4">dice</tspan><tspan
-         sodipodi:role="line"
-         style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="107.31998"
-         y="477.34851"
-         id="tspan11426-3-3-2">roller 3</tspan></text>
-    <path
-       style="fill:#4ffed4;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 92.604142,484.18738 h 29.104128 l -5.29166,15.875 H 97.895782 Z"
-       id="path2482-7-7-5-7" />
-    <text
-       xml:space="preserve"
-       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="107.31998"
-       y="490.57767"
-       id="text31151-2-8-3-7"><tspan
-         sodipodi:role="line"
-         style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="107.31998"
-         y="490.57767"
-         id="tspan31153-3-7-2-43">dice</tspan><tspan
-         sodipodi:role="line"
-         style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="107.31998"
-         y="495.86932"
-         id="tspan11426-3-3-7">roller 4</tspan></text>
-    <path
-       style="fill:#4ffed4;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 92.604142,502.70822 h 29.104128 l -5.29166,15.875 H 97.895782 Z"
-       id="path2482-7-7-5-8" />
-    <text
-       xml:space="preserve"
-       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="107.31998"
-       y="509.09851"
-       id="text31151-2-8-3-0"><tspan
-         sodipodi:role="line"
-         style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="107.31998"
-         y="509.09851"
-         id="tspan31153-3-7-2-2">dice</tspan><tspan
-         sodipodi:role="line"
-         style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="107.31998"
-         y="514.3902"
-         id="tspan11426-3-3-24">roller 5</tspan></text>
-    <path
-       id="path69068-7-6-1-6-9-0-6-0"
+       id="path37152"
        style="fill:#8f3fbd;fill-opacity:1;stroke:#000000;stroke-width:0.5"
-       d="m 114.82909,546.62914 c 7.93751,0 7.93751,10.58334 0,10.58334 H 98.954096 l -5.29164,-5.29166 5.29164,-5.29168 z"
-       sodipodi:nodetypes="cccccc" />
+       d="m 134.9375,436.56252 c 7.93751,0 7.93751,10.58333 0,10.58333 h -15.87503 l -5.29168,-5.29166 5.29168,-5.29167 z"
+       sodipodi:nodetypes="cccccc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="108.0313"
-       y="553.37726"
-       id="text69072-6-8-2-3-3-9-7-3"><tspan
+       x="128.13724"
+       y="443.30957"
+       id="text37156"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="108.0313"
-         y="553.37726"
-         id="tspan69070-5-3-7-5-6-1-3-4">DM.16</tspan></text>
+         x="128.13724"
+         y="443.30957"
+         id="tspan37154">DM[9]</tspan></text>
+    <path
+       id="path37158"
+       style="fill:#8f3fbd;fill-opacity:1;stroke:#000000;stroke-width:0.5"
+       d="m 134.9375,436.56252 c 7.93751,0 7.93751,10.58333 0,10.58333 h -15.87503 l -5.29168,-5.29166 5.29168,-5.29167 z"
+       sodipodi:nodetypes="cccccc"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024" />
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.5"
-       x="107.12426"
-       y="524.9212"
-       id="text31151-2-8-3-3-5"><tspan
+       x="128.13724"
+       y="443.30957"
+       id="text37162"
+       inkscape:export-filename="C:\Users\annar\code\myApps\textAdventure\docs\flowchart_02.png"
+       inkscape:export-xdpi="1024"
+       inkscape:export-ydpi="1024"><tspan
          sodipodi:role="line"
          style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="107.12426"
-         y="524.9212"
-         id="tspan43095">all colours</tspan><tspan
-         sodipodi:role="line"
-         style="text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="107.12426"
-         y="530.21289"
-         id="tspan43097">picked?</tspan></text>
-    <path
-       id="path50567-9"
-       style="fill:#ffffff;stroke-width:0.499999"
-       d="m 104.24576,538.69167 h 7.9375 v 5.29166 h -7.9375 z" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="104.77495"
-       y="542.39502"
-       id="text50571-5"><tspan
-         sodipodi:role="line"
-         id="tspan50569-0"
-         style="font-size:4.23333px;stroke-width:0.264583"
-         x="104.77495"
-         y="542.39502">yes</tspan></text>
-    <path
-       id="path50561-7"
-       style="fill:#ffffff;stroke-width:0.455217"
-       d="m 75.441476,525.99153 h 6.579349 v 5.29166 h -6.579349 z" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="75.97065"
-       y="529.69489"
-       id="text50565-6"><tspan
-         sodipodi:role="line"
-         id="tspan50563-1"
-         style="font-size:4.23333px;stroke-width:0.264583"
-         x="75.97065"
-         y="529.69489">no</tspan></text>
-    <path
-       style="fill:#b3b3b3;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
-       d="m 42.333333,367.77071 10.583333,13.22917"
-       id="path48480" />
-    <path
-       style="fill:#b3b3b3;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
-       d="M 66.145832,367.77071 52.916666,380.99988"
-       id="path48482" />
-    <path
-       style="fill:#b3b3b3;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
-       d="M 97.895832,367.77071 52.916666,380.99988"
-       id="path48484" />
-    <path
-       style="fill:#b3b3b3;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
-       d="M 127,367.77071 52.916666,380.99988"
-       id="path48486" />
-    <path
-       style="fill:#b3b3b3;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
-       d="M 66.145832,386.29154 H 95.249999"
-       id="path48488" />
-    <path
-       style="fill:#b3b3b3;stroke:#000000;stroke-width:0.499999;stroke-linejoin:bevel"
-       d="M 95.249999,406.39987 H 84.666666"
-       id="path48605" />
-    <path
-       style="fill:#ffff15;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 176.2125,421.21654 h 24.87083 l -5.29167,10.58333 h -24.87083 z"
-       id="path48699"
-       sodipodi:nodetypes="ccccc" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5"
-       x="185.36681"
-       y="427.96582"
-       id="text48703"><tspan
-         sodipodi:role="line"
-         style="font-size:4.23333px;text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="185.36681"
-         y="427.96582"
-         id="tspan48701">height</tspan></text>
-    <path
-       style="fill:#ffff15;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 176.2125,442.10407 h 24.87083 l -5.29167,10.58333 h -24.87083 z"
-       id="path50158"
-       sodipodi:nodetypes="ccccc" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5"
-       x="185.36681"
-       y="448.85355"
-       id="text50162"><tspan
-         sodipodi:role="line"
-         style="font-size:4.23333px;text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="185.36681"
-         y="448.85355"
-         id="tspan50160">weight</tspan></text>
-    <path
-       style="fill:#ffff15;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 174.90352,468.56257 h 26.17982 l -5.57018,10.58333 h -26.17982 z"
-       id="path51459"
-       sodipodi:nodetypes="ccccc" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5"
-       x="185.36681"
-       y="475.31229"
-       id="text51463"><tspan
-         sodipodi:role="line"
-         style="font-size:4.23333px;text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="185.36681"
-         y="475.31229"
-         id="tspan51461">eyeColour</tspan></text>
-    <path
-       style="fill:#ffff15;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 174.90352,487.61269 h 26.17982 l -5.57018,10.58333 h -26.17982 z"
-       id="path51467"
-       sodipodi:nodetypes="ccccc" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5"
-       x="185.36681"
-       y="494.36255"
-       id="text51471"><tspan
-         sodipodi:role="line"
-         style="font-size:4.23333px;text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="185.36681"
-         y="494.36255"
-         id="tspan51469">hairColour</tspan></text>
-    <path
-       style="fill:#ffff15;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 174.90352,505.60447 h 26.17982 l -5.57018,10.58333 h -26.17982 z"
-       id="path51475"
-       sodipodi:nodetypes="ccccc" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5"
-       x="185.36681"
-       y="512.35449"
-       id="text51479"><tspan
-         sodipodi:role="line"
-         style="font-size:4.23333px;text-align:center;text-anchor:middle;stroke-width:0.5"
-         x="185.36681"
-         y="512.35449"
-         id="tspan51477">skinColour</tspan></text>
+         x="128.13724"
+         y="443.30957"
+         id="tspan37160">DM[10]</tspan></text>
   </g>
 </svg>
