@@ -12,7 +12,7 @@ const fs = require('fs');
 
 const PORT = 8080;
 const USERS = require('./user/users.json');
-const SAVEDATA = true; //set to true on server
+const SAVEDATA = false; //set to true on server
 
 const server = new http.createServer(function (req, res) {
     var query = url.parse(req.url, true);  
