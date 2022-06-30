@@ -338,7 +338,17 @@ var Intro = (function(){
         let eyeColour = Player.getData('eyeColour');
         let hairColour = Player.getData('hairColour');
         let skinColour = Player.getData('skinColour');
+
+        let race = Player.getData('race');
+        let dice = (race === 'halfling') ? '1d4' : '1d6';
+        let eyeColours = COLOURS[race].eyes;
+        let hairColours = COLOURS[race].hair;
+        let skinColours = COLOURS[race].skin;
+
         if(eyeColour && hairColour && skinColour) {
+            vars.eyeRoll = eyeColours.indexOf(eyeColour) + 1;
+            vars.hairRoll = hairColours.indexOf(hairColour) + 1;
+            vars.skinRoll = skinColours.indexOf(skinColour) + 1;
             main.writeStory('You', 'I rolled ' + vars.eyeRoll + ' for eyes, ' + vars.hairRoll + ' for hair, and ' + vars.skinRoll + ' for skin.')
             let p = DM[20][0];
             p = p.replace("<charName>", Player.getData('charName'));
@@ -370,37 +380,43 @@ var Intro = (function(){
             }
         }, excludes);
 
-        let race = Player.getData('race');
-        let dice = (race === 'halfling') ? '1d4' : '1d6';
-        let eyeColours = COLOURS[race].eyes;
-        let hairColours = COLOURS[race].hair;
-        let skinColours = COLOURS[race].skin;
-
-        function rollForEyes() {            
-            main.rollDice(dice, (result)=> {
-                vars.eyeRoll = result.resultTotal;
-                let idx = result.resultTotal - 1;
-                Player.setData('eyeColour', eyeColours[idx]);
-                rollForColouring();
-            });
+        function rollForEyes() {   
+            if(eyeColour) {
+                vars.eyeRoll = eyeColours.indexOf(eyeColour) + 1;
+            } else {        
+                main.rollDice(dice, (result)=> {
+                    vars.eyeRoll = result.resultTotal;
+                    let idx = result.resultTotal - 1;
+                    Player.setData('eyeColour', eyeColours[idx]);
+                    rollForColouring();
+                });
+            }
         }
 
-        function rollForHair() {
-            main.rollDice(dice, (result)=> {
-                vars.hairRoll = result.resultTotal;
-                let idx = result.resultTotal - 1;
-                Player.setData('hairColour', hairColours[idx]);
-                rollForColouring();
-            });
+        function rollForHair() {  
+            if(hairColour) {
+                vars.hairRoll = hairColours.indexOf(hairColour) + 1;
+            } else { 
+                main.rollDice(dice, (result)=> {
+                    vars.hairRoll = result.resultTotal;
+                    let idx = result.resultTotal - 1;
+                    Player.setData('hairColour', hairColours[idx]);
+                    rollForColouring();
+                });
+            }
         }
 
-        function rollForSkin() {
-            main.rollDice(dice, (result)=> { 
-                vars.skinRoll = result.resultTotal;
-                let idx = result.resultTotal - 1;
-                Player.setData('skinColour', skinColours[idx]);
-                rollForColouring();
-            });
+        function rollForSkin() {  
+            if(skinColour) {
+                vars.skinRoll = skinColours.indexOf(skinColour) + 1;
+            } else { 
+                main.rollDice(dice, (result)=> { 
+                    vars.skinRoll = result.resultTotal;
+                    let idx = result.resultTotal - 1;
+                    Player.setData('skinColour', skinColours[idx]);
+                    rollForColouring();
+                });
+            }
         }
     }
 

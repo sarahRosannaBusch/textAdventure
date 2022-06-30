@@ -52,16 +52,20 @@ const server = new http.createServer(function (req, res) {
                                 let userFile = './user/users/' + username + '.json';
                                 try {
                                     userData = fs.readFileSync(userFile);
-                                    userData = JSON.parse(userData);
                                 } catch(e) {
                                     userData = fs.readFileSync('user/users/_template.json');
-                                    userData = JSON.parse(userData);
                                     if(SAVEDATA) {
-                                        fs.writeFile(userFile, JSON.stringify(userData, null, 2), function(err) {
+                                        fs.writeFile(userFile, userData, function(err) {
                                             if(err) console.log('failed to create file for ' + username);
                                             else console.log('created new game file for ' + username);
                                         });
                                     }
+                                }
+                                try {                                    
+                                    userData = JSON.parse(userData);
+                                } catch(e) {
+                                    console.log('cannot parse userData');
+                                    return;
                                 }
                                 let player = {};
                                 for(key in userData['player']) {
@@ -86,23 +90,23 @@ const server = new http.createServer(function (req, res) {
                         if(data.username) {
                             let filename = './user/users/' + data.username + '.json';
                             try {
-                                fs.readFile(filename, function(err, savedData) {
-                                    if(err) {
-                                        console.log('cannot read ' + filename);
-                                    } else {
-                                        savedData = JSON.parse(savedData);
-                                        savedData.player.choices = data.playerChoices;
-                                        savedData = JSON.stringify(savedData, null, 2);
-                                        if(SAVEDATA) {
-                                            fs.writeFile(filename, savedData, function(e) {
-                                                if(e) {
-                                                    console.log('error writing to ' + filename);
-                                                }
-                                                console.log('game data saved to ' + filename);
-                                            });
+                                let savedData = fs.readFileSync(filename);
+                                try {
+                                    savedData = JSON.parse(savedData);
+                                } catch(e) {
+                                    console.log('playerChoices not saved: ' + JSON.stringify(e));
+                                    return;
+                                }
+                                savedData.player.choices = data.playerChoices;
+                                savedData = JSON.stringify(savedData, null, 2);
+                                if(SAVEDATA) {
+                                    fs.writeFile(filename, savedData, function(e) {
+                                        if(e) {
+                                            console.log('error writing to ' + filename);
                                         }
-                                    }          
-                                });
+                                        console.log('game data saved to ' + filename);
+                                    });
+                                }  
                             } catch(e) {
                                 console.log('could not find game file for' + data.username);
                             }
@@ -112,23 +116,23 @@ const server = new http.createServer(function (req, res) {
                         if(data.username) {
                             let filename = './user/users/' + data.username + '.json';
                             try {
-                                fs.readFile(filename, function(err, savedData) {
-                                    if(err) {
-                                        console.log('cannot read ' + filename);
-                                    } else {
-                                        savedData = JSON.parse(savedData);
-                                        savedData.player.diceRolls = data.diceRolls;
-                                        savedData = JSON.stringify(savedData, null, 2);
-                                        if(SAVEDATA) {
-                                            fs.writeFile(filename, savedData, function(e) {
-                                                if(e) {
-                                                    console.log('error writing to ' + filename);
-                                                }
-                                                console.log('game data saved to ' + filename);
-                                            });
+                                let savedData = fs.readFileSync(filename);
+                                try {
+                                    savedData = JSON.parse(savedData);
+                                } catch(e) {
+                                    console.log('diceRolls not saved: ' + JSON.stringify(e));
+                                    return;
+                                }
+                                savedData.player.diceRolls = data.diceRolls;
+                                savedData = JSON.stringify(savedData, null, 2);
+                                if(SAVEDATA) {
+                                    fs.writeFile(filename, savedData, function(e) {
+                                        if(e) {
+                                            console.log('error writing to ' + filename);
                                         }
-                                    }          
-                                });
+                                        console.log('game data saved to ' + filename);
+                                    });
+                                }
                             } catch(e) {
                                 console.log('could not find game file for' + data.username);
                             }
@@ -138,33 +142,37 @@ const server = new http.createServer(function (req, res) {
                         if(data.username) {                            
                             let filename = './user/users/' + data.username + '.json';
                             try {
-                                fs.readFile(filename, function(err, savedData) {
-                                    if(err) {
-                                        console.log('cannot read ' + filename);
-                                    } else {
-                                        savedData = JSON.parse(savedData);
-                                        let char = savedData.player.charName;
-                                        for(item in data.playerData) {
-                                            switch(item) {
-                                                case 'dndNoob': case 'charName': case 'encounter':
-                                                    savedData.player[item] = data.playerData[item];
-                                                break;
-                                                default:
-                                                    savedData[char][item] = data.playerData[item];
-                                                break;
+                                let savedData = fs.readFileSync(filename);
+                                try {
+                                    savedData = JSON.parse(savedData);
+                                } catch(e) {
+                                    console.log('playerData not saved: ' + JSON.stringify(e));
+                                    return;
+                                }
+                                let char = savedData.player.charName;
+                                for(item in data.playerData) {
+                                    switch(item) {
+                                        case 'dndNoob': case 'charName': case 'encounter':
+                                            savedData.player[item] = data.playerData[item];
+                                        break;
+                                        default:
+                                            if(char) {
+                                                savedData[char][item] = data.playerData[item];
+                                            } else {
+                                                console.log('unknown character: ' + char);
                                             }
+                                        break;
+                                    }
+                                }
+                                savedData = JSON.stringify(savedData, null, 2);
+                                if(SAVEDATA) {
+                                    fs.writeFile(filename, savedData, function(e) {
+                                        if(e) {
+                                            console.log('error writing to ' + filename);
                                         }
-                                        savedData = JSON.stringify(savedData, null, 2);
-                                        if(SAVEDATA) {
-                                            fs.writeFile(filename, savedData, function(e) {
-                                                if(e) {
-                                                    console.log('error writing to ' + filename);
-                                                }
-                                                console.log('game data saved to ' + filename);
-                                            });
-                                        }
-                                    }          
-                                });
+                                        console.log('game data saved to ' + filename);
+                                    });
+                                }
                             } catch(e) {
                                 console.log('could not find game file for' + data.username);
                             }
