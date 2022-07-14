@@ -423,7 +423,7 @@ var Intro = (function(){
 
     var theEnd = function() {          
         main.writeStory('You', 'End demo.');    
-        main.writeStory('DM', "Thanks for playing my demo! If you want to help support the project, and get access to my test server, check out my Patreon page. Or, to learn more about me and what I do, visit my website.");
+        main.writeStory('DM', "Thanks for playing my demo! If you'd like to read some lore, or get access to my test server, check out my Patreon page. To learn more about me and what I do, visit my website.");
         main.createBtnOpts(["<a href='https://www.patreon.com/sarahrosannabusch'>Patreon</a>",
         "<a href='https://sarahrosannabusch.ca/'>my website</a>"], smiley);
     }
