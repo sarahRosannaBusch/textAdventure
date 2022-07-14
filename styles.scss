@@ -47,10 +47,6 @@ header, section, footer, aside, nav, main, article, figure, login {
     display: block; /* to define html5 semantic elements in older browsers */
 }
 
-a {
-    color: darkorange;
-}
-
 body {    
     background: $backgroundColour;
     color: $fontColour;
@@ -131,7 +127,11 @@ header, footer { //indicators, error messages
     background-position: center;
     flex: 0.75;
     border-bottom: 5px solid black;
-    position: relative;
+    position: relative;    
+
+    a {
+        color: darkorange;
+    }
 }
 
 .overlay {

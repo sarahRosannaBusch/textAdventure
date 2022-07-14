@@ -38,10 +38,6 @@ header, section, footer, aside, nav, main, article, figure, login {
   /* to define html5 semantic elements in older browsers */
 }
 
-a {
-  color: darkorange;
-}
-
 body {
   background: black;
   color: lightgrey;
@@ -115,6 +111,9 @@ header, footer {
   flex: 0.75;
   border-bottom: 5px solid black;
   position: relative;
+}
+#dmTable a {
+  color: darkorange;
 }
 
 .overlay, #dmBtm, #dmTop {

@@ -2,11 +2,11 @@
 <html lang='en-US'> 
 <head>
   <meta charset='UTF-8' />
-  <title> Backstories</title>
+  <title> Backstories Demo </title>
   <meta name='author' content='Sarah Rosanna Busch' />
   <meta name='description' content='D&D Backstories: A Text Adventure' />
-  <meta name='date' content='4 Oct 2021' />
-  <meta name='keywords' content='text adventure, game, d&d, dungeons and dragons, backstories, character creation, campaign, basic rules, game, browser' />
+  <meta name='date' content='13 July 2022' />
+  <meta name='keywords' content='text adventure, game, d&d, dungeons and dragons, backstories, character creation, campaign, basic rules, game, browser, rpg, roll playing game, interactive fiction' />
   <meta name='viewport' content='width=device-width, initial-scale=1.0' />
   <link rel='icon shortcut' href='img/icon.png' />
   <link rel='stylesheet' href='css/styles.css' />
@@ -16,20 +16,6 @@
 </head>
 <body onload='main.init()'>
 <div class='viewContainer'>
-<login>
-    <form method="post">
-        <label for="username">User:</label><br>
-        <input type="text" id="username" name="username"><br>
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password"><br>
-        <br>
-        <button onclick="main.login(event, username.value, password.value)">Login</button>
-        <br><br>
-        <p id="loginError" style="display:none">
-            Sorry, the username or password that you have entered is invalid.
-        </p>
-    </form>
-</login>
 <main id='game'>  
     <header>
         <!-- time, date, weather, light conditions, etc-->

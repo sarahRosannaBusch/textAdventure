@@ -2,10 +2,10 @@
 
 /** 
  * @file main.js
- * @brief  D&D Backstories main functionality
+ * @brief  D&D Backstories main functionality - demo
  * @author Sarah Rosanna Busch
- * @version 0.2
- * @date   8 June 2022
+ * @version d0.2
+ * @date   13 July 2022
  */
 
 var main = (function() {
@@ -50,25 +50,7 @@ var main = (function() {
         showDiceBox(false);
 
         vars.bubbleCount = 0;
-    }
-
-    that.login = function(e, username, password) {
-        e.preventDefault();
-        let str = JSON.stringify({'login':{'username':username, 'password':password}});
-        f.ajax.post('users.json', str, function(ack) {
-            console.log(ack);
-            ack = JSON.parse(ack);
-            if(ack.login) {
-                Player.setUser(ack.username);
-                Player.initData(ack);
-                vars.choices = Player.getData('choices');
-                vars.diceRolls = Player.getData('diceRolls');
-                elem.login.style.display = 'none';
-                Intro.start();
-            } else {
-                elem.loginError.style.display = 'block';
-            }
-        });
+        Intro.start();
     }
 
     that.rollDice = function(diceToRoll, callback) {

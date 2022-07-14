@@ -423,18 +423,13 @@ var Intro = (function(){
 
     var theEnd = function() {          
         main.writeStory('You', 'End demo.');    
-        main.writeStory('DM', "That's it for now. This game is still under development, so come back soon to begin " + Player.getData('charName') + "'s story.");
-        main.createBtnOpts(["I will!", "I probably won't."], smiley);
+        main.writeStory('DM', "Thanks for playing my demo! If you want to help support the project, and get access to my test server, check out my Patreon page. Or, to learn more about me and what I do, visit my website.");
+        main.createBtnOpts(["<a href='https://www.patreon.com/sarahrosannabusch'>Patreon</a>",
+        "<a href='https://sarahrosannabusch.ca/'>my website</a>"], smiley);
     }
 
     function smiley(choice) {
-        if(choice === 0) {            
-            main.writeStory('You', 'I will!');
-            main.writeStory('DM', ":)");
-        } else {
-            main.writeStory('You', "I probably won't.");
-            main.writeStory('DM', ":(");
-        }
+        main.writeStory('DM', ":)");
     }
 
     const DM = [
